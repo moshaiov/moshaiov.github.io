@@ -1,6 +1,7 @@
 COURSE NOTES
 https://dec41.user.srcf.net/notes/ [vast collection]
 https://tartarus.org/gareth/maths/notes/ [vast collection]
+https://github.com/Dongryul-Kim/harvard_notes [vast collection]
 https://you-qi2121.github.io/mypage/links.html [riemann surfaces, algebraic geometry, lie groups]
 https://www.math.stonybrook.edu/~azinger/mat620/EGnotes.pdf [enumerative geometry]
 

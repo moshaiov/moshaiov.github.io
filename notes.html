@@ -11,7 +11,7 @@
     <h1> analytic number theory </h1>
 claim. $\text{lcm}(1,\dots,n)\ge 2^{n-2}$. <hr>
 <button onclick="toggle_view('wjb'); toggle_text()">proof</button>
-<div id="wjb" style="visibility: hidden;">
+<div id="wjb" style="display: none;">
 $\int_0^1 x^n(1-x)^n\text{d}x\in(0,1/4^n)$ is a fraction with denominator $\text{lcm}(1,\dots,2n+1)$. ▨ </div> <hr>
 definitions. $\psi(n)=\log\text{lcm}(1,\dots,n)=\displaystyle\sum_{p^k\le n}\log p=\sum_{p\le n}\lfloor \log_p(n)\rfloor\log p$ <br>
 $\vartheta(n) = \displaystyle\sum_{p\le n}\log p$ <br> 
@@ -35,10 +35,10 @@ definition. a $\texttt{conic}$ has the form $ax^2+by^2+cxy+dx+ey+f=0$ for fixed 
 function toggle_view(id)
 {
   element=document.getElementById(id)
-  if(element.style.visibility==="hidden")
-    element.style.visibility="visible"
+  if(element.style.display==="none")
+    element.style.display="block"
   else
-    element.style.visibility="hidden"
+    element.style.display="none"
 }
 </script>
 </html>

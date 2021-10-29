@@ -5,12 +5,14 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], processEscapes: true }});</script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script>
-    <style> body {font-family: Georgia, serif; line-height: 2.5;} hr {height: 1px; border: 0; border-top: 1px solid #000; margin: 1em 0; } h1 {text-align: center;} </style>
+    <style> body {font-family: Georgia, serif; line-height: 2.5;} hr {height: 1px; border: 0; border-top: 1px solid #000; margin: 1em 0; } h1 {text-align: center;} button {background-color: white; color: black; border: 1px solid #000000; border-radius: 2px;} </style>
 </head>
 <body>
     <h1> analytic number theory </h1>
 claim. $\text{lcm}(1,\dots,n)\ge 2^{n-2}$. <hr>
-proof. $\int_0^1 x^n(1-x)^n\text{d}x\in(0,1/4^n)$ is a fraction with denominator $\text{lcm}(1,\dots,2n+1)$. ▨ <hr>
+<button onclick="toggle_view('wjb'); toggle_text()">proof</button>
+<div id="wjb" style="visibility: hidden;">
+$\int_0^1 x^n(1-x)^n\text{d}x\in(0,1/4^n)$ is a fraction with denominator $\text{lcm}(1,\dots,2n+1)$. ▨ </div> <hr>
 definitions. $\psi(n)=\log\text{lcm}(1,\dots,n)=\displaystyle\sum_{p^k\le n}\log p=\sum_{p\le n}\lfloor \log_p(n)\rfloor\log p$ <br>
 $\vartheta(n) = \displaystyle\sum_{p\le n}\log p$ <br> 
 $\pi(n)=\displaystyle\sum_{p\le n}1 =|\{p\le n\}|$. <hr>
@@ -28,4 +30,15 @@ x_3 & y_3 & 1
 definition. a $\texttt{conic}$ has the form $ax^2+by^2+cxy+dx+ey+f=0$ for fixed coefficients $a,...,f$, not all zero. eg ellipse, parabola. <hr>
 [&#9827 ag3] there exists a conic incident to any given five points. <hr>
 </body>
+   
+<script>
+function toggle_view(id)
+{
+  element=document.getElementById(id)
+  if(element.style.visibility==="hidden")
+    element.style.visibility="visible"
+  else
+    element.style.visibility="hidden"
+}
+</script>
 </html>

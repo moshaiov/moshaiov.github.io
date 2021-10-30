@@ -43,8 +43,12 @@ definition. an $\texttt{ideal}$ $I\triangleleft A$ is a nonempty subset closed u
 definitions. the $\texttt{trivial}$ ideal is $\{0\}$. a $\texttt{proper}$ ideal is one that's not the whole ring. <br>
 the set of $\texttt{invertible}$ elements is $A^\times=\{a:\exists b\phantom{0}ab=1\}$. <hr>
 [&#9827 ca2] a proper ideal cannot contain an invertible element. moreover $A\setminus A^\times = \displaystyle\bigcup_{I\text{ proper}}I$. <hr>
-definitions. a proper ideal $\mathfrak{p}$ is $\texttt{prime}$ if $a,b\not\in\mathfrak{p}\implies ab\not\in\mathfrak{p}$. a proper ideal $\mathfrak{m}$ is $\texttt{maximal}$ if the only two ideals containing it are itself and the entire ring.
+definitions. a proper ideal $\mathfrak{p}$ is $\texttt{prime}$ if $a,b\not\in\mathfrak{p}\implies ab\not\in\mathfrak{p}$. <br>
+a proper ideal $\mathfrak{m}$ is $\texttt{maximal}$ if the only two ideals containing it are itself and the entire ring. <hr>
 [&#9827 ca3] $\forall x\not\in\mathfrak{m}\exists y\in A, m\in\mathfrak{m} : xy=1+m$. <hr>
+claim. any proper ideal $I$ is contained in some maximal ideal $\mathfrak{m}$. <hr>
+<button onclick="show('edc'); kill(this);"> proof </button>
+<div id="edc" style="display: none;"> the result is clear when there's only a finite number of ideals. if not, consider the nonempty set of proper ideals containing $I$. ordered by inclusion, any chain has an upperbound. indeed, if $I_j$ is a chain of ideals, then $\bigcup_j I_j$ is an ideal. if it is nonproper it must contain $1$, implying one of the $I_j$ is nonproper. the result now follows by Zorn's lemma. </div> <hr>
 </body>
    
 <script>

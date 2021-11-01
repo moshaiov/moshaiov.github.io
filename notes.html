@@ -7,54 +7,7 @@
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script>
     <style> body, button {font-family: Georgia, serif; line-height: 2.5;} hr {height: 1px; border: 0; border-top: 1px solid #000; margin: 1em 0; } h1 {text-align: center;} button {background-color: white; color: black; border: 1px solid #000000; border-radius: 2px;} </style>
 </head>
-<body>
-    <h1> analytic number theory </h1>
-claim. $\text{lcm}(1,\dots,n)\ge 2^{n-2}$. <hr>
-<button onclick="show('dfx'); kill(this);"> proof </button>
-<div id="dfx" style="display: none;"> $\int_0^1 x^n(1-x)^n\text{d}x\in(0,1/4^n)$ is a fraction with denominator $\text{lcm}(1,\dots,2n+1)$. ▨ </div> <hr>
-definitions. $\psi(n)=\log\text{lcm}(1,\dots,n)=\displaystyle\sum_{p^k\le n}\log p=\sum_{p\le n}\lfloor \log_p(n)\rfloor\log p$ <br>
-$\vartheta(n) = \displaystyle\sum_{p\le n}\log p$ <br> 
-$\pi(n)=\displaystyle\sum_{p\le n}1 =|\{p\le n\}|$. <hr>
-&#9827 conclude that $\pi(n)>c n/\log(n)$. (for some $c$ and all $n>1$) <hr>
-&#9827 show that $\vartheta(n)\lt Cn$ via $\displaystyle\prod_{n\lt p\lt 2n}p$ dividing ${2n\choose n}$
-    <h1> algebraic geometry </h1>
-claim. $(x_1,y_1),(x_2,y_2),(x_3,y_3)$ are collinear iff $Q(x_j,y_j)=0$ for some polynomial $Q$. <hr>
-<button onclick="show('xmb'); kill(this);"> proof </button>
-<div id="xmb" style="display: none;"> the three points are collinear iff there exists $a,b,c$ not all zero with $ax_j+by_j+c=0$. ergo, iff $ \det\begin{bmatrix}
-x_1 & y_1 & 1 \\
-x_2 & y_2 & 1 \\
-x_3 & y_3 & 1 \end{bmatrix} =0$. ▨ </div> <hr>
-[&#9827 ag1] over the reals, give the area of the triangle formed by $(x_j,y_j)$ as a function of $Q(x_j,y_j)$. <hr>
-[&#9827 ag2] $(x_1,y_1),(x_2,y_2),(x_3,y_3),(x_4,y_4)$ are incident to a cline (circle or line) iff $R(x_j,y_j)=0$ for some polynomial $R$. <hr>
-definition. a <span style="color:blue;"> conic </span> has the form $ax^2+by^2+cxy+dx+ey+f=0$ for fixed coefficients $a,...,f$, not all zero. eg ellipse, parabola. <hr>
-[&#9827 ag3] there exists a conic incident to any given five points.
-    <h1> commutative algebra </h1>
-definition. a <span style="color:blue;"> ring </span> is a set $A$ endowed with operations $+,\cdot$ satisfying $\forall a,b,c$ <br>
-distributivity $a\cdot(b+c)=a\cdot b+a\cdot c$ <br>
-commutativity $a+b=b+a$, $a\cdot b=b\cdot a$ <br>
-unity $\exists 1,0: a\cdot 1=a=a+0$ <br>
-associativity $(a+b)+c=a+(b+c)$, $(a\cdot b)\cdot c=a\cdot (b\cdot c)$ <br>
-and finally, negativity $x\mapsto x+a$ is a bijection. <br>
-examples. $\mathbf{Z},\mathbf{Q},\mathbf{R},\mathbf{C}$, the integers mod $n$ $\mathbf{Z}/n$, $\mathbf{Z}[\sqrt{5}]=\{n+m\sqrt{5}:n,m\in\mathbf{Z}\}$, $\mathbf{Z}[i]$, $\mathbf{Z}[\frac{1+\sqrt{5}}{2}]$, polynomials $\mathbf{R}[x],\mathbf{Q}[x],\mathbf{Z}[x]$, polynomials in two or more variables, continuous functions, analytic functions... <br>
-comment. more general rings include $\mathbf{R}^{n\times n}$ which is noncommutative and $\mathbf{R}^3$ with the cross product, which is nonassociative and nonunital. <hr>
-<!-- todo motivate ideals -->
-definition. an <span style="color:blue;"> ideal </span> $I\triangleleft A$ is a nonempty subset closed under addition and multiplication from $A$ : $I+I\subseteq I$, $A\cdot I\subseteq I$. <hr>
-[&#9827 ca1] find all ideals of $\mathbf{Z}$. when is one contained in another? <hr>
-definitions. the <span style="color:blue;"> trivial </span> ideal is $\{0\}$. a <span style="color:blue;"> proper </span> ideal is one that's not the whole ring. <br>
-the set of <span style="color:blue;"> invertible </span> elements is $A^\times=\{a:\exists b\phantom{0}ab=1\}$. <hr>
-[&#9827 ca2] a proper ideal cannot contain an invertible element. moreover $A\setminus A^\times = \displaystyle\bigcup_{I\text{ proper}}I$. <hr>
-definitions. a proper ideal $\mathfrak{p}$ is <span style="color:blue;"> prime </span> if $a,b\not\in\mathfrak{p}\implies ab\not\in\mathfrak{p}$. <br>
-a proper ideal $\mathfrak{m}$ is <span style="color:blue;"> maximal </span> if the only two ideals containing it are itself and the entire ring. <hr>
-[&#9827 ca3] a proper ideal $I$ is maximal iff $\forall x\not\in I$ $\exists y\in A, j\in I : xy=1+j$. conclude that any maximal ideal is a prime ideal. <hr>
-claim. any proper ideal $I$ is contained in some maximal ideal $\mathfrak{m}$. <hr>
-<button onclick="show('edc'); kill(this);"> proof </button>
-<div id="edc" style="display: none;"> the result is clear when there's only a finite number of ideals. if not, consider the nonempty set of proper ideals containing $I$. ordered by inclusion, any chain has an upperbound. indeed, if $I_j$ is a chain of ideals, then $\bigcup_j I_j$ is an ideal. if it is nonproper it must contain $1$, implying one of the $I_j$ is nonproper. the result now follows by Zorn's lemma. </div> <hr>
-[&#9827 ca4] conclude that $A\setminus A^\times = \displaystyle\bigcup_{\mathfrak{m}}\mathfrak{m}$. show that $\displaystyle\bigcap_{\mathfrak{m}}\mathfrak{m}=\{x:\forall y\phantom{0}1-xy\in A^{\times}\}$. <hr>
-[&#9827 ca5] tfae for a ring $A$ : $xy=0\implies x=0$ or $y=0$, the trivial ideal is prime, $xy=xz$ implies $y=z$ assuming $x\neq 0$. a ring with these properties is called a <span style="color:blue;"> domain </span> <hr>
-definition. $S\subseteq A\setminus{0}$ is called <span style="color:blue;"> multiplicative </span> if $S\cdot S\subseteq S$. <hr>
-[&#9827 ca6] there exists a prime ideal $\mathfrak{p}$ disjoint to any given multiplicative set $S$. <hr>
-</body>
-   
+
 <script>
 function show(id)
 {
@@ -66,4 +19,84 @@ function kill(x)
     x.remove()
 }
 </script>
+
+<body>
+    <h1> analytic number theory </h1>
+claim. $\text{lcm}(1,\dots,n)\ge 2^{n-2}$. <hr>
+
+<button onclick="show('dfx'); kill(this);"> proof </button>
+<div id="dfx" style="display: none;"> $\int_0^1 x^n(1-x)^n\text{d}x\in(0,1/4^n)$ is a fraction with denominator $\text{lcm}(1,\dots,2n+1)$. ▨ </div> <hr>
+    
+definitions. $\psi(n)=\log\text{lcm}(1,\dots,n)=\displaystyle\sum_{p^k\le n}\log p=\sum_{p\le n}\lfloor \log_p(n)\rfloor\log p$ <br>
+$\vartheta(n) = \displaystyle\sum_{p\le n}\log p$ <br>    
+$\pi(n)=\displaystyle\sum_{p\le n}1 =|\{p\le n\}|$. <hr>
+    
+&#9827 conclude that $\pi(n)>c n/\log(n)$. (for some $c$ and all $n>1$) <hr>
+
+&#9827 show that $\vartheta(n)\lt Cn$ via $\displaystyle\prod_{n\lt p\lt 2n}p$ dividing ${2n\choose n}$
+    
+    
+    
+    <h1> algebraic geometry </h1>
+claim. $(x_1,y_1),(x_2,y_2),(x_3,y_3)$ are collinear iff $Q(x_j,y_j)=0$ for some polynomial $Q$. <hr>
+
+<button onclick="show('xmb'); kill(this);"> proof </button>
+<div id="xmb" style="display: none;"> the three points are collinear iff there exists $a,b,c$ not all zero with $ax_j+by_j+c=0$. ergo, iff $ \det\begin{bmatrix}
+x_1 & y_1 & 1 \\
+x_2 & y_2 & 1 \\
+x_3 & y_3 & 1 \end{bmatrix} =0$. ▨ </div> <hr>
+    
+[&#9827 ag1] over the reals, give the area of the triangle formed by $(x_j,y_j)$ as a function of $Q(x_j,y_j)$. <hr>
+    
+[&#9827 ag2] $(x_1,y_1),(x_2,y_2),(x_3,y_3),(x_4,y_4)$ are incident to a cline (circle or line) iff $R(x_j,y_j)=0$ for some polynomial $R$. <hr>
+    
+definition. a <span style="color:blue;"> conic </span> has the form $ax^2+by^2+cxy+dx+ey+f=0$ for fixed coefficients $a,...,f$, not all zero. eg ellipse, parabola. <hr>
+    
+[&#9827 ag3] there exists a conic incident to any given five points.
+
+
+
+    <h1> commutative algebra </h1>
+definition. a <span style="color:blue;"> ring </span> is a set $A$ endowed with operations $+,\cdot$ satisfying $\forall a,b,c$ <br>
+distributivity $a\cdot(b+c)=a\cdot b+a\cdot c$ <br>
+commutativity $a+b=b+a$, $a\cdot b=b\cdot a$ <br>
+unity $\exists 1,0: a\cdot 1=a=a+0$ <br>
+associativity $(a+b)+c=a+(b+c)$, $(a\cdot b)\cdot c=a\cdot (b\cdot c)$ <br>
+and finally, negativity $x\mapsto x+a$ is a bijection. <br>
+
+examples. $\mathbf{Z},\mathbf{Q},\mathbf{R},\mathbf{C}$, the integers mod $n$ $\mathbf{Z}/n$, $\mathbf{Z}[\sqrt{5}]=\{n+m\sqrt{5}:n,m\in\mathbf{Z}\}$, $\mathbf{Z}[i]$, $\mathbf{Z}[\frac{1+\sqrt{5}}{2}]$, polynomials $\mathbf{R}[x],\mathbf{Q}[x],\mathbf{Z}[x]$, polynomials in two or more variables, continuous functions, analytic functions... <br>
+
+comment. more general rings include $\mathbf{R}^{n\times n}$ which is noncommutative and $\mathbf{R}^3$ with the cross product, which is nonassociative and nonunital. <hr>
+
+<!-- todo motivate ideals -->
+definition. an <span style="color:blue;"> ideal </span> $I\triangleleft A$ is a nonempty subset closed under addition and multiplication from $A$ : $I+I\subseteq I$, $A\cdot I\subseteq I$. <hr>
+
+[&#9827 ca1] find all ideals of $\mathbf{Z}$. when is one contained in another? <hr>
+
+definitions. the <span style="color:blue;"> trivial </span> ideal is $\{0\}$. a <span style="color:blue;"> proper </span> ideal is one that's not the whole ring. <br>
+the set of <span style="color:blue;"> invertible </span> elements is $A^\times=\{a:\exists b\phantom{0}ab=1\}$. <hr>
+
+[&#9827 ca2] a proper ideal cannot contain an invertible element. moreover $A\setminus A^\times = \displaystyle\bigcup_{I\text{ proper}}I$. <hr>
+
+definitions. a proper ideal $\mathfrak{p}$ is <span style="color:blue;"> prime </span> if $a,b\not\in\mathfrak{p}\implies ab\not\in\mathfrak{p}$. <br>
+a proper ideal $\mathfrak{m}$ is <span style="color:blue;"> maximal </span> if the only two ideals containing it are itself and the entire ring. <hr>
+
+[&#9827 ca3] a proper ideal $I$ is maximal iff $\forall x\not\in I$ $\exists y\in A, j\in I : xy=1+j$. conclude that any maximal ideal is a prime ideal. <hr>
+
+claim. any proper ideal $I$ is contained in some maximal ideal $\mathfrak{m}$. <hr>
+
+<button onclick="show('edc'); kill(this);"> proof </button>
+<div id="edc" style="display: none;"> the result is clear when there's only a finite number of ideals. if not, consider the nonempty set of proper ideals containing $I$. ordered by inclusion, any chain has an upperbound. indeed, if $I_j$ is a chain of ideals, then $\bigcup_j I_j$ is an ideal. if it is nonproper it must contain $1$, implying one of the $I_j$ is nonproper. the result now follows by Zorn's lemma. </div> <hr>
+
+[&#9827 ca4] conclude that $A\setminus A^\times = \displaystyle\bigcup_{\mathfrak{m}}\mathfrak{m}$. show that $\displaystyle\bigcap_{\mathfrak{m}}\mathfrak{m}=\{x:\forall y\phantom{0}1-xy\in A^{\times}\}$. <hr>
+
+[&#9827 ca5] tfae for a ring $A$ : $xy=0\implies x=0$ or $y=0$, the trivial ideal is prime, $xy=xz$ implies $y=z$ assuming $x\neq 0$. a ring with these properties is called a <span style="color:blue;"> domain </span> <hr>
+
+definition. $S\subseteq A\setminus{0}$ is called <span style="color:blue;"> multiplicative </span> if $S\cdot S\subseteq S$. <hr>
+
+[&#9827 ca6] there exists a prime ideal $\mathfrak{p}$ disjoint to any given multiplicative set $S$. <hr>
+    
+    
+        <h1> linear analysis </h1>
+</body>
 </html>

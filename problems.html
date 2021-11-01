@@ -8,19 +8,24 @@
     <style> body {font-family: Georgia, serif; line-height: 2.5;} hr {height: 1px; border: 0; border-top: 1px solid #000; margin: 1em 0; } h1 {text-align: center;} </style>
 </head>
 <body>
+<!-- cs -->
 [&#10054 1] give a fast algorithm to compute $a^n$. (using significantly less than $n-1$ multiplications) <hr>
 [&#10054 2] show that the product of two given complex numbers can be computed using not four but only three multiplications. <hr>
 [&#10054 3] give an algorithm to find the second largest key from $x_1,\dots,x_n$ using $n+O\log n$ comparisons. (comparison : you pick two keys and are told which is larger) <hr>
 [&#10054 4] alice wishes to gift bob with a diamond. they live in differnet countries, and can only send packages via the post office. sadly, the workers are severly underpaid and would steal the diamond if the opportunity presented. find a solution to their problem. <hr>
 [&#10054 5] alice and bob each picked a key in $[n]$. they absolutely cannot risk anyone finding out (anything about) their keys. however, if their keys are equal they wish to know so. how should they go about finding this? <hr>
 [&#10054 6] alice and bob each have an $n$ bit number, $x$ and $y$. they wish for $\max(x,y)$ to be public knowledge. (not just who has the greater key, but what that key is). their communication, however, is quite limited. they can send a bit every second, but if both/neither send a bit, the channel closes. describe a protocol to achieve their goal in $n+O\log n$ seconds. (start with $n+O\sqrt{n}$). <hr> 
+<!-- analysis -->
 [&#10697 1] let $a$ be a weakly increasing sequence of positive integers. if $a_n=o(n)$ then the sequence $n/a_n$ contains each positive integer. <hr>
 [&#10697 2] a bounded harmonic function on $\mathbf{Z}^d$ must be constant. ($f:\mathbf{Z}^d\to\mathbf{R}$ is called harmonic if $\forall x$ $f(x)=\underset{y\sim x}{\text{average}}f(y)$, the average being over the $2d$ neighboring vertices of $x$.) <hr>
 [&#10697 3] find all additive maps $\mathbf{Z}^\mathbf{N}\to \mathbf{Z}$. (integer sequences to integers) <hr>
 [&#10697 4] there exists a continuous $f:\mathbf{R}\to\mathbf{R}$ with $|f^{-1}(x)|=n$ for all $x$ iff $n$ is odd. <hr>
 [&#10697 5] suppose $f:\mathbf{N}^2\to\mathbf{N}$ is such that $\forall x$ $|f^{-1}(x)|\le M$ is bounded. then $\dfrac{f(n,m)}{nm}$ is unbounded. <hr>
+<!-- algebra -->
 [&#10016 1] for $P\in\mathbf{R}[x]$ with nonnegative values we have $P=Q^2+S^2$ for some $Q,S\in\mathbf{R}[x]$. <hr>
 [&#10016 2] Pooh has $2n+1$ honey pots. he noticed that he can eat any one of them and split the remaining into two groups of equal total weight, each with $n$ pots. show that the pots all weigh the same. <hr>
+[&#10016 3] let $M$ be an $(k+r)\times(k+r)$ matrix given by $M=\begin{bmatrix} A & B \\ C & D \end{bmatrix}$ with $A$ invertible. then $\det M=\det A \det(D-CA^{-1}B)$ <hr>
+<!-- unclassified -->
 [&#8498 0 Grossman 13] every integer has a light on it. initially all lights are turned off. 2012 people arrive, one after the other. each person chooses 2013 consecutive lamps and switches their states (on$\leftrightarrow$off). let $k$ be the number of lit lamps after everyone's done. show that $k$ is even and no 2013 consecutive lamps contain more than $k/2$ lit lamps. <hr>
 [&#8498 1 Putnam 05] let $\#\{(x_1,\dots,x_n)\in\mathbf{Z}^n : |x_1|+\dots+|x_n|\le m\}=a_{mn}$. show that $a_{mn}=a_{nm}$. <hr>
 [&#8498 2 Putnam 05] find $\displaystyle \sum_{\sigma\in S_n}\dfrac{\text{sgn}(\sigma)}{1+\#\text{fixed points}(\sigma)}$ <hr>

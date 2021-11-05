@@ -71,30 +71,35 @@ comment. more general rings include $\mathbf{R}^{n\times n}$ which is noncommuta
 <!-- todo motivate ideals -->
 definition. an <span style="color:blue;"> ideal </span> $I\triangleleft A$ is a nonempty subset closed under addition and multiplication from $A$ : $I+I\subseteq I$, $A\cdot I\subseteq I$. <hr>
 
-[&#9827 ca1] find all ideals of $\mathbf{Z}$. when is one contained in another? <hr>
+[♣ ca1] find all ideals of $\mathbf{Z}$. when is one contained in another? <hr>
 
 definitions. the <span style="color:blue;"> trivial </span> ideal is $\{0\}$. a <span style="color:blue;"> proper </span> ideal is one that's not the whole ring. <br>
 the set of <span style="color:blue;"> invertible </span> elements is $A^\times=\{a:\exists b\phantom{0}ab=1\}$. <hr>
 
-[&#9827 ca2] a proper ideal cannot contain an invertible element. moreover $A\setminus A^\times = \displaystyle\bigcup_{I\text{ proper}}I$. <hr>
+[♣ ca2] a proper ideal cannot contain an invertible element. moreover $A\setminus A^\times = \displaystyle\bigcup_{I\text{ proper}}I$. <hr>
 
 definitions. a proper ideal $\mathfrak{p}$ is <span style="color:blue;"> prime </span> if $a,b\not\in\mathfrak{p}\implies ab\not\in\mathfrak{p}$. <br>
 a proper ideal $\mathfrak{m}$ is <span style="color:blue;"> maximal </span> if the only two ideals containing it are itself and the entire ring. <hr>
 
-[&#9827 ca3] a proper ideal $I$ is maximal iff $\forall x\not\in I$ $\exists y\in A, j\in I : xy=1+j$. conclude that any maximal ideal is a prime ideal. <hr>
+[♣ ca3] a proper ideal $I$ is maximal iff $\forall x\not\in I$ $\exists y\in A, j\in I : xy=1+j$. conclude that any maximal ideal is a prime ideal. <hr>
 
 claim. any proper ideal $I$ is contained in some maximal ideal $\mathfrak{m}$. <hr>
 
 <button onclick="show('edc'); kill(this);"> proof </button>
 <div id="edc" style="display: none;"> the result is clear when there's only a finite number of ideals. if not, consider the nonempty set of proper ideals containing $I$. ordered by inclusion, any chain has an upperbound. indeed, if $I_j$ is a chain of ideals, then $\bigcup_j I_j$ is an ideal. if it is nonproper it must contain $1$, implying one of the $I_j$ is nonproper. the result now follows by Zorn's lemma. </div> <hr>
 
-[&#9827 ca4] conclude that $A\setminus A^\times = \displaystyle\bigcup_{\mathfrak{m}}\mathfrak{m}$. show that $\displaystyle\bigcap_{\mathfrak{m}}\mathfrak{m}=\{x:\forall y\phantom{0}1-xy\in A^{\times}\}$. <hr>
+[♣ ca4] conclude that $A\setminus A^\times = \displaystyle\bigcup_{\mathfrak{m}}\mathfrak{m}$. show that $\displaystyle\bigcap_{\mathfrak{m}}\mathfrak{m}=\{x:\forall y\phantom{0}1-xy\in A^{\times}\}$. <hr>
 
-[&#9827 ca5] tfae for a ring $A$ : $xy=0\implies x=0$ or $y=0$, the trivial ideal is prime, $xy=xz$ implies $y=z$ assuming $x\neq 0$. a ring with these properties is called a <span style="color:blue;"> domain </span> <hr>
+definition. $A$ is called a  <span style="color:blue;"> domain </span> if tfe hold<br>
+$xy=0\implies x=0$ or $y=0$ <br>
+$(0)$ is a prime ideal <hr>
+$xy=xz$ implies $y=z$ assuming $x\neq 0$ <hr>
 
 definition. $S\subseteq A\setminus{0}$ is called <span style="color:blue;"> multiplicative </span> if $S\cdot S\subseteq S$. <hr>
 
-[&#9827 ca6] there exists a prime ideal $\mathfrak{p}$ disjoint to any given multiplicative set $S$.
-    
+[♣ ca5] there exists a prime ideal $\mathfrak{p}$ disjoint to any given multiplicative set $S$. <hr>
+
+[♣ ca6] $\text{rad}(A)=\{\text{nilpotents\}=\{x\mid\exists n : x^n=0\}$ is an ideal. in fact, $\text{rad}(A)=\displaystyle\bigcap_{\mathfrak{p}}\mathfrak{p}$. <hr>
+
 </body>
 </html>

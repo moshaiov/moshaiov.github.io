@@ -5,34 +5,51 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], processEscapes: true }});</script>
     <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"> </script>
-    <style> body {font-family: Georgia, serif; line-height: 2.5;} hr {height: 1px; border: 0; border-top: 1px solid #000; margin: 1em 0; } h1 {text-align: center;} </style>
+    <style> body {font-family: Georgia, serif; line-height: 3.5;} hr {height: 1px; border: 0; border-top: 1px solid #000; margin: 1em 0; } h1 {text-align: center;} </style>
 </head>
 <body>
-<!-- analysis -->
-[&#10697 1] let $a$ be a weakly increasing sequence of positive integers. if $a_n=o(n)$ then the sequence $n/a_n$ contains each positive integer. <hr>
-[&#10697 2] a bounded harmonic function on $\mathbf{Z}^d$ must be constant. ($f:\mathbf{Z}^d\to\mathbf{R}$ is called harmonic if $\forall x$ $f(x)=\underset{y\sim x}{\text{average}}f(y)$, the average being over the $2d$ neighboring vertices of $x$.) <hr>
-[&#10697 3] find all additive maps $\mathbf{Z}^\mathbf{N}\to \mathbf{Z}$. (integer sequences to integers) <hr>
-[&#10697 4] there exists a continuous $f:\mathbf{R}\to\mathbf{R}$ with $|f^{-1}(x)|=n$ for all $x$ iff $n$ is odd. <hr>
-[&#10697 5] suppose $f:\mathbf{N}^2\to\mathbf{N}$ is such that $\forall x$ $|f^{-1}(x)|\le M$ is bounded. then $\dfrac{f(n,m)}{nm}$ is unbounded. <hr>
-<!-- algebra -->
-[&#10016 1] for $P\in\mathbf{R}[x]$ with nonnegative values we have $P=Q^2+S^2$ for some $Q,S\in\mathbf{R}[x]$. <hr>
-[&#10016 2] Pooh has $2n+1$ honey pots. he noticed that he can eat any one of them and split the remaining into two groups of equal total weight, each with $n$ pots. show that the pots all weigh the same. <hr>
-[&#10016 3] let $M=\begin{bmatrix} A & B \\ C & D \end{bmatrix}$ be a square matrix. assuming $A$ square and invertible, we have $\det M=\det A \det(D-CA^{-1}B)$ <hr>
-<!-- cs -->
-[&#10054 1] give a fast algorithm to compute $a^n$. (using significantly less than $n-1$ multiplications) <hr>
-[&#10054 2] show that the product of two given complex numbers can be computed using not four but only three multiplications. <hr>
-[&#10054 3] give an algorithm to find the second largest key from $x_1,\dots,x_n$ using $n+O\log n$ comparisons. (comparison : you pick two keys and are told which is larger) <hr>
-[&#10054 4] alice wishes to gift bob with a diamond. they live in differnet countries, and can only send packages via the post office. sadly, the workers are severly underpaid and would steal the diamond if the opportunity presented. find a solution to their problem. <hr>
-[&#10054 5] alice and bob each picked a key in $[n]$. they absolutely cannot risk anyone finding out (anything about) their keys. however, if their keys are equal they wish to know so. how should they go about finding this? <hr>
-[&#10054 6] alice and bob each have an $n$ bit number, $x$ and $y$. they wish for $\max(x,y)$ to be public knowledge. (not just who has the greater key, but what that key is). their communication, however, is quite limited. they can send a bit every second, but if both/neither send a bit, the channel closes. describe a protocol to achieve their goal in $n+O\log n$ seconds. (start with $n+O\sqrt{n}$). <hr> 
-<!-- unclassified -->
-[&#8498 0 Grossman 13] every integer has a light on it. initially all lights are turned off. 2012 people arrive, one after the other. each person chooses 2013 consecutive lamps and switches their states (on$\leftrightarrow$off). let $k$ be the number of lit lamps after everyone's done. show that $k$ is even and no 2013 consecutive lamps contain more than $k/2$ lit lamps. <hr>
-[&#8498 1 Putnam 05] let $\#\{(x_1,\dots,x_n)\in\mathbf{Z}^n : |x_1|+\dots+|x_n|\le m\}=a_{mn}$. show that $a_{mn}=a_{nm}$. <hr>
-[&#8498 2 Putnam 05] find $\displaystyle \sum_{\sigma\in S_n}\dfrac{\text{sgn}(\sigma)}{1+\#\text{fixed points}(\sigma)}$ <hr>
-[&#8498 3] you and $n-1$ friends will be put in a room momentarily. you'll be able to see each other. a colour will be drawn on each of your foreheads (for everyone but you to see). then, simultaneously, everyone will specify the number of players with the same colour as them. devise a strategy for at least one of you to get the right answer. <hr>
-[&#8498 4] let $(A,B,E)$ be a bipartite graph with $d(a)\ge d(b)$ $\forall a\sim b$. show that $|B|\ge|A|$. <hr>
-[&#8498 5 Grossman 11] let $P(x)\in\mathbf{Z}[x]$ be monic. show that $p^2\mid P(x)$ for all $x\in\mathbf{Z}$ $\implies \deg P\ge 2p$. <hr>
-[&#8498 8 project Euler 345] describe an algorithm that given an $n\times n$ matrix $M$, finds $\displaystyle\max_{\sigma\in S_n}\sum_j M_{j,\sigma(j)}$ in reasonable time. <hr>
-[&#8498 9] consider the following dynamic on a graph. the nodes vote for / against every year. if a node's neighbours were equally divided, the node's vote won't change. if a majority voted $x$, the node will vote $x$. show that the votes are eventually two periodic. <hr>
+    <h1> problems </h1>
+[⧉ 1] any given infinite sequence of real numbers contains an infinite monotonic subsequence. <hr> 
+
+[⧉ 2] let $a$ be a weakly increasing sequence of positive integers. if $a_n=o(n)$ then the sequence $n/a_n$ contains each positive integer. <hr>
+
+[⧉ 3] a bounded harmonic function on $\mathbf{Z}^d$ must be constant. <br>
+($f:\mathbf{Z}^d\to\mathbf{R}$ is <span style="color:blue;"> harmonic </span> if $\forall x$ $f(x)=\underset{y\sim x}{\text{average}}f(y)$, the average being over the $2d$ neighboring vertices of $x$.) <hr>
+
+[⧉ 4] an additive map $\mathbf{Z}^\mathbf{N}\to \mathbf{Z}$ (integer sequences to integers) must have the form $(x_n)_n\mapsto s_1x_1+\dots+s_kx_k$ for some $k,s_j$. <br>
+($f$ is <span style="color: blue;"> additive </span> if $f(x+y)=f(x)+f(y)$ $\forall x,y$) <hr>
+
+[⧉ 5] a continuous function $f$ satisfies $\displaystyle\lim_{n\to\infty}f(na)=0$ for all $a$. show that $\displaystyle\lim_{x\to\infty}f(x)=0$. <hr> 
+
+[⧉ 6] a continuous $f:[0,1]\to\mathbf{R}$ satisfies $\displaystyle\lim_{h\to 0}\frac{f(x+h)+f(x-h)-2f(x)}{h^2}=0$ $\forall x\in(0,1)$. show that $f(x)=ax+b$ is affine. <hr> 
+
+[⧉ 7] a positif valued polynomial must have the form $R^2+S^2$ for two polynomials $R,S$. <hr>
+
+[⧉ 8] Pooh has $2n+1$ honey pots. he noticed that he can eat any one of them and split the remaining into two groups of equal total weight, each with $n$ pots. show that the pots all weigh the same. <hr>
+
 </body>
 </html>
+
+    <!-- other problems
+[⧉ ] there exists a continuous $f:\mathbf{R}\to\mathbf{R}$ with $|f^{-1}(x)|=n$ for all $x$ iff $n$ is odd. <hr>
+
+[⧉ ] suppose $f:\mathbf{N}^2\to\mathbf{N}$ is such that $\forall x$ $|f^{-1}(x)|\le M$ is bounded. then $\dfrac{f(n,m)}{nm}$ is unbounded. <hr>
+
+[⧉ ] let $M=\begin{bmatrix} A & B \\ C & D \end{bmatrix}$ be a square matrix. assuming $A$ square and invertible, we have $\det M=\det A \det(D-CA^{-1}B)$ <hr>
+
+[⧉ ] give a fast algorithm to compute $a^n$. (using significantly less than $n-1$ multiplications) <hr>
+[⧉ ] show that the product of two given complex numbers can be computed using not four but only three multiplications. <hr>
+[⧉ ] give an algorithm to find the second largest key from $x_1,\dots,x_n$ using $n+O\log n$ comparisons. (comparison : you pick two keys and are told which is larger) <hr>
+[⧉ ] alice wishes to gift bob with a diamond. they live in differnet countries, and can only send packages via the post office. sadly, the workers are severly underpaid and would steal the diamond if the opportunity presented. find a solution to their problem. <hr>
+[⧉ ] alice and bob each picked a key in $[n]$. they absolutely cannot risk anyone finding out (anything about) their keys. however, if their keys are equal they wish to know so. how should they go about finding this? <hr>
+[⧉ ] alice and bob each have an $n$ bit number, $x$ and $y$. they wish for $\max(x,y)$ to be public knowledge. (not just who has the greater key, but what that key is). their communication, however, is quite limited. they can send a bit every second, but if both/neither send a bit, the channel closes. describe a protocol to achieve their goal in $n+O\log n$ seconds. (start with $n+O\sqrt{n}$). <hr> 
+
+[⧉ ] every integer has a light on it. initially all lights are turned off. 2012 people arrive, one after the other. each person chooses 2013 consecutive lamps and switches their states (on$\leftrightarrow$off). let $k$ be the number of lit lamps after everyone's done. show that $k$ is even and no 2013 consecutive lamps contain more than $k/2$ lit lamps. <hr>
+[⧉ ] let $\#\{(x_1,\dots,x_n)\in\mathbf{Z}^n : |x_1|+\dots+|x_n|\le m\}=a_{mn}$. show that $a_{mn}=a_{nm}$. <hr>
+[⧉ ] find $\displaystyle \sum_{\sigma\in S_n}\dfrac{\text{sgn}(\sigma)}{1+\#\text{fixed points}(\sigma)}$ <hr>
+[⧉ ] you and $n-1$ friends will be put in a room momentarily. you'll be able to see each other. a colour will be drawn on each of your foreheads (for everyone but you to see). then, simultaneously, everyone will specify the number of players with the same colour as them. devise a strategy for at least one of you to get the right answer. <hr>
+[⧉ ] let $(A,B,E)$ be a bipartite graph with $d(a)\ge d(b)$ $\forall a\sim b$. show that $|B|\ge|A|$. <hr>
+[⧉ ] let $P(x)\in\mathbf{Z}[x]$ be monic. show that $p^2\mid P(x)$ for all $x\in\mathbf{Z}$ $\implies \deg P\ge 2p$. <hr>
+[⧉ ] describe an algorithm that given an $n\times n$ matrix $M$, finds $\displaystyle\max_{\sigma\in S_n}\sum_j M_{j,\sigma(j)}$ in reasonable time. <hr>
+[⧉ ] consider the following dynamic on a graph. the nodes vote for / against every year. if a node's neighbours were equally divided, the node's vote won't change. if a majority voted $x$, the node will vote $x$. show that the votes are eventually two periodic. <hr>
+    -->

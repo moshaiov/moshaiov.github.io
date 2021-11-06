@@ -21,7 +21,7 @@ function kill(x)
 </script>
 
 <body>
-    <h1> analytic number theory </h1>
+    <h1> number theory </h1>
 claim. $\text{lcm}(1,\dots,n)\ge 2^{n-2}$. <hr>
 
 <button onclick="show('dfx'); kill(this);"> proof </button>
@@ -37,7 +37,7 @@ $\pi(n)=\displaystyle\sum_{p\le n}1 =|\{p\le n\}|$. <hr>
     
     
     
-    <h1> algebraic geometry </h1>
+    <h1> geometry </h1>
 claim. $(x_1,y_1),(x_2,y_2),(x_3,y_3)$ are collinear iff $Q(x_j,y_j)=0$ for some polynomial $Q$. <hr>
 
 <button onclick="show('xmb'); kill(this);"> proof </button>
@@ -56,7 +56,7 @@ definition. a <span style="color:blue;"> conic </span> has the form $ax^2+by^2+c
 
 
 
-    <h1> commutative algebra </h1>
+    <h1> algebra </h1>
 definition. a <span style="color:blue;"> ring </span> is a set $A$ endowed with operations $+,\cdot$ satisfying $\forall a,b,c$ <br>
 distributivity $a\cdot(b+c)=a\cdot b+a\cdot c$ <br>
 commutativity $a+b=b+a$, $a\cdot b=b\cdot a$ <br>
@@ -99,7 +99,7 @@ definition. $S\subseteq A\setminus{0}$ is called <span style="color:blue;"> mult
 
 [♣ ca5] there exists a prime ideal $\mathfrak{p}$ disjoint to any given multiplicative set $S$. <hr>
 
-[♣ ca6] $\text{rad}(A)=\{\text{nilpotents}\}=\{x\mid\exists n : x^n=0\}$ is an ideal. in fact, $\text{rad}(A)=\displaystyle\bigcap_{\mathfrak{p}}\mathfrak{p}$. <hr>
+[♣ ca6] $\text{rad}(A)=\{\text{nilpotents}\}=\{x\mid\exists n : x^n=0\}$ is an ideal. in fact, $\text{rad}(A)=\displaystyle\bigcap_{\mathfrak{p}\triangleleft}\mathfrak{p}$. <hr>
 
 </body>
 </html>

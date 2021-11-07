@@ -21,6 +21,21 @@ function dark_mode() {
       hr.classList.toggle("dark")
   }
   var y = document.getElementById('dark_mode');
-  if (y.innerHTML==="dark mode") {y.innerHTML="light mode";}
-  else y.innerHTML="dark mode";
+  if (y.innerHTML==="dark mode")
+  {
+    y.innerHTML="light mode";
+    localStorage.setItem('dark',"light mode");
+  }
+  else
+  {
+    y.innerHTML="dark mode";
+    localStorage.setItem('dark',"light mode");
+  }
 }
+
+console.log("hello world");
+
+if(localStorage.getItem('dark')==="light mode")
+  console.log("dark mode");
+else
+  console.log("light mode");

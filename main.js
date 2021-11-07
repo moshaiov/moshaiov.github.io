@@ -24,18 +24,16 @@ function dark_mode() {
   if (y.innerHTML==="dark mode")
   {
     y.innerHTML="light mode";
-    localStorage.setItem('dark',"light mode");
+    localStorage.setItem('dark',"on");
   }
   else
   {
     y.innerHTML="dark mode";
-    localStorage.setItem('dark',"light mode");
+    localStorage.setItem('dark',"off");
   }
 }
 
 console.log("hello world");
 
-if(localStorage.getItem('dark')==="light mode")
-  console.log("dark mode");
-else
-  console.log("light mode");
+if(localStorage.getItem('dark')==="on")
+  dark_mode();

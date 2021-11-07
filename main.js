@@ -36,4 +36,7 @@ function dark_mode() {
 console.log("hello world");
 
 if(localStorage.getItem('dark')==="on")
+{
+  console.log("i think dark mode was turned on");
   dark_mode();
+}

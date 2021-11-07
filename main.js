@@ -32,7 +32,3 @@ function dark_mode() {
     localStorage.setItem('dark',"on");
   }
 }
-
-console.log("hello world");
-
-dark_mode();

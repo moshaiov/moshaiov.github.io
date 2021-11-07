@@ -4,6 +4,7 @@ https://tartarus.org/gareth/maths/notes/ [vast collection]
 https://github.com/Dongryul-Kim/harvard_notes [vast collection]
 https://you-qi2121.github.io/mypage/links.html [riemann surfaces, algebraic geometry, lie groups]
 https://www.math.stonybrook.edu/~azinger/mat620/EGnotes.pdf [enumerative geometry]
+https://math.mit.edu/~rbm/iml/ [distributions]
 
 PROBLEMS
 https://istina.msu.ru/media/courses/course/7be/72b/31309676/pdfjoiner_11.pdf

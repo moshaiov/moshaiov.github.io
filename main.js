@@ -36,3 +36,9 @@ function dark_mode() {
 function mode_guesser() {
   console.log(localStorage.getItem('dark'))
 }
+
+function automatic_dark_mode()
+{
+  if(localStorage.getItem('dark')==="on")
+    dark_mode();
+}

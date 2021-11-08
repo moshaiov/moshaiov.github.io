@@ -32,3 +32,7 @@ function dark_mode() {
     localStorage.setItem('dark',"off");
   }
 }
+
+function mode_guesser() {
+  console.log(localStorage.getItem('dark'))
+}

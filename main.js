@@ -7,7 +7,18 @@ function show_hide(id) {
   }
 }
 
-function dark_mode() {
+function dark_light_button_fn() {
+  var url = window.location.href.split('?')[0];
+  var y = document.getElementById('dark_mode');
+  if (y.innerHTML==="dark mode")
+    url = url + "?dark=true";
+  else
+    url = url +"?dark=false";
+  window.location = url;
+
+}
+
+function toggle_dark_mode() {
   var x = document.body;
   x.classList.toggle("dark");
   var buttons = document.getElementsByTagName('button');

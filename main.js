@@ -41,7 +41,7 @@ function automatic_dark_mode()
 function mode_link(url)
 {
   var y = document.getElementById('dark_mode');
-  if (y.innerHTML==="dark mode")
+  if (y.innerHTML==="light mode")
     url = url + "?dark=true";
   window.location = url;
 }

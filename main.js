@@ -21,14 +21,14 @@ function dark_mode() {
       hr.classList.toggle("dark")
   }
   var y = document.getElementById('dark_mode');
-  if (y.innerHTML==="dark mode")
-  {
-    y.innerHTML="light mode";
-    localStorage.setItem('dark',"off");
-  }
-  else
+  if (y.innerHTML==="light mode")
   {
     y.innerHTML="dark mode";
     localStorage.setItem('dark',"on");
+  }
+  else
+  {
+    y.innerHTML="light mode";
+    localStorage.setItem('dark',"off");
   }
 }

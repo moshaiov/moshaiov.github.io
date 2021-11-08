@@ -9,29 +9,7 @@
     <script src="main.js"></script>
 </head>
     
-<script> let searchParams = new URLSearchParams(window.location.search);
-  if(searchParams.has('dark') && searchParams.get('dark')==="true")
-  {
-    var x = document.body;
-  x.classList.toggle("dark");
-  var buttons = document.getElementsByTagName('button');
-  for (let i = 0; i < buttons.length; i++) {
-      let button = buttons[i];
-      button.classList.toggle("dark")
-  }
-  var hrs = document.getElementsByTagName('hr');
-  for (let i = 0; i < hrs.length; i++) {
-      let hr = hrs[i];
-      hr.classList.toggle("dark")
-  }
-  var y = document.getElementById('dark_mode');
-  if (y.innerHTML==="light mode")
-    y.innerHTML="dark mode";
-  else
-    y.innerHTML="light mode";
-  }</script>
-    
-<span class="navbar" style="float:right; margin: 15px;"> <a href="/index.html">home</a> &nbsp; <a href="/problems.html">problems</a> &nbsp; <a href="/notes.html">notes</a> &nbsp; <a href="/solutions.html">solutions</a> &nbsp; <button onclick="dark_mode()" id="dark_mode">dark mode</button> </span> <br> <br>
+<span class="navbar" style="float:left; margin: 15px;"> <a href="/index.html">home</a> &nbsp; <a href="/problems.html">problems</a> &nbsp; <a href="/notes.html">notes</a> &nbsp; <a href="/solutions.html">solutions</a> &nbsp; <button onclick="dark_mode()" id="dark_mode">dark mode</button> </span> <br> <br>
     
 <body>
 welcome to my homepage <br>

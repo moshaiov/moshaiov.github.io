@@ -15,22 +15,11 @@ function dark_mode() {
       let button = buttons[i];
       button.classList.toggle("dark")
   }
-  var hrs = document.getElementsByTagName('hr');
-  for (let i = 0; i < hrs.length; i++) {
-      let hr = hrs[i];
-      hr.classList.toggle("dark")
-  }
   var y = document.getElementById('dark_mode');
   if (y.innerHTML==="light mode")
     y.innerHTML="dark mode";
   else
     y.innerHTML="light mode";
-}
-
-function get_mode()
-{
-  var x = document.getElementById('dark_mode');
-  return x.innerHTML;
 }
 
 function automatic_dark_mode()

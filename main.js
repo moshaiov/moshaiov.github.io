@@ -27,6 +27,12 @@ function dark_mode() {
     y.innerHTML="light mode";
 }
 
+function get_mode()
+{
+  var x = document.getElementById('dark_mode');
+  return x.innerHTML;
+}
+
 function automatic_dark_mode()
 {
   let searchParams = new URLSearchParams(window.location.search);

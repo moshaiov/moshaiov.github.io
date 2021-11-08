@@ -22,23 +22,14 @@ function dark_mode() {
   }
   var y = document.getElementById('dark_mode');
   if (y.innerHTML==="light mode")
-  {
     y.innerHTML="dark mode";
-    localStorage.setItem('dark',"off");
-  }
   else
-  {
     y.innerHTML="light mode";
-    localStorage.setItem('dark',"on");
-  }
-}
-
-function mode_guesser() {
-  console.log(localStorage.getItem('dark'))
 }
 
 function automatic_dark_mode()
 {
-  if(localStorage.getItem('dark')==="on")
+  let searchParams = new URLSearchParams(window.location.search);
+  if(searchParams.has('dark') && searchParams.get('dark')==="true")
     dark_mode();
 }

@@ -24,12 +24,12 @@ function dark_mode() {
   if (y.innerHTML==="light mode")
   {
     y.innerHTML="dark mode";
-    localStorage.setItem('dark',"on");
+    localStorage.setItem('dark',"off");
   }
   else
   {
     y.innerHTML="light mode";
-    localStorage.setItem('dark',"off");
+    localStorage.setItem('dark',"on");
   }
 }
 

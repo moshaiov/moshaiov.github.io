@@ -37,3 +37,11 @@ function automatic_dark_mode()
   if(searchParams.has('dark') && searchParams.get('dark')==="true")
     toggle_dark_mode();
 }
+
+function mode_link(url)
+{
+  var y = document.getElementById('dark_mode');
+  if (y.innerHTML==="dark mode")
+    url = url + "?dark=true";
+  window.location = url;
+}

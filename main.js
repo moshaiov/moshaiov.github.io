@@ -12,8 +12,6 @@ function dark_light_button_fn() {
   var y = document.getElementById('dark_mode');
   if (y.innerHTML==="dark mode")
     url = url + "?dark=true";
-  else
-    url = url +"?dark=false";
   window.location = url;
 
 }
@@ -37,5 +35,5 @@ function automatic_dark_mode()
 {
   let searchParams = new URLSearchParams(window.location.search);
   if(searchParams.has('dark') && searchParams.get('dark')==="true")
-    dark_mode();
+    toggle_dark_mode();
 }

@@ -68,9 +68,31 @@ any real root must have even multiplicity. the leading coefficient is positive. 
 
 <button onclick="show_hide('roy')"> [⧉ 8] </button>
 <div id="roy" style="display: none;">
-first we assume all pots weights are positif integers. since $w_j\equiv w_1+\dots+w_n\mod 2$, the $w_j$ are either all even or all odd. in the first case, we may divide all weights by half. otherwise, we perform $w_j\mapsto\dfrac{w_j+1}{2}$. by induction on the total weight, all weights are equal. it follows that the weights are equal assuming only they're rational. but any real weights give a system of equations that define only the constant solution over $\mathbf{Q}$. by elementary linear algebra, the same real system yields only constant solutions over $\mathbf{R}$
-<span style="float:right;"> ▨ </span> </div>
+first we assume all pots weights are positif integers. since $w_j\equiv w_1+\dots+w_n\mod 2$, the $w_j$ are either all even or all odd. in the first case, we may divide all weights by half. otherwise, we perform $w_j\mapsto\dfrac{w_j+1}{2}$. by induction on the total weight, all weights are equal. it follows that the weights are equal assuming only they're rational. but any real weights give a system of equations that has only the constant solution over $\mathbf{Q}$. by elementary linear algebra, the system has only constant solutions over $\mathbf{R}$.
+<span style="float:right;"> ▨ </span> </div> <hr>
 
+    
+<button onclick="show_hide('rex')"> [⧉ 9] </button>
+<div id="rex" style="display: none;">
+let $m$ be a positive integer and and $r\in\{0,\dots,m-1\}$. then $\dfrac{a_{nm+r}}{nm+r}\le \dfrac{na_m+a_r}{nm+r}\to a_m/m$. ergo $\displaystyle\limsup_n a_n/n \le a_m/m$ $\forall m$, so $\displaystyle\lim a_n/n=\inf a_n/n$.
+<span style="float:right;"> ▨ </span> </div> <hr>
+
+
+<button onclick="show_hide('nox')"> [⧉ 10] </button>
+<div id="nox" style="display: none;">
+let $x$ denote the sum of all numbers. the $i^{\text{th}}$ prisoner guesses that $x\equiv i\mod n$, leading to a unique guess for the number on their head. surely one prisoner will guess correctly.
+<span style="float:right;"> ▨ </span> </div> <hr>
+
+<button onclick="show_hide('qdv')"> [⧉ 11] </button>
+<div id="qdv" style="display: none;">
+(sol 1) the prisoners pick a leader. the leader guesses no one shares his number. everyone else guesses their number is the same as the leaders. surely one prisoner will guess correctly. <br>
+(sol 2) let $G$ be the graph on the prisoners with two connected if they share the same number. the $i^{\text{th}}$ prisoner guesses that the number of edges in $G$ is congruent to $i$ modulo $n$, leading to a unique guess for the number of connected prisoners.
+<span style="float:right;"> ▨ </span> </div> <hr>
+
+<button onclick="show_hide('oew')"> [⧉ 12] </button>
+<div id="oew" style="display: none;">
+suppose $n$ is odd. (otherwise an imaginary $(n+1)^{\text{st}}$ prisoner with $\infty$ written on their forehead is created). let $x_i$ denote the $i^{\text{th}}$ prisoner's number. the $j^{\text{th}}$ prisoner should raise theirr hand based on the parity of the number of inversions in the cyclic sequence $x_{j+1},\dots,x_{j-1}$. let us show the strategy works. suppose $z_1,z_2$ are two consecutive values and $(x_1...x_n)=(a_1\dots a_A,z_1,b_1\dots b_B,z_2,c_1\dots c_C)$. then the sum of parities counted is $B(A+C)+2\#(c_k>a_i)+A+B+C\equiv 1\mod 2$.
+<span style="float:right;"> ▨ </span> </div> <hr>
 
 </body>
 </html>
@@ -82,7 +104,6 @@ first we assume all pots weights are positif integers. since $w_j\equiv w_1+\dot
 a different solution is by developing $\displaystyle \sum a_{mn}x^my^n = \dfrac{1}{1-x-y-xy}$. <br>
 another solution is noting $a_{mn}=a_{m-1,n}+a_{m,n-1}+a_{m-1,n-1}$. <hr>
 [&#8498 2] let $M_{ij}$ be $x$ on the diagonal and $1$ outside. then $\det M = \prod\text{eigenvalues} = (x-1)^{n-1}(x+n-1)$ equals by definition $\displaystyle\sum_{\sigma\in S_n}\text{sgn}(\sigma)x^{\#\text{fixed points}(\sigma)}$. now integrate on $[0,1]$ to get $\displaystyle \sum_{\sigma\in S_n}\dfrac{\text{sgn}(\sigma)}{1+\#\text{fixed points}(\sigma)}=(-1)^{n+1}\dfrac{n}{n+1}$. <hr>
-[&#8498 3] you'll be the group's king. everyone else will assume they have the same colour as you, and you'll assume you have a unique colour. <hr>
 [&#8498 4] $|A|=\displaystyle \sum_{a\sim b}\dfrac{1}{d(a)}\le\sum_{a\sim b}\dfrac{1}{d(b)}=|B|$. <hr>
 [&#8498 5] consider the discrete derivative operator, $\Delta:\mathbf{Z}[x]\to\mathbf{Z}[x]$ defined as $(\Delta Q)(x)=Q(x+1)-Q(x)$. we have $(\Delta^{\deg(P)}P)(x)=\deg(P)!$ divisible by $p^2$, so $\deg(P)\ge 2p$. <hr>
 [&#8498 8] the solution the Author intended (I assume) is the so called Hungarian algorithm. I'll describe how I solved it. pick a random permutation $\sigma$. if $\text{score}(\sigma)\ge \text{score}(\sigma\tau)$ for all transpositions $\tau$, then $\sigma$ is a good candidate. otherwise, we get an improved candidate, and we keep trying. (I picked several starting $\sigma$'s, and, at least for the problem at hand this heuristic worked). 

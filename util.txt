@@ -1,4 +1,4 @@
-COURSE NOTES
+COURSE NOTES (srcs)
 https://dec41.user.srcf.net/notes/ [vast collection]
 https://tartarus.org/gareth/maths/notes/ [vast collection]
 https://github.com/Dongryul-Kim/harvard_notes [vast collection]
@@ -8,10 +8,13 @@ https://math.mit.edu/~rbm/iml/ [distributions]
 https://digmi.org/lecture-notes/ [mostly Hebrew notes]
 https://meshulam.net.technion.ac.il/files/2021/05/Introductory-Geometry-English.pdf [elementary geometry]
 
-PROBLEMS
+PROBLEMS (srcs)
 https://istina.msu.ru/media/courses/course/7be/72b/31309676/pdfjoiner_11.pdf
 https://web.stanford.edu/~dkim04/assets/pdf/writings/olympiad/pow-compressed.pdf
 
-TO LOOK AT
+TAKE A LOOK
 https://www.reddit.com/r/mathriddles/comments/grs783/the_prisoners_problem_to_end_all_prisoners/
 https://www.reddit.com/r/mathriddles/comments/q1fjte/students_with_hats/
+
+MIGHT BE COOL TO
+implement the game black sheep

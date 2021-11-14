@@ -91,7 +91,7 @@ let $x$ denote the sum of all numbers. the $i^{\text{th}}$ prisoner guesses that
 
 <button onclick="show_hide('oew')"> [⧉ 12] </button>
 <div id="oew" style="display: none;">
-suppose $n$ is odd. (otherwise an imaginary $(n+1)^{\text{st}}$ prisoner with $\infty$ written on their forehead is created). let $x_i$ denote the $i^{\text{th}}$ prisoner's number. the $j^{\text{th}}$ prisoner should raise their hand based on the parity of the number of inversions in the cyclic sequence $x_{j+1},\dots,x_{j-1}$. let us show the strategy works. suppose $z_1,z_2$ are two consecutive values and $(x_1...x_n)=(a_1\dots a_A,z_1,b_1\dots b_B,z_2,c_1\dots c_C)$. then the sum of inversions counted is $B(A+C)+2\#(c_k>a_i)+A+B+C\equiv 1\mod 2$.
+suppose $n$ is odd. (otherwise an imaginary $(n+1)^{\text{st}}$ prisoner with $\infty$ written on their forehead is created). let $x_i$ denote the $i^{\text{th}}$ prisoner's number. the $j^{\text{th}}$ prisoner should raise their hand based on the parity of the number of inversions in the cyclic sequence $x_{j+1},\dots,x_{j-1}$. let us show the strategy works. suppose $z_1,z_2$ are two consecutive values and $(x_1...x_n)$ circularly equals $(z_1,a_1\dots a_A,z_2,b_1\dots b_B)$. then the sum of inversions counted is $A+B+AB+2\#\text{inv}(a)+2\#\text{inv}(b)\equiv 1\mod 2$.
 <span style="float:right;"> ▨ </span> </div> <hr>
 
 </body>

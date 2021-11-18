@@ -9,6 +9,7 @@ https://digmi.org/lecture-notes/ [mostly Hebrew notes]
 https://meshulam.net.technion.ac.il/files/2021/05/Introductory-Geometry-English.pdf [elementary geometry]
 https://ocw.mit.edu/courses/mathematics/18-712-introduction-to-representation-theory-fall-2010/lecture-notes/
 http://www-math.mit.edu/~etingof/artinnotes.pdf [noncommutative]
+https://math.mit.edu/classes/18.745/Notes/ [Lie alg]
 
 PROBLEMS (srcs)
 https://istina.msu.ru/media/courses/course/7be/72b/31309676/pdfjoiner_11.pdf

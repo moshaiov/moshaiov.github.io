@@ -25,3 +25,4 @@ https://www.reddit.com/r/mathriddles/comments/q1fjte/students_with_hats/
 MIGHT BE COOL TO
 implement the game black sheep
 write about the universality of the cantor set, space filling curves, Benjamini's theorem
+write about archimede's hat box theorem and filling a ball using 1 x d rectangles.

@@ -21,6 +21,18 @@
 </span> <br> <br>
 
 <body>
+    <h1> Fourier analysis </h1>
+claim. the Gaussian is fixed by the Fourier transform, $\displaystyle\int_{-\infty}^{\infty}e^{-\pi x^2}e^{-2\pi ix\xi}\text{d}x=e^{-\pi\xi^2}$. <hr>
+
+<button onclick="show_hide('gff')">proof. </button>
+<div id="gff" style="display: none;"> we have $0=\int_{\partial[-r,r]\times[0,\xi]}e^{-\pi z^{2}}\text{d}z=\int_{-r}^{r}e^{-\pi x^{2}}\text{d} x-\int_{-r}^{r}e^{-\pi(x+i\xi)^{2}}\text{d} x+e^{-\pi r^{2}}O_{\xi}(1)$. let $r\uparrow\infty$ and recall $\int_{-\infty}^{\infty}e^{-\pi x^{2}}\text{d} x=1$. <span style="float:right;"> ▨ </span> </div> <hr>
+
+theorem. $f\in L^1(\mathbf{R})$, $\hat{f}=0\implies f=0$ ae. <hr>
+
+<button onclick="show_hide('lax')">proof. </button>
+<div id="lax" style="display: none;"> (Newman) let $F_{a}(\xi)=\int_{-\infty}^{a}f(x)e^{-2\pi i(x-a)\xi}\text{d} x=\int_{\infty}^{a}f(x)e^{-2\pi i(x-a)\xi}\text{d} x$. the lhs may be extended holomorphically to the upper half plane, and the rhs to the lower half plane. the whole $F_{a}:\mathbf{C}\to\mathbf{C}$ is continuous, and thus holomorphic. but $|F_{a}|\le\left\Vert f\right\Vert$ , so $F_{a}$ is constant. on the other hand, ${\displaystyle \lim_{s\to-\infty}F_{a}(is)}=0$ by dominated convergence. finally, $F_{a}(0)=0\implies\int_{-\infty}^{a}f\equiv0\implies f=0$ ae. <span style="float:right;"> ▨ </span> </div> <hr>
+    
+    
     <h1> analytic number theory </h1>
 claim. $\text{lcm}(1,\dots,n)\ge 2^{n-2}$. <hr>
 

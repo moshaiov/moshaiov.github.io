@@ -1,10 +1,13 @@
 #newline
-#dfn
 
-#topic{}
-#proof{}
 #comment{}
 #blue{}
+#topic{}
+#proof{}
+#dfn{}
+#claim{}
+#lemma{}
+#theorem{}
 #norm{}
 
 %Z,%Q,%R,%C,%End

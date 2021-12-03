@@ -1,0 +1,8 @@
+#newline
+#topic{}
+#proof{}
+#comment{}
+#dfn{}
+#norm{}
+
+%Z,%Q,%R,%C

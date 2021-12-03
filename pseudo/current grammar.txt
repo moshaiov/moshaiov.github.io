@@ -7,4 +7,4 @@
 #blue{}
 #norm{}
 
-%Z,%Q,%R,%C
+%Z,%Q,%R,%C,%End

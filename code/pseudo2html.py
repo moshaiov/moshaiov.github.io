@@ -72,18 +72,18 @@ endproof = """
 <!-- endproof -->
 """
 
-begincomment = "\n<!-- comment."
-
-endcomment = "endcomment -->\n"
-
 def topicFunc(x):
     return """<!-- topic -->
     <h1> {} </h1>
         """.format(x)
 
+def cmntFunc(x):
+    return "\n<!-- comment.\n\n\t{} \n\nendcomment -->\n".format(x)
+
 macroFunctions = {
     "#topic" : topicFunc,
-    "%norm" : normFunc
+    "%norm" : normFunc,
+    "#comment" : cmntFunc
 }
 
 def addMacroFunctions(string):
@@ -106,9 +106,7 @@ def pseudo2HTML(string):
     string=begindoc+string+enddoc
     string=re.sub("#beginproof",beginproof,string)
     string=string.replace("#endproof",endproof)
-    string=string.replace("#begincomment",begincomment)
-    string=string.replace("#endcomment",endcomment)
-    string=string.replace("#newline","<hr>")
+    string=string.replace("#newline","\n<hr>\n")
 
     string=addMacroFunctions(string)
 

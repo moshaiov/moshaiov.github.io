@@ -33,11 +33,17 @@ macros = {
 "C" : "\mathbf{C}",
 }
 
+
+
 fncDict = {
     "comment" : lambda x : "\n<!-- comment.\n{}\nendcomment-->\n".format(x),
     "blue" : lambda x : "<dfn> {} </dfn>".format(x),
     "topic" : lambda x : "<!-- topic -->\n<h1> {} </h1>\n".format(x),
-    "proof" : lambda rand,x : "\n<!-- beginproof -->\n\t<hr> <button onclick=\"show_hide(\'{}\')\">proof. </button> <div id=\"{}\" style=\"display: none;\">\n {} \n\t<span style=\"float:right;\"> ▨ </span> </div> <hr> \n<!-- endproof -->\n".format(rand,rand,x),
+    "proof" : lambda rand,x : "\n<!-- beginproof -->\n\t <hr> <button onclick=\"show_hide(\'{}\')\">proof. </button> <div id=\"{}\" style=\"display: none;\">\n {} \n\t<span style=\"float:right;\"> ▨ </span> </div>\n<!-- endproof -->\n".format(rand,rand,x),
+    "dfn" : lambda x : "<hr>\ndefinition." if x=="" else "<hr>\ndefinition ["+x+"].",
+    "claim" : lambda x : "<hr>\nclaim." if x=="" else "<hr>\nclaim ["+x+"].",
+    "lemma" : lambda x : "<hr>\nlemma." if x=="" else "<hr>\nlemma ["+x+"].",
+    "theorem" : lambda x : "<hr>\ntheorem." if x=="" else "<hr>\ntheorem ["+x+"].",
     "norm" : lambda x : "\\left\\lVert {} \\right\\rVert".format(x)
 }
 
@@ -68,7 +74,6 @@ def doFunction(string,hash_idx,closing_bracket_idx):
     fnc=fncDict["proof"]
     return string[:hash_idx]+fnc(rnd,var)+string[closing_bracket_idx+1:]
 
-#assumes any # symbol will be followed by {...}
 def doSomeFunction(string):
     for x in range(len(string)):
         if string[x]=="#":
@@ -80,7 +85,6 @@ def doSomeFunction(string):
 def doAllFunctions(string):
        
     string=string.replace("#newline","\n<hr>\n")
-    string=string.replace("#dfn","definition.")
 
     while doSomeFunction(string) != "already HTML":
         string=doSomeFunction(string)

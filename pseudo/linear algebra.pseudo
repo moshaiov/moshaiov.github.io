@@ -1,32 +1,5 @@
-alskdfjaflsk lks alksfn 
-alskdfjaflsk lks alksfn 
-alskdfjaflsk lks alksfn 
-alskdfjaflsk lks alksfn 
-alskdfjaflsk lks alksfn 
-alskdfjaflsk lks alksfn 
-alskdfjaflsk lks alksfn 
-alskdfjaflsk lks alksfn 
-alskdfjaflsk lks alksfn 
-alskdfjaflsk lks alksfn 
-alskdfjaflsk lks alksfn 
-alskdfjaflsk lks alksfn 
-alskdfjaflsk lks alksfn 
-alskdfjaflsk lks alksfn 
-alskdfjaflsk lks alksfn 
-alskdfjaflsk lks alksfn 
-alskdfjaflsk lks alksfn 
-alskdfjaflsk lks alksfn 
-alskdfjaflsk lks alksfn 
-alskdfjaflsk lks alksfn 
-alskdfjaflsk lks alksfn 
-alskdfjaflsk lks alksfn 
-alskdfjaflsk lks alksfn 
-alskdfjaflsk lks alksfn 
-alskdfjaflsk lks alksfn 
-alskdfjaflsk lks alksfn 
-alskdfjaflsk lks alksfn 
-alskdfjaflsk lks alksfn 
-alskdfjaflsk lks alksfn 
-alskdfjaflsk lks alksfn 
-alskdfjaflsk lks alksfn 
-alskdfjaflsk lks alksfn 
+#topic{linear algebra}
+
+#dfn{} $T\in %End V$ is #blue{diagonalizable} if there exists a basis $(v_{j})$ of $V$ and corresponding scalars $\lambda_{j}$ such that $Tv_{j}=\lambda_{j}v_{j}$. ie if $[T]_{B}$ is diagonal for some basis $B$.
+
+#claim{} $T\in %End V$ diagonalizable iff $V=\bigoplus_{\lambda\in F}\ker(T-\lambda)$

@@ -47,7 +47,7 @@ fncDict = {
     "norm" : lambda x : "\\left\\lVert {} \\right\\rVert".format(x)
 }
 
-
+### ASSUMPTION: all # will be followed by ...{...}
 def open_and_closing_idx(string,hash_idx):
     i=hash_idx
     while string[i]!="{":
@@ -82,7 +82,6 @@ def doFunction(string,hash_idx,closing_bracket_idx):
     
     return string[:hash_idx]+fncReplacement+string[closing_bracket_idx+1:]
 
-#assumes each # will be followed by {..}
 def doSomeFunction(string):
     for x in range(len(string)):
         if string[x]=="#":
@@ -91,7 +90,6 @@ def doSomeFunction(string):
     return "already HTML"
 
 def doAllFunctions(string):
-       
     string=string.replace("#newline","\n<hr>\n")
 
     while doSomeFunction(string) != "already HTML":

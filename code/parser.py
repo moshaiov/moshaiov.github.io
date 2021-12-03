@@ -68,6 +68,7 @@ def doFunction(string,hash_idx,closing_bracket_idx):
     fnc=fncDict["proof"]
     return string[:hash_idx]+fnc(rnd,var)+string[closing_bracket_idx+1:]
 
+#assumes any # symbol will be followed by {...}
 def doSomeFunction(string):
     for x in range(len(string)):
         if string[x]=="#":

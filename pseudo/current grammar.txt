@@ -1,8 +1,10 @@
 #newline
+#dfn
+
 #topic{}
 #proof{}
 #comment{}
-#dfn{}
+#blue{}
 #norm{}
 
 %Z,%Q,%R,%C

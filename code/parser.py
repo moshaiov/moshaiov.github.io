@@ -31,6 +31,7 @@ macros = {
 "R" : "\mathbf{R}",
 "Q" : "\mathbf{Q}",
 "C" : "\mathbf{C}",
+"End" : "\text{End}"    
 }
 
 

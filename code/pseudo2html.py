@@ -2,10 +2,16 @@
 ### author: tom moshaiov
 ### date: 3.12.21
 ### comments: tis but a script
+### acknowledgments: stackoverflow
 
 ### pseudo grammar includes:
 #   latex macros via the symbol %
+#   eg %R for real numbers
 #   html macros via the symbol #
+#   eg #beginproof
+#   parameters via {}
+#   eg #topic{modular arithmetic}
+
 
 ### program inputs: path to pseudo source, path to html destination
 ### compile with: $python3 pseudo2html.py {path.to.pseudo} {path.to.html}
@@ -17,12 +23,19 @@ import random
 import string
 import sys
 
+### latex
+
 macros = {
 "Z" : "\mathbf{Z}",
 "R" : "\mathbf{R}",
 "Q" : "\mathbf{Q}",
 "C" : "\mathbf{C}",
 }
+
+def normFunc(x):
+    return "\\left\\lVert {} \\right\\rVert".format(x)
+
+### html
 
 begindoc = """<!DOCTYPE html>
 <html>
@@ -34,9 +47,11 @@ begindoc = """<!DOCTYPE html>
     <script src="main.js"></script>
 </head>
 <body>
+
 """
 
 enddoc = """
+
 </body>
 </html>"""
 
@@ -59,8 +74,34 @@ endproof = """
 
 begincomment = "\n<!-- comment."
 
-endcomment = "-->\n"
+endcomment = "endcomment -->\n"
 
+def topicFunc(x):
+    return """<!-- topic -->
+    <h1> {} </h1>
+        """.format(x)
+
+macroFunctions = {
+    "#topic" : topicFunc,
+    "%norm" : normFunc
+}
+
+def addMacroFunctions(string):
+    counter = 0
+    newstring = ""
+    start = 0
+    for macro in macroFunctions:
+        s=macro+r"{([^{}]+)}"
+        for m in re.finditer(s, string):
+            end, newstart = m.span()
+            newstring += string[start:end]
+            rep = m.group(1)  # + str(counter)
+            newstring += macroFunctions[macro](rep)
+            start = newstart
+            counter += 1
+    newstring += string[start:]
+    return newstring
+    
 def pseudo2HTML(string):
     string=begindoc+string+enddoc
     string=re.sub("#beginproof",beginproof,string)
@@ -68,6 +109,8 @@ def pseudo2HTML(string):
     string=string.replace("#begincomment",begincomment)
     string=string.replace("#endcomment",endcomment)
     string=string.replace("#newline","<hr>")
+
+    string=addMacroFunctions(string)
 
     for macro in macros:
         rep="%"+macro

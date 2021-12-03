@@ -75,11 +75,13 @@ def doFunction(string,hash_idx,closing_bracket_idx):
     fnc=fncDict["proof"]
     return string[:hash_idx]+fnc(rnd,var)+string[closing_bracket_idx+1:]
 
+#assumes each # will be followed by {..}
 def doSomeFunction(string):
+    a=-1
     for x in range(len(string)):
         if string[x]=="#":
             a=x
-        if string[x]=="}":
+        if string[x]=="}" and a!=-1:
             return doFunction(string,a,x)
     return "already HTML"
 

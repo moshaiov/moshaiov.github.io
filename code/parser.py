@@ -5,8 +5,8 @@
 ### acknowledgments: stackoverflow
 
 ### pseudo grammar includes:
-#   latex macros via the symbol %
-#   eg %R for real numbers
+#   latex macros via the symbol \
+#   eg \R for real numbers
 #   html macros via the symbol #
 #   eg #beginproof
 #   parameters via {}
@@ -23,15 +23,14 @@ import random
 import string
 import sys
 
-### latex
-
 
 macros = {
 "Z" : "\\mathbf{Z}",
 "R" : "\\mathbf{R}",
 "Q" : "\\mathbf{Q}",
 "C" : "\\mathbf{C}",
-"End" : "\\text{End}"    
+"End" : "\\text{End}",
+"span" : "\\text{span}"
 }
 
 
@@ -49,18 +48,24 @@ fncDict = {
 }
 
 
+def open_and_closing_idx(string,hash_idx):
+    i=hash_idx
+    while string[i]!="{":
+        i+=1
+    openIdx=i
+    num_opened=1
+    while num_opened>0:
+        i+=1
+        if string[i]=="{":
+            num_opened+=1
+        if string[i]=="}":
+            num_opened-=1
+    return openIdx,i
 
 def getFunctionNameAndInput(string,hash_idx):
-    idx=hash_idx+1
-    name=""
-    while string[idx]!="{":
-        name+=string[idx]
-        idx+=1
-    var=""
-    idx+=1
-    while string[idx]!="}":
-        var+=string[idx]
-        idx+=1
+    openIdx, closeIdx = open_and_closing_idx(string,hash_idx)
+    name=string[hash_idx+1:openIdx]
+    var=string[openIdx+1:closeIdx]
     return name, var
 
 def getRandomString(N=10):
@@ -68,21 +73,21 @@ def getRandomString(N=10):
 
 def doFunction(string,hash_idx,closing_bracket_idx):
     fncName, var = getFunctionNameAndInput(string,hash_idx)
-    if fncName != "proof":
-        fnc=fncDict[fncName]
-        return string[:hash_idx]+fnc(var)+string[closing_bracket_idx+1:]
-    rnd=getRandomString()
-    fnc=fncDict["proof"]
-    return string[:hash_idx]+fnc(rnd,var)+string[closing_bracket_idx+1:]
+    fnc = fncDict[fncName]
+    if fncName!="proof":
+        fncReplacement = fnc(var)
+    else:
+        rnd=getRandomString()
+        fncReplacement=fnc(rnd,var)
+    
+    return string[:hash_idx]+fncReplacement+string[closing_bracket_idx+1:]
 
 #assumes each # will be followed by {..}
 def doSomeFunction(string):
-    a=-1
     for x in range(len(string)):
         if string[x]=="#":
-            a=x
-        if string[x]=="}" and a!=-1:
-            return doFunction(string,a,x)
+            closing_bracket_idx=open_and_closing_idx(string,x)[1]           
+            return doFunction(string,x,closing_bracket_idx)
     return "already HTML"
 
 def doAllFunctions(string):
@@ -115,7 +120,7 @@ def pseudo2HTML(string):
     string=doAllFunctions(string)
 
     for macro in macros:
-        rep="%"+macro
+        rep="\\"+macro
         by=macros[macro]
         string=string.replace(rep,by)
 

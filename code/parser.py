@@ -35,7 +35,7 @@ macros = {
 
 fncDict = {
     "comment" : lambda x : "\n<!-- comment.\n{}\nendcomment-->\n".format(x),
-    "dfn" : lambda x : "<dfn> {} </dfn>".format(x),
+    "blue" : lambda x : "<dfn> {} </dfn>".format(x),
     "topic" : lambda x : "<!-- topic -->\n<h1> {} </h1>\n".format(x),
     "proof" : lambda rand,x : "\n<!-- beginproof -->\n\t<hr> <button onclick=\"show_hide(\'{}\')\">proof. </button> <div id=\"{}\" style=\"display: none;\">\n {} \n\t<span style=\"float:right;\"> ▨ </span> </div> <hr> \n<!-- endproof -->\n".format(rand,rand,x),
     "norm" : lambda x : "\\left\\lVert {} \\right\\rVert".format(x)
@@ -80,7 +80,8 @@ def doSomeFunction(string):
 def doAllFunctions(string):
        
     string=string.replace("#newline","\n<hr>\n")
-    
+    string=string.replace("#dfn","definition.")
+
     while doSomeFunction(string) != "already HTML":
         string=doSomeFunction(string)
     return string
@@ -121,4 +122,3 @@ with open(path2pseudo,"r") as src:
     pseudo=src.read()
     F=open(path2html,"w")
     F.write(pseudo2HTML(pseudo))
-

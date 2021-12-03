@@ -10,4 +10,4 @@
 #theorem{}
 #norm{}
 
-%Z,%Q,%R,%C,%End
+\Z,\Q,\R,\C,\End,\span

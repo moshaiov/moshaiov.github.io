@@ -4,8 +4,73 @@
 
 #claim{} $T\in \End V$ diagonalizable iff $V=\underset{\lambda\in F}{\oplus}\ker(T-\lambda)$.
 
-#proof{
+#proof
+{
 $[\impliedby]$ is clear. $[\implies]:$ let $v_j,\lambda_j$
 be as in the definition. then $V=\span \{v_j\}\le \sum\ker(T-\lambda_j)$.
 it remains to show the sum is direct. suppose $0=\sum_\lambda v_\lambda$
-with $Tv_{\lambda}=\lambda v_{\lambda}$. acting by $\prod_{\lambda\neq\lambda_{0}}(T-\lambda)$ yields $v_{\lambda_{0}}=0$.}
+with $Tv_{\lambda}=\lambda v_{\lambda}$. acting by $\prod_{\lambda\neq\lambda_{0}}(T-\lambda)$ yields $v_{\lambda_{0}}=0$.
+}
+
+#theorem{Jordan Chevalley} let $T\in\End V$ have $m_{T}(t)=\prod_{j}(t-\lambda_{j})^{m_{j}}$ split over F.
+there exists unique commuting $N,D\in\End(V)$ with $T=N+D$, $N$ nilpotent, $D$ diagonalizable.
+in addition, $N,D$ are polynomials in $T$ without constant term.
+
+#claim{} let $T\in\End V$ have $m_{T}\mid pq$ for $p,q$ coprime polynomials.
+then $V$ decomposes as a direct sum of $T$ invariant spaces $\ker p(T)\oplus\ker q(T)$.
+
+#proof
+{
+suppose $ap+bq=1$. ergo $\ker p(T)\cap\ker q(T)=\left\{ 0\right\} $.
+also $V=ap(T)V+bq(T)V$ where $ap(T)V\sub\ker q(T)$ and $bq(T)V\sub\ker p(T)$
+as $m_{T}\mid pq\implies pq(T)=0$.
+}
+
+#cor{} let $T\in\End V$ have $m_{T}(t)=\prod_{j}(t-\lambda_{j})^{m_{j}}$
+split over $F$. then $V$ decomposes as a direct sum of $T$ invariant
+spaces $\oplus_{j}\ker(T-\lambda_{j})^{m_{j}}$.
+
+#cor{} let $T\in\End V.$ then $T$ diagonalizable iff $m_{T}$
+splits over $F$ into distinct linear forms, $m_{T}(t)=\prod_{j}(t-\lambda_{j})$.
+
+#cor{} let $T\in\End V$ be diagonalizable and $W\le V$ be $T$
+invariant. then $T|_{W}\in\End W$ is diagonalizable.
+
+#cor{} if $T,S\in\End(V)$ commute and are diagonalizable then
+there exists a basis diagonalizing both $T,S$. in particular, $T+S$
+is diagonalizable.
+
+#proof
+{
+let $V=\oplus_{j}\ker(T-\lambda_{j})$. as $S$ commutes with
+$T-\lambda_{j}$, the summands $V_{j}=\ker(T-\lambda_{j})$ are $S$
+invariant. so it suffices to find a basis of $V_{j}$ on which both
+$S|_{V_{j}},T|_{V_{j}}$ act diagonally. as $T$ acts as a scalar
+on $V_{j}$, one simply needs to diagonalize $S|_{V_{j}}$.
+}
+
+#beginproof{Jordan Chevalley existence}
+let $m_{T}(t)=\prod_{j}(t-\lambda_{j})^{m_{j}}$,
+$V=\oplus_{j}\ker(T-\lambda_{j})^{m_{j}}$. by crt, there exists $p(t)\in F[t]$
+with $p(t)\equiv\lambda_{j}\mod(t-\lambda_{j})^{m_{j}}$ and $p(0)=0$.
+clearly $D=p(T)$ and $N=T-p(T)$ commute and sum to $T$. let $D_{j},N_{j}$
+be the restrictions of $D,N$ on $V_{j}=\ker(T-\lambda_{j})^{m_{j}}$.
+then $D_{j}=\lambda_{j}I|_{V_{j}}$, and thus $D$ is diagonalizable.
+also $(t-\lambda_{j})^{m_{j}}\mid(t-p(t))^{m_{j}}$ so $N_{j}^{m_{j}}=0$,
+and thus $N$ is nilpotent.
+#endproof
+
+#claim{} the sum of commuting nilpotents is nilpotent.
+
+#proof
+{
+say $rs=sr$, $r^{n}=s^{m}=0$. then $(r+s)^{n+m-1}={\displaystyle \sum_{k+\ell=n+m-1}}{k+\ell \choose k}r^{k}s^{\ell}=0$.
+}
+
+#beginproof{Jordan Chevalley uniqueness} let $N,D$ be as constructed,
+and suppose $N',D'$ are another solution. as $N,D$ are polynomials
+in $T$ and $N',D'$ commute with $T$, they commute with $N,D$.
+but now $D'-D=N-N'$ is the difference of commuting diagonalizable
+and nilpotent operators and is thus diagonalizable and nilpotent,
+ergo zero.
+#endproof

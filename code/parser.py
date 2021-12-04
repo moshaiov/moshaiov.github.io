@@ -1,7 +1,7 @@
 ### title: pseudo to html converter
 ### author: tom moshaiov
 ### date: 3.12.21
-### comments: tis but a script
+### comments: tis but a script. it works for my purposes, but a better parser would use data structures like trees and stacks and would be more efficient
 ### acknowledgments: stackoverflow
 
 ### pseudo grammar includes:
@@ -29,6 +29,7 @@ macros = {
 "R" : "\\mathbf{R}",
 "Q" : "\\mathbf{Q}",
 "C" : "\\mathbf{C}",
+"sub" : "\\subseteq",
 "End" : "\\text{End}",
 "span" : "\\text{span}"
 }
@@ -40,10 +41,13 @@ fncDict = {
     "blue" : lambda x : "<dfn> {} </dfn>".format(x),
     "topic" : lambda x : "<!-- topic -->\n<h1> {} </h1>\n".format(x),
     "proof" : lambda rand,x : "\n<!-- beginproof -->\n\t <hr> <button onclick=\"show_hide(\'{}\')\">proof. </button> <div id=\"{}\" style=\"display: none;\">\n {} \n\t<span style=\"float:right;\"> ▨ </span> </div>\n<!-- endproof -->\n".format(rand,rand,x),
+    "proof\n" : lambda rand,x : "\n<!-- beginproof -->\n\t <hr> <button onclick=\"show_hide(\'{}\')\">proof. </button> <div id=\"{}\" style=\"display: none;\">\n {} \n\t<span style=\"float:right;\"> ▨ </span> </div>\n<!-- endproof -->\n".format(rand,rand,x),
     "dfn" : lambda x : "<hr>\ndefinition." if x=="" else "<hr>\ndefinition ["+x+"].",
     "claim" : lambda x : "<hr>\nclaim." if x=="" else "<hr>\nclaim ["+x+"].",
     "lemma" : lambda x : "<hr>\nlemma." if x=="" else "<hr>\nlemma ["+x+"].",
+    "cor" : lambda x : "<hr>\ncorollary." if x=="" else "<hr>\nlemma ["+x+"].",
     "theorem" : lambda x : "<hr>\ntheorem." if x=="" else "<hr>\ntheorem ["+x+"].",
+    "beginproof" : lambda rand, x : "\n<!-- beginproof -->\n\t <hr> <button onclick=\"show_hide(\'{}\')\">proof [".format(rand)+x+"]. </button> <div id=\"{}\" style=\"display: none;\">\n".format(rand),
     "norm" : lambda x : "\\left\\lVert {} \\right\\rVert".format(x)
 }
 
@@ -74,23 +78,24 @@ def getRandomString(N=10):
 def doFunction(string,hash_idx,closing_bracket_idx):
     fncName, var = getFunctionNameAndInput(string,hash_idx)
     fnc = fncDict[fncName]
-    if fncName!="proof":
+    if fncName not in ["proof","proof\n","beginproof"]:
         fncReplacement = fnc(var)
     else:
         rnd=getRandomString()
         fncReplacement=fnc(rnd,var)
-    
+
     return string[:hash_idx]+fncReplacement+string[closing_bracket_idx+1:]
 
 def doSomeFunction(string):
     for x in range(len(string)):
         if string[x]=="#":
-            closing_bracket_idx=open_and_closing_idx(string,x)[1]           
+            closing_bracket_idx=open_and_closing_idx(string,x)[1]
             return doFunction(string,x,closing_bracket_idx)
     return "already HTML"
 
 def doAllFunctions(string):
     string=string.replace("#newline","\n<hr>\n")
+    string=string.replace("#endproof","\n\t<span style=\"float:right;\"> ▨ </span> </div>\n<!-- endproof -->\n")
 
     while doSomeFunction(string) != "already HTML":
         string=doSomeFunction(string)

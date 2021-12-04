@@ -1,5 +1,11 @@
 #topic{linear algebra}
 
-#dfn{} $T\in %End V$ is #blue{diagonalizable} if there exists a basis $(v_{j})$ of $V$ and corresponding scalars $\lambda_{j}$ such that $Tv_{j}=\lambda_{j}v_{j}$. ie if $[T]_{B}$ is diagonal for some basis $B$.
+#dfn{} $T\in \End V$ is #blue{diagonalizable} if there exists a basis $(v_{j})$ of $V$ and corresponding scalars $\lambda_{j}$ such that $Tv_{j}=\lambda_{j}v_{j}$. ie if $[T]_{B}$ is diagonal for some basis $B$.
 
-#claim{} $T\in %End V$ diagonalizable iff $V=\bigoplus_{\lambda\in F}\ker(T-\lambda)$
+#claim{} $T\in \End V$ diagonalizable iff $V=\underset{\lambda\in F}{\oplus}\ker(T-\lambda)$.
+
+#proof{
+$[\impliedby]$ is clear. $[\implies]:$ let $v_j,\lambda_j$
+be as in the definition. then $V=\span \{v_j\}\le \sum\ker(T-\lambda_j)$.
+it remains to show the sum is direct. suppose $0=\sum_\lambda v_\lambda$
+with $Tv_{\lambda}=\lambda v_{\lambda}$. acting by $\prod_{\lambda\neq\lambda_{0}}(T-\lambda)$ yields $v_{\lambda_{0}}=0$.}

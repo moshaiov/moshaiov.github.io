@@ -1,13 +1,15 @@
 #newline
+#endproof
 
+#proof{} //wraps entire proof inside show/hide div
+#beginproof{} //creates a show/hide div. value passed will be shown in proof name.
 #comment{}
-#blue{}
-#topic{}
-#proof{}
+#blue{} //highlights
+#topic{} //creates header
 #dfn{}
 #claim{}
 #lemma{}
 #theorem{}
-#norm{}
+#norm{} //latex code for norm
 
-\Z,\Q,\R,\C,\End,\span
+\Z,\Q,\R,\C,\End,\span,\sub

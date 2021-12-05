@@ -29,8 +29,8 @@ function dark_light_button_fn() {
 function automatic_dark_mode()
 {
   let searchParams = new URLSearchParams(window.location.search);
-  if(searchParams.has('dark') && searchParams.get('dark')==="true")
-    dark_light_button_fn();
+  if(searchParams.get('dark')==="true")
+    toggle_dark_mode();
 }
 
 function mode_link(url)

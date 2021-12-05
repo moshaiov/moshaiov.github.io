@@ -1,5 +1,16 @@
 <!DOCTYPE html>
 <html>
+
+<!-- dark mode setup -->
+  <body onload="automatic_dark_mode()">
+    <style> body {visibility: hidden; opacity: 0;} </style>
+  <script>
+    window.addEventListener('DOMContentLoaded', function () {document.body.style.visibility = 'visible'; document.body.style.opacity = 1;});
+    let searchParams = new URLSearchParams(window.location.search);
+    if(searchParams.has('dark') && searchParams.get('dark')==="true")
+      document.body.style.backgroundColor = "black";
+  </script>
+    
 <head>
     <title>moshaiov</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -8,8 +19,6 @@
     <link rel="stylesheet" href="../graphics/main.css">
         <script src="../code/main.js"></script>
 </head>
-
-<body onload="automatic_dark_mode()">
     
 <span class="navbar" style="float:right; margin: 15px;">
   <button onclick="mode_link('../pages/homepage')" style="color: #49BED9;">home</button> &nbsp

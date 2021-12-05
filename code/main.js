@@ -8,18 +8,22 @@ function show_hide(id) {
 }
 
 function toggle_dark_mode() {
-  var x = document.body;
-  x.classList.toggle("dark");
+  var y = document.getElementById('dark_mode');
+  if (y.innerHTML==="light mode") {
+    document.body.style.backgroundColor = "white";
+    document.body.style.color = "black";
+    y.innerHTML="dark mode";
+  }
+  else {
+    document.body.style.backgroundColor = "black";
+    document.body.style.color = "white";
+    y.innerHTML="light mode";
+  }
   var buttons = document.getElementsByTagName('button');
   for (let i = 0; i < buttons.length; i++) {
       let button = buttons[i];
       button.classList.toggle("dark")
   }
-  var y = document.getElementById('dark_mode');
-  if (y.innerHTML==="light mode")
-    y.innerHTML="dark mode";
-  else
-    y.innerHTML="light mode";
 }
 
 function dark_light_button_fn() {

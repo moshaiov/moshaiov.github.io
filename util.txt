@@ -14,6 +14,7 @@ https://math.mit.edu/classes/18.745/Notes/ [Lie alg]
 https://math.dartmouth.edu/~dana/bookspapers/cstar.pdf
 https://people.math.harvard.edu/~ctm/home/text/class/harvard/212a/19/html/home/course/course.pdf
 https://matthewhr.wordpress.com/expository-writings-notes-problem-solutions-etc/
+https://www.math.ucla.edu/~biskup/PDFs/PCMI/PCMI-notes-1 [random walks]
 
 PROBLEMS (srcs)
 https://istina.msu.ru/media/courses/course/7be/72b/31309676/pdfjoiner_11.pdf

@@ -23,6 +23,8 @@ https://math.columbia.edu/~dejong/courses/Commutative-Algebra.pdf
 https://ocw.mit.edu/courses/mathematics/18-712-introduction-to-representation-theory-fall-2010/lecture-notes/
 https://math.mit.edu/classes/18.745/Notes/
 http://www-math.mit.edu/~etingof/artinnotes.pdf
+http://perso.ens-lyon.fr/sophie.morel/notes540.pdf [homological algebra]
+http://perso.ens-lyon.fr/sophie.morel/rep_theory_notes.pdf
 
 geometry & topology
 -------------------
@@ -37,6 +39,8 @@ analysis
 https://math.mit.edu/~rbm/iml/    [distributions]
 https://math.dartmouth.edu/~dana/bookspapers/cstar.pdf
 https://people.math.harvard.edu/~ctm/home/text/class/harvard/212a/19/html/home/course/course.pdf    [advanced real analysis]
+http://perso.ens-lyon.fr/sophie.morel/notes_449.pdf [analytic rep theory]
+
 
 probability
 -----------

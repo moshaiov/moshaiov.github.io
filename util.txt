@@ -28,6 +28,7 @@ http://perso.ens-lyon.fr/sophie.morel/rep_theory_notes.pdf
 
 geometry & topology
 -------------------
+https://www.math.stonybrook.edu/~kirillov/mat552/liegroups.pdf
 https://you-qi2121.github.io/mypage/liegroup.pdf
 https://you-qi2121.github.io/mypage/cars.pdf    [Riemann surfaces]
 https://math.berkeley.edu/~teleman/math/Riemann.pdf

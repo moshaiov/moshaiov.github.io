@@ -42,10 +42,13 @@ https://math.dartmouth.edu/~dana/bookspapers/cstar.pdf
 https://people.math.harvard.edu/~ctm/home/text/class/harvard/212a/19/html/home/course/course.pdf    [advanced real analysis]
 http://perso.ens-lyon.fr/sophie.morel/notes_449.pdf [analytic rep theory]
 
-
 probability
 -----------
 https://www.math.ucla.edu/~biskup/PDFs/PCMI/PCMI-notes-1 [random walks]
+
+cs theory
+---------
+https://faculty.math.illinois.edu/~vddries/recursion.pdf
 
 OTHER
 =====

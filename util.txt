@@ -12,6 +12,8 @@ http://www.ma.huji.ac.il/~razk/iWeb/My_Site/Teaching.html
 Hebrew
 ------
 https://digmi.org/lecture-notes/
+http://www.limsoup.net/
+https://www.nachi.co.il/lecture-notes-%D7%A1%D7%99%D7%9B%D7%95%D7%9E%D7%99%D7%9D
 https://www.weizmann.ac.il/math/Gelander/sites/math.Gelander/files/uploads/commutative-algebra.pdf
 http://www.ma.huji.ac.il/lecture_notes/pazy1.pdf [mainfolds]
 

@@ -1,5 +1,32 @@
-#topic{linear analysis}
+#topic{functional analysis}
 
-#theorem{Bohman-Korovkin} let
+#theorem{} $X\biject\mspec(\CC(X))$ via $x\mapsto\{f\in\CC(X):f(x)=0\}$ for a compact Hausdorff $X$.
 
-then
+#proof
+{
+clearly $\mm_x=\ker(\eval_x)$ is a maximal ideal. $\mm_x\neq\mm_y$ for $x\neq y$ follows from Urysohn. now, suppose $I\ideal\CC(X)$ is contained in no $\mm_x$. then $\forall x\exists f_x\in I:f_x(x)\neq0$. let $U_x=\{y:f_x(y)\neq 0\}$. for $X=U_{x_1}\cup\dots\cup U_{x_n}$ we have $0 < f_{x_1}\overline{f_{x_1}}+\dots+f_{x_n}\overline{f_{x_n}}\in I$, meaning $I=\CC(X)$. 
+}
+
+#theorem{Bohman-Korovkin} let $B_n$ be positif linear operators on $\CC[0,1]$. then $B_nf\unif f$ for all $f\in\CC[0,1]$ if it holds for $f(x)=1,x,x^2$.
+
+#proof
+{
+fix $f,\eps$. we have $#abs{f(x)-f(y)}\le \eps+C_{f,\eps}(x-y)^2$ by uniform continuity. since $#abs{B_n(g)}\le B_n(|g|)$ we have pointwise 
+$#abs{f(y)-B_{n}f}\le #abs{B_{n}(f(y)-f)}$
+$+#norm{f}#norm{1-B_{n}(1)}$
+$\le B_{n}(#abs{f-f(y)})$
+$+#norm{f} o(1)$
+$\le\eps B_{n}(1)+C_{f,\eps}B_{n}((\iden-y)^{2})$
+$+#norm{f} o(1)\le\eps+C_{f,\eps}(\iden-y)^{2}$
+$+(\eps+C_{f,\eps}$
+$+#norm{f} )o(1)$
+
+and thus $#norm{f-B_n(f)}=\max_y #abs{f(y)-B_{n}(f)(y)}\le 2\eps$ for large enough $n$.
+}
+
+#cor{Bernstein}
+for $f\in\CC[0,1]$ we have 
+$\displaystyle\sum_{k=0}^{n}$$f(\frac{k}{n}){n \choose k}x^{k}(1-x)^{n-k}\unif f(x)$.
+
+#cor{Weierstrass} any continuous function on a compact interval is a uniform limit of polynomials.
+

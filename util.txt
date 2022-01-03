@@ -38,6 +38,7 @@ https://you-qi2121.github.io/mypage/cars.pdf    [Riemann surfaces]
 https://math.berkeley.edu/~teleman/math/Riemann.pdf
 https://www.math.stonybrook.edu/~azinger/mat620/EGnotes.pdf
 https://meshulam.net.technion.ac.il/files/2021/05/Introductory-Geometry-English.pdf
+https://adebray.github.io/lecture_notes/m392c_RSnotes.pdf
 
 analysis
 --------
@@ -61,6 +62,7 @@ https://istina.msu.ru/media/courses/course/7be/72b/31309676/pdfjoiner_11.pdf
 https://drive.google.com/file/d/1sQtirXxkEfWYuGSKDZ-d7VGYkR_idebY/view?usp=sharing [olympiad combinatorics]
 https://web.stanford.edu/~dkim04/assets/pdf/writings/olympiad/pow-compressed.pdf
 https://www.reddit.com/r/mathriddles/comments/grs783/the_prisoners_problem_to_end_all_prisoners/
+chiasme
 
 MIGHT BE COOL TO
 implement the game black sheep

@@ -1,0 +1,1019 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing single
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine basic
+\cite_engine_type default
+\biblio_style plain
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation 0bp
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+concise mathematics
+\end_layout
+
+\begin_layout Author
+tom moshaiov
+\end_layout
+
+\begin_layout Date
+-
+\end_layout
+
+\begin_layout Standard
+chapters : 
+\end_layout
+
+\begin_layout Standard
+background (calculus, number theory, set theory)
+\end_layout
+
+\begin_layout Standard
+analysis (metric spaces, complex analysis, Fourier analysis, functional
+ analysis, measure theory)
+\end_layout
+
+\begin_layout Standard
+geometry (differential geometry, topological spaces, algebraic topology)
+\end_layout
+
+\begin_layout Standard
+algebra (linear algebra, group theory, commutative algebra, field theory,
+ Lie algebras)
+\end_layout
+
+\begin_layout Standard
+combinatorics (enumeration, graph theory, computation, game theory)
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\conv}{\text{conv}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\ord}{\text{ord}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FormulaMacro
+\newcommand{\lcm}{\text{lcm}}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+calculus lecture 1 - series expansion, the derivative, the exponential function
+\end_layout
+
+\begin_layout Standard
+note : this will not be a rigorous course.
+ the student will eventually understand the rigorous treatment, cf [metric
+ spaces, measure theory].
+ you needn't worry, even though functions will usually be assumed analytic,
+ the lectures are suited for a mathematician, not only a physicist.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+motivation.
+ given a function 
+\begin_inset Formula $f$
+\end_inset
+
+ (taking and outputting real values) and a point 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+, we wish to expand 
+\begin_inset Formula $f$
+\end_inset
+
+ at 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ as 
+\begin_inset Formula $f(x_{0}+h)=A+Bh+Ch^{2}+Dh^{3}+\dots$
+\end_inset
+
+.
+ letting 
+\begin_inset Formula $h=0$
+\end_inset
+
+, we see 
+\begin_inset Formula $A=f(x_{0})$
+\end_inset
+
+.
+ what about the higher coefficients? suppose 
+\begin_inset Formula $h=10^{-9}$
+\end_inset
+
+ is a very small number.
+ then 
+\begin_inset Formula $h^{2}=10^{-18}$
+\end_inset
+
+ is even smaller, considerably so, not to mention the higher powers 
+\begin_inset Formula $h^{3},h^{4},\dots$
+\end_inset
+
+.
+ thus 
+\begin_inset Formula $f(x_{0}+h)\sim f(x_{0})+Bh$
+\end_inset
+
+ is a linear approximation of 
+\begin_inset Formula $f$
+\end_inset
+
+ at 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+, valid for very small 
+\begin_inset Formula $h$
+\end_inset
+
+.
+ so 
+\begin_inset Formula $B$
+\end_inset
+
+ is the slope, namely the rate of change of 
+\begin_inset Formula $f(x_{0}+h)$
+\end_inset
+
+ with respect to 
+\begin_inset Formula $h$
+\end_inset
+
+.
+ this crucial coefficient 
+\begin_inset Formula $B$
+\end_inset
+
+ is called the derivative of 
+\begin_inset Formula $f$
+\end_inset
+
+ at 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+, denoted 
+\begin_inset Formula $f'(x_{0})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+example.
+ if 
+\begin_inset Formula $f(x)=x^{2}$
+\end_inset
+
+, then 
+\begin_inset Formula $f(x_{0}+h)=x_{0}^{2}+2x_{0}h+h^{2}$
+\end_inset
+
+, meaning 
+\begin_inset Formula $f'(x_{0})=2x_{0}$
+\end_inset
+
+ for any 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+, or simply 
+\begin_inset Formula $f'(x)=2x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+exercise.
+ find 
+\begin_inset Formula $f'(x_{0})$
+\end_inset
+
+ for general 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+ and 
+\begin_inset Formula $f(x)$
+\end_inset
+
+ one of the following.
+ 
+\begin_inset Formula $f(x)\equiv5$
+\end_inset
+
+ (constant), 
+\begin_inset Formula $f(x)=x$
+\end_inset
+
+, 
+\begin_inset Formula $f(x)=x^{3}$
+\end_inset
+
+, generally 
+\begin_inset Formula $f(x)=x^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+observation.
+ let 
+\begin_inset Formula $f,g$
+\end_inset
+
+ be two functions.
+ then 
+\begin_inset Formula $(f+g)'(x_{0})=f'(x_{0})+g'(x_{0})$
+\end_inset
+
+.
+ if 
+\begin_inset Formula $c$
+\end_inset
+
+ is a constant, 
+\begin_inset Formula $(cf)'(x_{0})=cf'(x_{0})$
+\end_inset
+
+.
+ more generally, 
+\begin_inset Formula $(fg)'(x_{0})=f'(x_{0})g(x_{0})+f(x_{0})g'(x_{0})$
+\end_inset
+
+ [Leibniz rule].
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(f+g)'=f'+g'
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(cf)'=cf'
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+(fg)'=f'g+g'f
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+exercise.
+ verify Leibniz's rule for 
+\begin_inset Formula $f(x)=x^{k}$
+\end_inset
+
+ and 
+\begin_inset Formula $g(x)=x^{m}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+exercise.
+ if 
+\begin_inset Formula $g(x)=f(c+x)$
+\end_inset
+
+ then 
+\begin_inset Formula $g'(x)=f'(c+x)$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+corollary.
+ 
+\begin_inset Formula $f(x_{0}+h)=a_{0}+a_{1}h+a_{2}h^{2}+a_{3}h^{3}+\dots$
+\end_inset
+
+ implies 
+\begin_inset Formula $f'(x_{0}+h)=a_{1}+2a_{2}h+3a_{3}h^{2}+\dots$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+corollary.
+ let 
+\begin_inset Formula $f(x_{0}+h)=a_{0}+a_{1}h+a_{2}h^{2}+a_{3}h^{3}+\dots$
+\end_inset
+
+ be the series expansion of 
+\begin_inset Formula $f$
+\end_inset
+
+ at 
+\begin_inset Formula $x_{0}$
+\end_inset
+
+.
+ then 
+\begin_inset Formula $a_{0}=f(x_{0})$
+\end_inset
+
+, 
+\begin_inset Formula $a_{1}=f'(x_{0})$
+\end_inset
+
+, 
+\begin_inset Formula $a_{2}=f''(x_{0})/2$
+\end_inset
+
+, 
+\begin_inset Formula $a_{3}=f'''(x_{0})/6$
+\end_inset
+
+, and in general 
+\begin_inset Formula $a_{n}=f^{(n)}(x_{0})/n!$
+\end_inset
+
+, where 
+\begin_inset Formula $f^{(n)}$
+\end_inset
+
+ is the 
+\begin_inset Formula $n$
+\end_inset
+
+th derivative function of 
+\begin_inset Formula $f$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+problem.
+ the exponential function 
+\begin_inset Formula $\exp(x)$
+\end_inset
+
+ satisfies 
+\begin_inset Formula $\exp(0)=1$
+\end_inset
+
+ and 
+\begin_inset Formula $\exp'(x)=\exp(x)$
+\end_inset
+
+ for all 
+\begin_inset Formula $x$
+\end_inset
+
+.
+ find its series expansion at 
+\begin_inset Formula $x_{0}=0$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+solution.
+ write 
+\begin_inset Formula $\exp(x)=a_{0}+a_{1}x+a_{2}x^{2}+a_{3}x^{3}+a_{4}x^{4}+\dots$
+\end_inset
+
+.
+ then 
+\begin_inset Formula $1=\exp(0)=\exp^{(n)}(0)=a_{n}n!$
+\end_inset
+
+ so that 
+\begin_inset Formula $\exp(x)=1+x+x^{2}/2+x^{3}/6+x^{4}/24+x^{5}/120+\dots$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+note.
+ in particular, we see that having the starting value 
+\begin_inset Formula $\exp(0)$
+\end_inset
+
+ and a formula for the infinitesimal rate of change of 
+\begin_inset Formula $\exp$
+\end_inset
+
+ at every point, we determined 
+\begin_inset Formula $\exp(x)$
+\end_inset
+
+ for all 
+\begin_inset Formula $x$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+calculus sheet 1
+\end_layout
+
+\begin_layout Standard
+exercise.
+ let 
+\begin_inset Formula $h(x)=f(g(x))$
+\end_inset
+
+ be a composed function.
+ then 
+\begin_inset Formula $h'(x)=f'(g(x))g'(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+exercise.
+ show that 
+\begin_inset Formula $1+t+t^{2}+t^{3}+\dots=\dfrac{1}{1-t}$
+\end_inset
+
+ for 
+\begin_inset Formula $|t|<1$
+\end_inset
+
+.
+ deduce that 
+\begin_inset Formula $\left(\dfrac{1}{x}\right)'=-\dfrac{1}{x^{2}}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+exercise.
+ express 
+\begin_inset Formula $(f/g)'$
+\end_inset
+
+ in terms of 
+\begin_inset Formula $f,g,f',g'$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+exercise.
+ show that 
+\begin_inset Formula $\exp(x+y)=\exp(x)\exp(y)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+hint.
+ consider 
+\begin_inset Formula $g(x)=\exp(x+y)/\exp(y)$
+\end_inset
+
+.
+ why must it equal 
+\begin_inset Formula $\exp(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+field theory - lecture ? - finite fields
+\end_layout
+
+\begin_layout Standard
+claim.
+ any finite subgroup of 
+\begin_inset Formula $F^{\times}$
+\end_inset
+
+ is cyclic.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+proof.
+ let 
+\begin_inset Formula $G\le F^{\times}$
+\end_inset
+
+ have order 
+\begin_inset Formula $n$
+\end_inset
+
+.
+ then the 
+\begin_inset Formula $n$
+\end_inset
+
+ elements of 
+\begin_inset Formula $g$
+\end_inset
+
+ solve 
+\begin_inset Formula $g^{n}=1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+proof 1.
+ write 
+\begin_inset Formula $n=p_{1}^{a_{1}}\dots p_{k}^{a_{k}}=q_{1}\dots q_{k}$
+\end_inset
+
+.
+ there's at most 
+\begin_inset Formula $n/p_{j}$
+\end_inset
+
+ solutions to 
+\begin_inset Formula $x^{n/p_{j}}=1$
+\end_inset
+
+ in 
+\begin_inset Formula $F$
+\end_inset
+
+, so 
+\begin_inset Formula $\exists g_{j}\in G$
+\end_inset
+
+ with 
+\begin_inset Formula $g_{j}^{n/p_{j}}\neq1$
+\end_inset
+
+.
+ it follows that 
+\begin_inset Formula $\ord(g_{j}^{n/q_{j}})=q_{j}$
+\end_inset
+
+.
+ since the 
+\begin_inset Formula $q_{j}$
+\end_inset
+
+ are pairwise coprime and 
+\begin_inset Formula $G$
+\end_inset
+
+ abelian, it contains an element of order 
+\begin_inset Formula $q_{1}\dots q_{k}=n$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+proof 2.
+ write 
+\begin_inset Formula $G\simeq C_{n_{1}}\times\dots\times C_{n_{r}}$
+\end_inset
+
+.
+ let 
+\begin_inset Formula $k=\lcm(n_{1},\dots,n_{r})\le n$
+\end_inset
+
+.
+ then 
+\begin_inset Formula $g^{k}=1$
+\end_inset
+
+ for all 
+\begin_inset Formula $g\in G$
+\end_inset
+
+.
+ since there's 
+\begin_inset Formula $n$
+\end_inset
+
+ solutions to this degree 
+\begin_inset Formula $k$
+\end_inset
+
+ equation, 
+\begin_inset Formula $n\le k$
+\end_inset
+
+.
+ finally, 
+\begin_inset Formula $\lcm(n_{j})=\prod n_{j}$
+\end_inset
+
+ implies the 
+\begin_inset Formula $n_{j}$
+\end_inset
+
+ are pairwise coprime, and 
+\begin_inset Formula $G$
+\end_inset
+
+ is cyclic.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+theorem.
+ there are 
+\begin_inset Formula $\dfrac{1}{n}{\displaystyle \sum_{d\mid n}\mu(n/d)q^{d}}$
+\end_inset
+
+ irreducible monic polynomials of degree 
+\begin_inset Formula $n$
+\end_inset
+
+ over 
+\begin_inset Formula $F_{q}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage newpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection*
+
+\color red
+algebraic topology lecture 2 - homotopy invariance - incomplete
+\end_layout
+
+\begin_layout Standard
+exercise.
+ 
+\begin_inset Formula $\Delta^{n}\times I={\displaystyle \bigcup_{i=0}^{n}}\conv\{e_{0},\dots,e_{i},(e_{i},1),\dots,(e_{n},1)\}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+sol.
+ 
+\begin_inset Formula $\supseteq$
+\end_inset
+
+ is clear.
+ fix 
+\begin_inset Formula $x=t_{0}e_{0}+\dots+t_{n}e_{n}+te_{n+1}$
+\end_inset
+
+.
+ if 
+\begin_inset Formula $t_{i+1}+\dots+t_{n}\le t\le t_{i}+\dots+t_{n}$
+\end_inset
+
+ then 
+\begin_inset Formula $x=t_{0}e_{0}+\dots+t_{i-1}e_{i-1}+\alpha e_{i}+\beta(e_{i},1)+t_{i+1}(e_{i+1},1)+\dots+t_{n}(e_{n},1)$
+\end_inset
+
+ where 
+\begin_inset Formula $\beta=t-(t_{i+1}+\dots+t_{n})$
+\end_inset
+
+ and 
+\begin_inset Formula $\alpha=t_{i}-\beta$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+claim.
+ if 
+\begin_inset Formula $f\simeq g$
+\end_inset
+
+ are homotopic maps 
+\begin_inset Formula $X\to Y$
+\end_inset
+
+, then 
+\begin_inset Formula $g_{\#}-f_{\#}$
+\end_inset
+
+ is of the form 
+\begin_inset Formula $dP+Pd$
+\end_inset
+
+ for some 
+\begin_inset Formula $P:S_{n}(X)\to S_{n+1}(Y)$
+\end_inset
+
+.
+ in particular, 
+\begin_inset Formula $f_{*}=g_{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $ $
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

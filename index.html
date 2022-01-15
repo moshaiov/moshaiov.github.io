@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Moshaiov </title>
+	<link rel="stylesheet" href="main.css">
+	<script src="main.js"> </script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], processEscapes: true }}); </script>
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+</head>
+<body>
+
+<!-- MENU --> <div style="text-align: center;">
+<span class="lnk" onclick="show_only_page('home page')">home</span> &nbsp &nbsp
+<span class="lnk" onclick="show_only_page('notes')">notes</span> &nbsp &nbsp
+<span class="lnk" onclick="show_only_page('solutions')">solutions</span> &nbsp &nbsp
+<span class="lnk" onclick="show_only_page('games')">games</span> &nbsp &nbsp
+<span class="btn" onclick="toggle_dark_and_light_modes()" id="light_switch_button">dark mode</span>
+</div> <br> <!-- END MENU -->
+
+
+<!-- HOME PAGE --> <div id="home page" class="page" style="display: inline;">
+	welcome to my webpage <br>
+	contact : t0m d0t m0shai0v at gmail d0t c0m
+</div> <!-- END HOME PAGE-->
+
+
+<!-- LATEX MACROS --> <div style="display: none;">
+	$
+	\newcommand{\disp}{\displaystyle}
+	\newcommand{\sub}{\subseteq}
+	\newcommand{\End}{\text{End}}
+	\newcommand{\img}{\text{img}}
+	\newcommand{\d}{\text{d}}
+	\newcommand{\O}{\mathcal{O}}
+	\newcommand{\R}{\mathbf{R}}
+	\newcommand{\Z}{\mathbf{Z}}
+	\newcommand{\N}{\mathbf{N}}
+	$
+</div> <!-- END LATEX MACROS -->
+
+
+<!-- NOTES --> <div id="notes" class="page" style="display: none;">
+<u>links to contents</u><br>
+
+
+<!-- TABLE OF CONTENTS -->
+		<!-- LINEAR ALGEBRA MENU --> <span class="btn" onclick="toggle_show_and_hide('linear algebra anchors')">linear algebra</span> <br>
+		<div id="linear algebra anchors" style="display: none;">
+			&nbsp <span class="lnk" onclick="show_only_topic('nilpotent-operators')">nilpotent operators</span> <br>
+		</div> <!-- END LINEAR ALGEBRA MENU -->
+
+		<!-- CALCULUS MENU --> <span class="btn" onclick="toggle_show_and_hide('calculus anchors')">calculus</span> <br>
+		<div id="calculus anchors" style="display: none;">
+			&nbsp <span class="lnk" onclick="show_only_topic('Feynman-method')">Feynamn method</span> <br>
+		</div> <!-- END CALCULUS MENU -->
+
+		<!-- MISCELLANY MENU --> <span class="btn" onclick="toggle_show_and_hide('miscellany anchors')">miscellany</span> <br>
+		<div id="miscellany anchors" style="display: none;">
+			&nbsp <span class="lnk" onclick="show_only_topic('problems')">problems</span> <br>
+		</div> <!-- END MISCELLANY MENU -->
+<!-- END TABLE OF CONTENTS -->
+
+<!-- NILPOTENT OPERATORS --> <div id="nilpotent-operators" class="topic" style="display: none;"> <h1>nilpotent operators</h1>
+	<u>claim</u> let $T\in\End(V)$, $n=\dim V$. then $\{v\mid \exists k : T^k=0\}=\ker T^n$. in particular, $T$ is nilpotent iff $T^n=0$.
+
+	<br><br>
+
+	<span class="btn" onclick="toggle_show_and_hide('ab')"><u>proof</u></span> <div id="ab" style="display: none;">
+	consider the chain $\{0\}=\ker T^0\sub \ker T\sub \ker T^2\sub\dots\sub\ker T^n\sub \ker T^{n+1}\sub \dots$ . it must stabilize. namely, let $m$ be the smallest solution for $\ker T^k=\ker T^{k+1}$. then $m\le n$ and since $T^{m+1}x=0\implies T^mx=0$, we have $\ker T^m=\ker T^{m+1}=\ker T^{m+2}=\ker T^{m+3}=\dots$ . ergo $\bigcup_{k\ge0}\ker T^k=\ker T^m=\ker T^n$.
+	<span style="float:right;"> ▨ </span></div>
+
+	<br><br>
+
+	<u>theorem</u> [Jordan] the following equivalent statements hold true for any nilpotent operator $T\in\End V$. <br>
+	$\cdot$ $V$ may be decomposed as $V=\bigoplus_{j=1}^r V_j$ where $T$ acts as a nilpotent shift on each $V_j$. <br>
+	$\cdot$ $T$ has a block diagonal matrix form where each block has the form $ \tiny{\begin{bmatrix} 0 & 1 &  &  &  \\ & 0 & 1 &  &  \\ &  & \ddots & 1 &  \\ &  &  & 0 & 1 \\ &  &  &  & 0 \end{bmatrix}}$ <br>
+	$\cdot$ there exists $v_1,\dots,v_r\in V$ such that $\O_{v_1}\sqcup\dots\sqcup\O_{v_r}$ is a basis of $V$, where $\O_v=\{v,Tv,T^2v,\dots\}\setminus\{0\}$.
+
+	<br><br>
+
+	<span class="btn" onclick="toggle_show_and_hide('aa')"><u>proof</u></span> <div id="aa" style="display: none;">
+	by induction on $\dim V$. base case : a nilpotent $1\times 1$ matrix is $[0]$. <br>
+	step : let $W=\img T$. if $W=0$ then $T=0$ and we're done. otherwise consider $T|_W\in\End W$.
+	let $(w_1,\dots,T^{f_1}w_1,\dots,w_k,\dots,T^{f_k}w_k)$ be an orbital union basis of $W$. <br>
+	fix $Tv_j=w_j$ ($j\in[k]$) as well as $u_1,\dots,u_r$ completing $T^{f_1}w_1,\dots,T^{f_k}w_k$ to a basis of $\ker T$. <br>
+	the orbital union $(v_1,w_1,\dots,T^{f_1}w_1,\dots,v_k,w_k,\dots,T^{f_k}w_k,u_1,\dots,u_r)$ is a list of $\dim V$ linearly independent vectors, i.e. a basis.
+	<span style="float:right;"> ▨ </span></div>
+</div> <!-- END NILPOTENT OPERATORS -->
+
+
+<!-- FEYNMAN METHOD --> <div id="Feynman-method" class="topic" style="display: none;"> <h1>Feynman method</h1>
+	<u>♣1</u> compute $\disp\int_0^\infty\frac{e^{-x}-e^{-2x}}{x}\d x$
+</div> <!-- END FEYNMAN METHOD -->
+
+<!-- PROBLEMS --> <div id="problems" class="topic" style="display: none;"> <h1>problems</h1>
+	<u>♣1</u> determine how Alice and Bob can perform the following trick. with Bob in the other room, Alice presents the audience with an eight by eight grid of lamps, initially turned off. she picks an audience member, who is allowed to toggle the state of each of the lamps. then, a second audience member is chosen to come to the stage and point at (but not toggle) one of the lamps. Alice thinks for a bit and toggles one of the lamps. she calls Bob to enter the room. Bob sees the toggled board, thinks for a bit, and points at the same lamp as the audience member.
+
+	<br><br>
+
+	<u>♣2</u> let $f:\Z^\N\to\Z$ obey $f(x+y)=f(x)+f(y)$ $\forall$ integral sequences $x,y$. show that $\exists$ a finite sequence $\alpha_1,\dots,\alpha_k : f(x_1,x_2,x_3,\dots)=x_1\alpha_1+\dots+x_k\alpha_k$ $\forall x$.
+
+	<br><br>
+</div> <!-- END PROBLEMS -->
+
+</div> <!-- END NOTES -->
+
+	<!-- SOLUTIONS --> <div id="solutions" class="page" style="display: none;">
+	<span style="color:red"> under construction </span>
+	</div> <!-- END SOLUTIONS -->
+
+
+	<!-- GAMES --> <div id="games" class="page" style="display: none;">
+		<span style="color:red"> under construction </span>
+	</div> <!-- END GAMES -->
+
+</body>
+
+</html>

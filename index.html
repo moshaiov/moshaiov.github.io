@@ -90,6 +90,27 @@
 
 
 <!-- FEYNMAN METHOD --> <div id="Feynman-method" class="topic" style="display: none;"> <h1>Feynman method</h1>
+	<u>example 1</u> we'll evaluate $\disp \int_0^1\frac{x^3-x^2}{\ln x}\d x$.
+
+	<br> <br>
+
+	<span class="btn" onclick="toggle_show_and_hide('ac')"><u>solution</u></span> <div id="ac" style="display: none;">
+		extending the problem, let $f(t)=\disp\int_0^1\frac{x^t-x^2}{\ln(x)}\d x$, convergent for $t>-1$. Leibniz yields $f'(t)=\disp \int_0^1 x^t\d x=\dfrac{1}{t+1}$. thus $f(t)=\ln(t+1)+C$. the value of $C=-\ln 3$ is given by $f(2)=0$. thus $f(3)=\ln(4/3)$ is the value we wanted.
+	<span style="float:right;"> ▨ </span></div>
+
+	<br> <br>
+
+	<u>example 2</u> we'll evaluate the Fourier transform of the Gaussian, namely $\disp f(\xi)=\int_{-\infty}^{\infty}e^{-x^2}e^{-2\pi i\xi x}\d x$.
+
+	<br> <br>
+
+	<span class="btn" onclick="toggle_show_and_hide('ad')"><u>solution</u></span> <div id="ad" style="display: none;">
+		calling the integrand $\Psi$, Leibniz yields $\disp f'(\xi)= \int_{-\infty}^{\infty} \partial_\xi\Psi\d x$.
+		but $\partial_\xi\Psi=-2\pi ix\Psi=\pi i(\partial_x \Psi +2\pi i\xi \Psi)$ gives $f'(\xi)=-2\pi^2\xi f(\xi)$. we solve this linear ODE by $f(\xi)=C e^{-\pi^2\xi^2}$. finally, the well known $f(0)=\sqrt{\pi}$ yields $$\disp\int_{-\infty}^{\infty}e^{-x^2}e^{-2\pi i\xi x}\d x=\sqrt{\pi}e^{-\pi^2\xi^2}$$
+	<span style="float:right;"> ▨ </span></div>
+
+	<br> <br>
+
 	<u>♣1</u> compute $\disp\int_0^\infty\frac{e^{-x}-e^{-2x}}{x}\d x$
 </div> <!-- END FEYNMAN METHOD -->
 

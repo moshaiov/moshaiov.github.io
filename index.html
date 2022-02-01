@@ -31,11 +31,15 @@
 	\newcommand{\sub}{\subseteq}
 	\newcommand{\End}{\text{End}}
 	\newcommand{\img}{\text{img}}
+	\newcommand{\st}{\text{ s.t. }}
 	\newcommand{\d}{\text{d}}
 	\newcommand{\O}{\mathcal{O}}
 	\newcommand{\R}{\mathbf{R}}
 	\newcommand{\Z}{\mathbf{Z}}
 	\newcommand{\N}{\mathbf{N}}
+	\newcommand{\T}{\mathbf{T}}
+	\newcommand{\TT}{\mathcal{T}}
+
 	$
 </div> <!-- END LATEX MACROS -->
 
@@ -43,8 +47,7 @@
 <!-- NOTES --> <div id="notes" class="page" style="display: none;">
 <u>links to contents</u><br>
 
-
-<!-- TABLE OF CONTENTS -->
+<!-- --------------------------------------------------------------------TABLE OF CONTENTS-------------------------------------------------------------------- -->
 		<!-- LINEAR ALGEBRA MENU --> <span class="btn" onclick="toggle_show_and_hide('linear algebra anchors')">linear algebra</span> <br>
 		<div id="linear algebra anchors" style="display: none;">
 			&nbsp <span class="lnk" onclick="show_only_topic('nilpotent-operators')">nilpotent operators</span> <br>
@@ -52,14 +55,20 @@
 
 		<!-- CALCULUS MENU --> <span class="btn" onclick="toggle_show_and_hide('calculus anchors')">calculus</span> <br>
 		<div id="calculus anchors" style="display: none;">
-			&nbsp <span class="lnk" onclick="show_only_topic('Feynman-method')">Feynamn method</span> <br>
+			&nbsp <span class="lnk" onclick="show_only_topic('Feynman method')">Feynamn method</span> <br>
 		</div> <!-- END CALCULUS MENU -->
+	
+		<!-- TOPOLOGY MENU --> <span class="btn" onclick="toggle_show_and_hide('topology anchors')">topology</span> <br>
+		<div id="topology anchors" style="display: none;">
+			&nbsp <span class="lnk" onclick="show_only_topic('combinatorial methods')">combinatorial methods</span> <br>
+		</div> <!-- END TOPOLOGY MENU -->
 
 		<!-- MISCELLANY MENU --> <span class="btn" onclick="toggle_show_and_hide('miscellany anchors')">miscellany</span> <br>
 		<div id="miscellany anchors" style="display: none;">
 			&nbsp <span class="lnk" onclick="show_only_topic('problems')">problems</span> <br>
 		</div> <!-- END MISCELLANY MENU -->
-<!-- END TABLE OF CONTENTS -->
+	
+<!-- --------------------------------------------------------------------LINEAR ALGEBRA-------------------------------------------------------------------- -->
 
 <!-- NILPOTENT OPERATORS --> <div id="nilpotent-operators" class="topic" style="display: none;"> <h1>nilpotent operators</h1>
 	<u>claim</u> let $T\in\End(V)$, $n=\dim V$. then $\{v\mid \exists k : T^kv=0\}=\ker T^n$. in particular, $T$ is nilpotent iff $T^n=0$.
@@ -88,8 +97,9 @@
 	<span style="float:right;"> ▨ </span></div>
 </div> <!-- END NILPOTENT OPERATORS -->
 
+<!-- --------------------------------------------------------------------CALCULUS-------------------------------------------------------------------- -->
 
-<!-- FEYNMAN METHOD --> <div id="Feynman-method" class="topic" style="display: none;"> <h1>Feynman method</h1>
+<!-- FEYNMAN METHOD --> <div id="Feynman method" class="topic" style="display: none;"> <h1>Feynman method</h1>
 	<u>example 1</u> we'll evaluate $\disp \int_0^1\frac{x^3-x^2}{\ln x}\d x$.
 
 	<br> <br>
@@ -114,6 +124,24 @@
 	<u>♣1</u> compute $\disp\int_0^\infty\frac{e^{-x}-e^{-2x}}{x}\d x$
 </div> <!-- END FEYNMAN METHOD -->
 
+<!-- --------------------------------------------------------------------TOPOLOGY-------------------------------------------------------------------- -->
+
+<!-- COMBINATORIAL METHODS --> <div id="combinatorial methods" class="topic" style="display: none;"> <h1>combinatorial methods</h1>
+	<u>claim</u> Sperner's lemma implies Brouwer's fixed point theorem
+	<br><br>
+	<span class="btn" onclick="toggle_show_and_hide('ae')"><u>proof</u></span> <div id="ae" style="display: none;">
+	suppose for the sake of contradiction $f:\Delta^d\to\Delta^d$ is continuous with no fixed points. 
+	then $\forall x\in\Delta^d\exists i\st x_i > f(x)_i$. we pick any such $i$ and color $x$ using it. 
+	this yields a Sperner coloring (on any triangulation). 
+	for each $n$ let $\TT_n$ be a triangulation of $\Delta^n$ with diameter less than $1/n$. 
+	let $T_n\in\TT_n$ be a Sperner simplex, and let $x^0_n,\dots,x^d_n$ be its vertices, with $x^i_n$ colored $i$, and any pair distanced at most $1/n$ apart.
+	let $x\in\Delta^d$ be an accumulation point of $x^0_n$. ergo $x$ is also an accumulation point of $x^i_n$ for each $i$. 
+	it follows that $f(x)_i\le x_i$ for all $i$. since $1=\sum x_i=\sum f(x)_i$, it follows that $x$ is a fixed point of $f$.
+	<span style="float:right;"> ▨ </span></div>
+</div> <!-- END COMBINATORIAL METHODS -->
+
+<!-- --------------------------------------------------------------------MISC-------------------------------------------------------------------- -->
+	
 <!-- PROBLEMS --> <div id="problems" class="topic" style="display: none;"> <h1>problems</h1>
 	<u>♣1</u> determine how Alice and Bob can perform the following trick. with Bob in the other room, Alice presents the audience with an eight by eight grid of lamps, initially turned off. she picks an audience member, who is allowed to toggle the state of each of the lamps. then, a second audience member is chosen to come to the stage and point at (but not toggle) one of the lamps. Alice thinks for a bit and toggles one of the lamps. she calls Bob to enter the room. Bob sees the toggled board, thinks for a bit, and points at the same lamp as the audience member.
 
@@ -126,14 +154,18 @@
 
 </div> <!-- END NOTES -->
 
-	<!-- SOLUTIONS --> <div id="solutions" class="page" style="display: none;">
+<!-- --------------------------------------------------------------------SOLUTIONS-------------------------------------------------------------------- -->
+	
+<div id="solutions" class="page" style="display: none;">
 	<span style="color:red"> under construction </span>
-	</div> <!-- END SOLUTIONS -->
+</div> <!-- END SOLUTIONS -->
 
+<!-- --------------------------------------------------------------------GAMES-------------------------------------------------------------------- -->
 
-	<!-- GAMES --> <div id="games" class="page" style="display: none;">
-		<span style="color:red"> under construction </span>
-	</div> <!-- END GAMES -->
+	
+<div id="games" class="page" style="display: none;">
+	<span style="color:red"> under construction </span>
+</div> <!-- END GAMES -->
 
 </body>
 

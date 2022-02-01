@@ -52,6 +52,7 @@ http://perso.ens-lyon.fr/sophie.morel/notes_449.pdf [analytic rep theory]
 probability
 -----------
 https://www.math.ucla.edu/~biskup/PDFs/PCMI/PCMI-notes-1 [random walks]
+http://hairer.org/notes/Markov.pdf
 
 cs theory
 ---------

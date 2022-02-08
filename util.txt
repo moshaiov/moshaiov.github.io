@@ -67,6 +67,7 @@ https://drive.google.com/file/d/1sQtirXxkEfWYuGSKDZ-d7VGYkR_idebY/view?usp=shari
 https://web.stanford.edu/~dkim04/assets/pdf/writings/olympiad/pow-compressed.pdf
 https://www.reddit.com/r/mathriddles/comments/grs783/the_prisoners_problem_to_end_all_prisoners/
 chiasme
+https://artofproblemsolving.com/community/c6h374983_russia_2003
 
 MIGHT BE COOL TO
 implement the game black sheep

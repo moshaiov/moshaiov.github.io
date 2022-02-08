@@ -32,6 +32,7 @@ https://math.mit.edu/classes/18.745/Notes/
 http://www-math.mit.edu/~etingof/artinnotes.pdf
 http://perso.ens-lyon.fr/sophie.morel/notes540.pdf [homological algebra]
 http://perso.ens-lyon.fr/sophie.morel/rep_theory_notes.pdf
+http://www.mathematik.uni-regensburg.de/Jannsen/home/UebungWS1718/Etale-gesamt-eng.pdf
 
 geometry & topology
 -------------------

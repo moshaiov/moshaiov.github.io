@@ -55,6 +55,7 @@ probability
 -----------
 https://www.math.ucla.edu/~biskup/PDFs/PCMI/PCMI-notes-1 [random walks]
 http://hairer.org/notes/Markov.pdf
+http://www2.math.uu.se/~sea/kurser/stokprocmn1/slumpvandring_eng.pdf
 
 cs theory
 ---------
@@ -69,6 +70,7 @@ https://web.stanford.edu/~dkim04/assets/pdf/writings/olympiad/pow-compressed.pdf
 https://www.reddit.com/r/mathriddles/comments/grs783/the_prisoners_problem_to_end_all_prisoners/
 chiasme
 https://artofproblemsolving.com/community/c6h374983_russia_2003
+https://dgrozev.wordpress.com/
 
 MIGHT BE COOL TO
 implement the game black sheep

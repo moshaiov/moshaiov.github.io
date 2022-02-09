@@ -72,6 +72,7 @@ chiasme
 https://artofproblemsolving.com/community/c6h374983_russia_2003
 https://dgrozev.wordpress.com/
 https://www.reddit.com/r/mathriddles/comments/lsutbq/infinite_set_of_gamers/
+https://www.reddit.com/r/mathriddles/comments/puvqdh/guessing_numbers_general/
 
 MIGHT BE COOL TO
 implement the game black sheep

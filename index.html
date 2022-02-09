@@ -33,41 +33,87 @@
 	\newcommand{\img}{\text{img}}
 	\newcommand{\st}{\text{ s.t. }}
 	\newcommand{\d}{\text{d}}
+	\newcommand{\eps}{\varepsilon}
+
 	\newcommand{\O}{\mathcal{O}}
 	\newcommand{\R}{\mathbf{R}}
 	\newcommand{\Z}{\mathbf{Z}}
+	\newcommand{\Q}{\mathbf{Q}}
 	\newcommand{\N}{\mathbf{N}}
 	\newcommand{\T}{\mathbf{T}}
 	\newcommand{\TT}{\mathcal{T}}
+	\newcommand{\CC}{\mathscr{C}}
+	\newcommand{\too}{\longrightarrow}
+	\newcommand{\arr}[1]{\overset{#1}{\to}}
+	\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+	\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+
 
 	$
 </div> <!-- END LATEX MACROS -->
 
-
 <!-- NOTES --> <div id="notes" class="page" style="display: none;">
-<u>links to contents</u><br>
+<span class="btn" onclick="toggle_show_and_hide('links to contents')"><u>links to contents</u></span> <br>
+<!-- TABLE OF CONTENTS --><div id="links to contents" style="display:none;">
 
-<!-- --------------------------------------------------------------------TABLE OF CONTENTS-------------------------------------------------------------------- -->
-		<!-- LINEAR ALGEBRA MENU --> <span class="btn" onclick="toggle_show_and_hide('linear algebra anchors')">linear algebra</span> <br>
-		<div id="linear algebra anchors" style="display: none;">
-			&nbsp <span class="lnk" onclick="show_only_topic('nilpotent-operators')">nilpotent operators</span> <br>
-		</div> <!-- END LINEAR ALGEBRA MENU -->
+		<!-- COMBINATORICS MENU --> <span class="btn" onclick="toggle_show_and_hide('combinatorics anchors')">combinatorics</span> <br>
+		<div id="combinatorics anchors" style="display: none;">
+			&nbsp <span class="lnk" onclick="show_only_topic('permutations')">permutations</span> <br>
+			&nbsp <span class="lnk" onclick="show_only_topic('one dimensional random walks')">one dimensional random walks</span> <br>
+		</div> <!-- END COMBINATORICS MENU -->
 
 		<!-- CALCULUS MENU --> <span class="btn" onclick="toggle_show_and_hide('calculus anchors')">calculus</span> <br>
 		<div id="calculus anchors" style="display: none;">
 			&nbsp <span class="lnk" onclick="show_only_topic('Feynman method')">Feynamn method</span> <br>
 		</div> <!-- END CALCULUS MENU -->
-	
+
+		<!-- LINEAR ALGEBRA MENU --> <span class="btn" onclick="toggle_show_and_hide('linear algebra anchors')">linear algebra</span> <br>
+		<div id="linear algebra anchors" style="display: none;">
+			&nbsp <span class="lnk" onclick="show_only_topic('nilpotent-operators')">nilpotent operators</span> <br>
+		</div> <!-- END LINEAR ALGEBRA MENU -->
+
+		<!-- ANALYSIS MENU --> <span class="btn" onclick="toggle_show_and_hide('analysis anchors')">analysis</span> <br>
+		<div id="analysis anchors" style="display: none;">
+			&nbsp <span class="lnk" onclick="show_only_topic('analysis misc')">analysis misc</span> <br>
+		</div> <!-- END ANALYSIS MENU -->
+
 		<!-- TOPOLOGY MENU --> <span class="btn" onclick="toggle_show_and_hide('topology anchors')">topology</span> <br>
 		<div id="topology anchors" style="display: none;">
 			&nbsp <span class="lnk" onclick="show_only_topic('combinatorial methods')">combinatorial methods</span> <br>
 		</div> <!-- END TOPOLOGY MENU -->
 
-		<!-- MISCELLANY MENU --> <span class="btn" onclick="toggle_show_and_hide('miscellany anchors')">miscellany</span> <br>
-		<div id="miscellany anchors" style="display: none;">
-			&nbsp <span class="lnk" onclick="show_only_topic('problems')">problems</span> <br>
-		</div> <!-- END MISCELLANY MENU -->
-	
+		<!-- PROBLEMS MENU --> <span class="btn" onclick="toggle_show_and_hide('problems anchors')">problems</span> <br>
+		<div id="problems anchors" style="display: none;">
+			&nbsp <span class="lnk" onclick="show_only_topic('problems misc')">problems misc</span> <br>
+		</div> <!-- END PROBLEMS MENU -->
+</div> <!-- END TABLE OF CONTENTS -->
+
+
+<!-- --------------------------------------------------------------------COMBINATORICS-------------------------------------------------------------------- -->
+<!-- PERMUTATIONS --> <div id="permutations" class="topic" style="display: none;"> <h1>permutations</h1>
+<u>exercise</u> what's the probability a random $\sigma\in S_n$ has $1,2$ in the same cycle?
+
+<br><br>
+
+<u>exercise</u> the $n$ keys for $n$ safes are randomly distributed in the safes (each safe contains one key). if the first $k$ safes are open, what is the probability we can open the rest?
+<!-- k/n via writing permutations in canonical form, where the least element of a cycle is written last, and these are in increasing order -->
+</div> <!-- END PERMUTATIONS -->
+
+
+<!-- ONE DIMENSIONAL RANDOM WALKS --> <div id="one dimensional random walks" class="topic" style="display: none;"> <h1>one dimensional random walks</h1>
+<u>exercise</u> fix $a,b\in\N$. the number of walks of length $n$ from $-a$ to $b$ equals the number of walks of length $n$ from $a$ to $b$ which pass through the origin.
+
+<br><br>
+
+<u>corollary</u> the number of walks of length $2k$ which start at $0$ and never return to $0$ is ${2k\choose k}$, namely the number of walks which start at $0$ and end there.
+
+<br><br>
+
+<u>corollary</u> $\disp \sum_{k+\ell=n}{2k\choose k}{2\ell\choose \ell}=4^n$
+</div> <!-- END ONE DIMENSIONAL RANDOM WALKS -->
+
+
+
 <!-- --------------------------------------------------------------------LINEAR ALGEBRA-------------------------------------------------------------------- -->
 
 <!-- NILPOTENT OPERATORS --> <div id="nilpotent-operators" class="topic" style="display: none;"> <h1>nilpotent operators</h1>
@@ -102,27 +148,45 @@
 <!-- FEYNMAN METHOD --> <div id="Feynman method" class="topic" style="display: none;"> <h1>Feynman method</h1>
 	<u>example 1</u> we'll evaluate $\disp \int_0^1\frac{x^3-x^2}{\ln x}\d x$.
 
-	<br> <br>
+	<br><br>
 
 	<span class="btn" onclick="toggle_show_and_hide('ac')"><u>solution</u></span> <div id="ac" style="display: none;">
 		extending the problem, let $f(t)=\disp\int_0^1\frac{x^t-x^2}{\ln(x)}\d x$, convergent for $t>-1$. Leibniz yields $f'(t)=\disp \int_0^1 x^t\d x=\dfrac{1}{t+1}$. thus $f(t)=\ln(t+1)+C$. the value of $C=-\ln 3$ is given by $f(2)=0$. thus $f(3)=\ln(4/3)$ is the value we wanted.
 	<span style="float:right;"> ▨ </span></div>
 
-	<br> <br>
+	<br><br>
 
 	<u>example 2</u> we'll evaluate the Fourier transform of the Gaussian, namely $\disp f(\xi)=\int_{-\infty}^{\infty}e^{-x^2}e^{-2\pi i\xi x}\d x$.
 
-	<br> <br>
+	<br><br>
 
 	<span class="btn" onclick="toggle_show_and_hide('ad')"><u>solution</u></span> <div id="ad" style="display: none;">
 		calling the integrand $\Psi$, Leibniz yields $\disp f'(\xi)= \int_{-\infty}^{\infty} \partial_\xi\Psi\d x$.
 		but $\partial_\xi\Psi=-2\pi ix\Psi=\pi i(\partial_x \Psi +2\pi i\xi \Psi)$ gives $f'(\xi)=-2\pi^2\xi f(\xi)$. we solve this linear ODE by $f(\xi)=C e^{-\pi^2\xi^2}$. finally, the well known $f(0)=\sqrt{\pi}$ yields $$\disp\int_{-\infty}^{\infty}e^{-x^2}e^{-2\pi i\xi x}\d x=\sqrt{\pi}e^{-\pi^2\xi^2}$$
 	<span style="float:right;"> ▨ </span></div>
 
-	<br> <br>
+	<br><br>
 
 	<u>♣1</u> compute $\disp\int_0^\infty\frac{e^{-x}-e^{-2x}}{x}\d x$
 </div> <!-- END FEYNMAN METHOD -->
+
+<!-- --------------------------------------------------------------------ANALYSIS-------------------------------------------------------------------- -->
+<!-- ANALYSIS MISC --> <div id="analysis misc" class="topic" style="display: none;"> <h1>analysis misc</h1>
+
+	<u>exercise + definition</u> a sequence $x_n\in[0,1]$ is <blue>equidistributed</blue> if tfae hold <br>
+	(i) for any interval $I\sub[0,1]$ we have $\dfrac{1}{N}\abs{\{r\in[N]:x_r\in I\}}\too\text{length}(I)$ <br>
+	(ii) for all $f\in\CC[0,1]$ we have $\disp\frac{1}{N}\sum_{r=1}^Nf(x_r)\too\int_0^1 f(x)\d x$ <br>
+	(iii) $\disp\sum_{r=1}^N e^{2\pi i kx_r} = o(N)$ for all nonzero integers $k$.
+
+	<br><br>
+
+	<u>corollary</u> [Weyl] let $\alpha\in\R$. then $\alpha\in\R\setminus\Q\iff n\alpha$ modulo $1$ is equidistributed.
+
+	<br><br>
+
+	<u>exercise</u> find the "distribution" of the first decimal digit of $2^n$.
+
+</div> <!-- END ANALYSIS MISC -->
 
 <!-- --------------------------------------------------------------------TOPOLOGY-------------------------------------------------------------------- -->
 
@@ -130,39 +194,42 @@
 	<u>claim</u> Sperner's lemma implies Brouwer's fixed point theorem
 	<br><br>
 	<span class="btn" onclick="toggle_show_and_hide('ae')"><u>proof</u></span> <div id="ae" style="display: none;">
-	suppose for the sake of contradiction $f:\Delta^d\to\Delta^d$ is continuous with no fixed points. 
-	then $\forall x\in\Delta^d\exists i\st x_i > f(x)_i$. we pick any such $i$ and color $x$ using it. 
-	this yields a Sperner coloring (on any triangulation). 
-	for each $n$ let $\TT_n$ be a triangulation of $\Delta^n$ with diameter less than $1/n$. 
+	suppose for the sake of contradiction $\Delta^d\arr{f}\Delta^d$ is continuous with no fixed points.
+	then $\forall x\in\Delta^d\exists i\st x_i > f(x)_i$. we pick any such $i$ and color $x$ using it.
+	this yields a Sperner coloring (on any triangulation) of $\Delta^d$.
+	for each $n$ let $\TT_n$ be a triangulation of $\Delta^n$ with diameter less than $1/n$.
 	let $T_n\in\TT_n$ be a Sperner simplex, and let $x^0_n,\dots,x^d_n$ be its vertices, with $x^i_n$ colored $i$, and any pair distanced at most $1/n$ apart.
-	let $x\in\Delta^d$ be an accumulation point of $x^0_n$. ergo $x$ is also an accumulation point of $x^i_n$ for each $i$. 
+	let $x\in\Delta^d$ be an accumulation point of $x^0_n$. ergo $x$ is also an accumulation point of $x^i_n$ for each $i$.
 	it follows that $f(x)_i\le x_i$ for all $i$. since $1=\sum x_i=\sum f(x)_i$, it follows that $x$ is a fixed point of $f$.
 	<span style="float:right;"> ▨ </span></div>
 </div> <!-- END COMBINATORIAL METHODS -->
 
-<!-- --------------------------------------------------------------------MISC-------------------------------------------------------------------- -->
-	
-<!-- PROBLEMS --> <div id="problems" class="topic" style="display: none;"> <h1>problems</h1>
-	<u>♣1</u> determine how Alice and Bob can perform the following trick. with Bob in the other room, Alice presents the audience with an eight by eight grid of lamps, initially turned off. she picks an audience member, who is allowed to toggle the state of each of the lamps. then, a second audience member is chosen to come to the stage and point at (but not toggle) one of the lamps. Alice thinks for a bit and toggles one of the lamps. she calls Bob to enter the room. Bob sees the toggled board, thinks for a bit, and points at the same lamp as the audience member.
+<!-- --------------------------------------------------------------------PROBLEMS-------------------------------------------------------------------- -->
+
+<!-- PROBLEMS MISC --> <div id="problems misc" class="topic" style="display: none;"> <h1>problems misc</h1>
+	<u>♣1</u> determine how Alice and Bob can perform the following magic trick. with Bob in the other room, Alice presents the audience with an eight by eight grid of lamps, initially turned off. one audience member is then allowed to toggle the state of each of the lamps. finally, a second audience member is chosen to come to the stage and point at (but not toggle) one of the lamps. Alice thinks for a bit and toggles one of the lamps. she calls Bob to enter the room. Bob sees the (toggled) board, thinks for a bit, and points at the same lamp as the audience member.
 
 	<br><br>
 
-	<u>♣2</u> let $f:\Z^\N\to\Z$ obey $f(x+y)=f(x)+f(y)$ $\forall$ integral sequences $x,y$. show that $\exists$ a finite sequence $\alpha_1,\dots,\alpha_k : f(x_1,x_2,x_3,\dots)=x_1\alpha_1+\dots+x_k\alpha_k$ $\forall x$.
+	<u>♣2</u> let $f:\Z^\N\to\Z$ obey $f(x+y)=f(x)+f(y)$ $\forall$ integral sequences $x,y$. show that $\exists$ a finite sequence $\alpha_1,\dots,\alpha_k$ such that $f(x_1,x_2,x_3,\dots)=x_1\alpha_1+\dots+x_k\alpha_k$ $\forall x$.
 
 	<br><br>
-</div> <!-- END PROBLEMS -->
 
+	<u>♣3</u> Alice and Bob each are in different rooms, and each has a secret $n$ bit number $a,b\in[0,2^n-1]$. they both want to determine $\max(a,b)$. that is, not only who has the greater number, but also its value. their way of communication is as follows. once the channel opens, one may send a bit to the other each second. but when a second comes where neither (or both) transmit a bit, the channel closes. design a protocol to acheive their goal taking $n+O(\log n)$ seconds.
+
+</div> <!-- END PROBLEMS MISC -->
+<br><br>
 </div> <!-- END NOTES -->
 
 <!-- --------------------------------------------------------------------SOLUTIONS-------------------------------------------------------------------- -->
-	
+
 <div id="solutions" class="page" style="display: none;">
 	<span style="color:red"> under construction </span>
 </div> <!-- END SOLUTIONS -->
 
 <!-- --------------------------------------------------------------------GAMES-------------------------------------------------------------------- -->
 
-	
+
 <div id="games" class="page" style="display: none;">
 	<span style="color:red"> under construction </span>
 </div> <!-- END GAMES -->

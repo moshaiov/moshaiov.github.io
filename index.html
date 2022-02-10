@@ -30,15 +30,34 @@
 	\newcommand{\disp}{\displaystyle}
 	\newcommand{\sub}{\subseteq}
 	\newcommand{\End}{\text{End}}
+	\newcommand{\span}{\text{span}}
+	\newcommand{\tr}{\text{tr}}
+
+	\newcommand{\Aut}{\text{Aut}}
+	\newcommand{\Mod}{\text{Mod}}
+	\newcommand{\Ab}{\text{Ab}}
+	\newcommand{\SU}{\text{SU}}
+	\newcommand{\Res}{\text{Res}}
+
+	\newcommand{\SO}{\text{SO}}
+	\newcommand{\GL}{\text{GL}}
+	\newcommand{\th}{^{\text{th}}}
 	\newcommand{\img}{\text{img}}
 	\newcommand{\st}{\text{ s.t. }}
 	\newcommand{\d}{\text{d}}
 	\newcommand{\eps}{\varepsilon}
-
+	\newcommand{\id}{\text{id}}
+	\newcommand{\inv}{^{-1}}
+	\newcommand{\bij}{\longleftrightarrow}
 	\newcommand{\O}{\mathcal{O}}
 	\newcommand{\R}{\mathbf{R}}
+	\newcommand{\S}{\mathbf{S}}
+
 	\newcommand{\Z}{\mathbf{Z}}
 	\newcommand{\Q}{\mathbf{Q}}
+	\newcommand{\C}{\mathbf{C}}
+	\newcommand{\H}{\mathbf{H}}
+
 	\newcommand{\N}{\mathbf{N}}
 	\newcommand{\T}{\mathbf{T}}
 	\newcommand{\TT}{\mathcal{T}}
@@ -82,6 +101,11 @@
 			&nbsp <span class="lnk" onclick="show_only_topic('combinatorial methods')">combinatorial methods</span> <br>
 		</div> <!-- END TOPOLOGY MENU -->
 
+		<!-- REPRESENTATION THEORY MENU --> <span class="btn" onclick="toggle_show_and_hide('representation theory anchors')">representation theory</span> <br>
+		<div id="representation theory anchors" style="display: none;">
+			&nbsp <span class="lnk" onclick="show_only_topic('SU2')">$\SU(2)$</span> <br>
+		</div> <!-- END REPRESENTATION THEORY MENU -->
+
 		<!-- PROBLEMS MENU --> <span class="btn" onclick="toggle_show_and_hide('problems anchors')">problems</span> <br>
 		<div id="problems anchors" style="display: none;">
 			&nbsp <span class="lnk" onclick="show_only_topic('problems misc')">problems misc</span> <br>
@@ -97,6 +121,7 @@
 
 <u>exercise</u> the $n$ keys for $n$ safes are randomly distributed in the safes (each safe contains one key). if the first $k$ safes are open, what is the probability we can open the rest?
 <!-- k/n via writing permutations in canonical form, where the least element of a cycle is written last, and these are in increasing order -->
+	
 </div> <!-- END PERMUTATIONS -->
 
 
@@ -203,6 +228,89 @@
 	it follows that $f(x)_i\le x_i$ for all $i$. since $1=\sum x_i=\sum f(x)_i$, it follows that $x$ is a fixed point of $f$.
 	<span style="float:right;"> ▨ </span></div>
 </div> <!-- END COMBINATORIAL METHODS -->
+
+<!-- --------------------------------------------------------------------REPRESENTATION THEORY-------------------------------------------------------------------- -->
+<!-- SU2 --> <div id="SU2" class="topic" style="display: none;"> <h1>representation theory of $\huge{\SU(2)}$</h1>
+<u>exercise</u>
+let $\H=\bigg\{A=\left(\begin{array}{cc}
+z & w\\
+-\bar{w} & \bar{z}
+\end{array}\right):z,w\in\C\bigg\}$ be the quaternions, with norm $\norm{A}^2=|z|^2+|w|^2=\det A$. verify that the "standard basis" $\id,i,j,k$ of $\H$ over $\R$  has $ij=k$, $jk=i$, $ki=j$, $i^2=j^2=k^2=-\id$, and $\norm{x_1+x_2i+x_3j+x_4k}^2=x_1^2+x_2^2+x_3^2+x_4^2$, and further $\span_\R(i,j,k)=\{A\in\H:\tr A=0\}$.
+
+<br><br>
+
+<u>observation</u> we have $\SU(2)=\bigg\{\left(\begin{array}{cc}
+a & b\\
+-\bar{b} & \bar{a}
+\end{array}\right):|a|^2+|b|^2=1\bigg\}$ equals the unit sphere of $\H$. furthermore, $\SU(2)$ acts on $\H$ by isometries via left multiplication / conjugation. lastly, conjugation yields an $\SU(2)$ action on $\span_\R(i,j,k)\equiv\R^3$ by isometries.
+
+<br><br>
+
+<u>exercise</u> $\SO(3)\equiv \SU(2)/\{\pm\id\}$
+
+<br><br>
+
+<u>exercise</u> let $T=\SU(2)\cap \{\text{diagonal}\}$. each conjugacy class of $\SU(2)$ intersects $T$.
+
+<br><br>
+
+<u>exercise</u> trace yields a bijection $\{ \text{conjugacy classes of } \SU(2) \} \bij [-2,2]$.
+
+<br><br>
+
+<u>definition</u> let $V_n=\span_{\C}(x^n,x^{n-1}y,\dots,xy^{n-1},y^{n})=\{\text{homogeneous $n$ degree polynomials in }x,y\}$ be acted upon by $\GL_2$ via $g.f(x,y)=f((x,y)g)$.
+
+<br><br>
+
+<u>exercise</u> find with respect to the natural basis of $V_n$ the matrix of $g=\left(\begin{array}{cc}
+a & b\\
+c & d
+\end{array}\right)$ for $n$ up to $2$.
+
+<br><br>
+
+<u>observation</u> let $\chi_n$ be the character of the $\GL_2$ representation $V_n$. let $t=\left(\begin{array}{cc}
+\phi & 0\\
+0 & \phi\inv
+\end{array}\right)$. then $\disp\chi_n(t)=\sum_{k=0}^n\phi^{n-2k}=\dfrac{\phi^{n+1}-\phi^{-n-1}}{\phi-\phi\inv}$
+
+<br><br>
+
+<u>claim</u> $V_n$ is $\SU(2)$ irreducible.
+
+<br><br>
+
+<u>subclaim</u> let $W\le V_n$ be an $\SU(2)$ submodule. if $w=\sum r_j x^{n-j}y^j\in W$ and $r_i\neq 0$ then $x^{n-j}y^j\in W$.
+
+<br><br>
+
+<span class="btn" onclick="toggle_show_and_hide('af')"><u>proof</u></span> <div id="af" style="display: none;">
+by induction on the number of nonzero coefficients. the base case (one) being immediate. given another nonzero $r_\ell$, the process to follow will kill it :
+fix $\theta$ some irrational multiple of $\pi$ (so $e^{ir\theta}$ are distinct for $r\in\Z$) and let $g=\left(\begin{array}{cc}
+e^{i\theta} & 0\\
+0 & e^{i\theta}
+\end{array}\right)$, and let $w'=gw- e^{(n-2\ell)i\theta}w$. then $w'\in W$ has one less nonzero coefficient (namely the $i\th$).
+<span style="float:right;"> ▨ </span></div>
+
+<br><br>
+
+<u>exercise</u> deduce the claim from the subclaim.
+
+<br><br>
+
+<u>theorem</u> any (finite dimensional, continuous) irreducible representation of $\SU(2)$ is isomorphic to one of the $V_n$.
+
+<br><br>
+
+<span class="btn" onclick="toggle_show_and_hide('ag')"><u>proof</u></span> <div id="ag" style="display: none;">
+let $V$ be a representation of $\SU(2)$ and $\chi$ its character. recall the maximal torus $T=\SU(2)\cap\{\text{diagonal}\}\equiv \T=\S^1$. now $\Res_T^{\SU(2)}V$ is a representation of $T$. by the representation theory of $\T$ we have for $t=\left(\begin{array}{cc}
+\phi & 0\\
+0 & \phi\inv
+\end{array}\right)\in T$ that $\chi(t)=\sum_{k\in\Z} m_k \phi^k$ for some $m_k\ge0$ (a Laurent polynomial $\phi$). since $t$ is conjugate to $t\inv$, these Laurent polynomials are even ($f(\phi)=f(\phi\inv)$). on one hand $\chi_{V_n}(t)=\disp\sum_{k=0}^n \phi^{n-2k}$ span over $\Z$ the even Laurent polynomials in $\phi$. it follows that for some $r_j\in\Z$ we have $\chi,\sum r_j\chi_{V_n}$ agreeing on $T$. since any conjugacy class of $\SU(2)$ intersects $T$, the are equal. it remains to move the negative coefficients to the side of $\chi$ and note the uniqueness of character decomposition.
+<span style="float:right;"> ▨ </span></div>
+
+
+</div> <!-- END SU2 -->
 
 <!-- --------------------------------------------------------------------PROBLEMS-------------------------------------------------------------------- -->
 

@@ -38,12 +38,18 @@ function show_only_page(page_id) {
   show_element_by_id(page_id);
 }
 
+var last_topic = "";
+
 function show_only_topic(topic_id) {
-  var divsToHide = document.getElementsByClassName("topic");
-    for(var i = 0; i < divsToHide.length; i++){
-        divsToHide[i].style.display = "none";
-    }
+  if(last_topic !== "")
+  {
+    var div_to_hide=document.getElementById(last_topic);
+    div_to_hide.style.display = "none";
+  }
+  last_topic=topic_id;
+  console.log(topic_id);
   show_element_by_id(topic_id);
+  toggle_show_and_hide("links to contents");
 }
 
 function toggle_show_and_hide(id) {

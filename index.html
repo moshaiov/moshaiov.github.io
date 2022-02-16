@@ -27,6 +27,7 @@
 
 <!-- LATEX MACROS --> <div style="display: none;">
 	$
+	\newcommand{\spc}{\phantom{,}}
 	\newcommand{\disp}{\displaystyle}
 	\newcommand{\sub}{\subseteq}
 	\newcommand{\End}{\text{End}}
@@ -43,6 +44,8 @@
 	\newcommand{\GL}{\text{GL}}
 	\newcommand{\th}{^{\text{th}}}
 	\newcommand{\img}{\text{img}}
+	\newcommand{\diag}{\text{diag}}
+
 	\newcommand{\st}{\text{ s.t. }}
 	\newcommand{\d}{\text{d}}
 	\newcommand{\eps}{\varepsilon}
@@ -66,14 +69,22 @@
 	\newcommand{\arr}[1]{\overset{#1}{\to}}
 	\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 	\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
-
-
+	\newcommand{\ov}[1]{\overline{{#1}}}
+	\require{AMScd}
 	$
+
+	\begin{CD}
+	\mathbb{Z}/p^n\mathbb{Z} @>{\pi_{n+1,\alpha}}>> U_1/U_{n+1}\\
+	@VVV @VVV\\
+	\mathbb{Z}/p^{n-1}\mathbb{Z} @>{\theta_{n,\alpha}}>> U_1/U_n
+	\end{CD}
+
+	https://www.jmilne.org/not/Mamscd.pdf
 </div> <!-- END LATEX MACROS -->
 
-<!-- NOTES --> <div id="notes" class="page" style="display: none;">
-<span class="btn" onclick="toggle_show_and_hide('links to contents')"><u>links to contents</u></span> <br>
-<!-- TABLE OF CONTENTS --><div id="links to contents" style="display:none;">
+		<!-- NOTES --> <div id="notes" class="page" style="display: none;">
+		<span class="btn" onclick="toggle_show_and_hide('links to contents')"><u>links to contents</u></span> <br>
+		<!-- TABLE OF CONTENTS --><div id="links to contents" style="display:none;">
 
 		<!-- COMBINATORICS MENU --> <span class="btn" onclick="toggle_show_and_hide('combinatorics anchors')">combinatorics</span> <br>
 		<div id="combinatorics anchors" style="display: none;">
@@ -89,6 +100,7 @@
 		<!-- LINEAR ALGEBRA MENU --> <span class="btn" onclick="toggle_show_and_hide('linear algebra anchors')">linear algebra</span> <br>
 		<div id="linear algebra anchors" style="display: none;">
 			&nbsp <span class="lnk" onclick="show_only_topic('nilpotent-operators')">nilpotent operators</span> <br>
+			&nbsp <span class="lnk" onclick="show_only_topic('over R and C')">over $\R$ and $\C$</span> <br>
 		</div> <!-- END LINEAR ALGEBRA MENU -->
 
 		<!-- ANALYSIS MENU --> <span class="btn" onclick="toggle_show_and_hide('analysis anchors')">analysis</span> <br>
@@ -101,17 +113,26 @@
 			&nbsp <span class="lnk" onclick="show_only_topic('combinatorial methods')">combinatorial methods</span> <br>
 		</div> <!-- END TOPOLOGY MENU -->
 
+		<!-- ALGEBRAIC NUMBER THEORY MENU --> <span class="btn" onclick="toggle_show_and_hide('algebraic number theory anchors')">algebraic number theory</span> <br>
+		<div id="algebraic number theory anchors" style="display: none;">
+			&nbsp <span class="lnk" onclick="show_only_topic('algebraic number theory misc')">algebraic number theory misc</span> <br>
+		</div> <!-- END ALGEBRAIC NUMBER THEORY MENU -->
+
 		<!-- REPRESENTATION THEORY MENU --> <span class="btn" onclick="toggle_show_and_hide('representation theory anchors')">representation theory</span> <br>
 		<div id="representation theory anchors" style="display: none;">
 			&nbsp <span class="lnk" onclick="show_only_topic('SU2')">$\SU(2)$</span> <br>
 		</div> <!-- END REPRESENTATION THEORY MENU -->
+
+		<!-- SET THEORY MENU --> <span class="btn" onclick="toggle_show_and_hide('set theory anchors')">set theory</span> <br>
+		<div id="set theory anchors" style="display: none;">
+			&nbsp <span class="lnk" onclick="show_only_topic('set theory basics')">basics</span> <br>
+		</div> <!-- END SET THEORY MENU -->
 
 		<!-- PROBLEMS MENU --> <span class="btn" onclick="toggle_show_and_hide('problems anchors')">problems</span> <br>
 		<div id="problems anchors" style="display: none;">
 			&nbsp <span class="lnk" onclick="show_only_topic('problems misc')">problems misc</span> <br>
 		</div> <!-- END PROBLEMS MENU -->
 </div> <!-- END TABLE OF CONTENTS -->
-
 
 <!-- --------------------------------------------------------------------COMBINATORICS-------------------------------------------------------------------- -->
 <!-- PERMUTATIONS --> <div id="permutations" class="topic" style="display: none;"> <h1>permutations</h1>
@@ -121,7 +142,6 @@
 
 <u>exercise</u> the $n$ keys for $n$ safes are randomly distributed in the safes (each safe contains one key). if the first $k$ safes are open, what is the probability we can open the rest?
 <!-- k/n via writing permutations in canonical form, where the least element of a cycle is written last, and these are in increasing order -->
-	
 </div> <!-- END PERMUTATIONS -->
 
 
@@ -167,6 +187,19 @@
 	the orbital union $(v_1,w_1,\dots,T^{f_1}w_1,\dots,v_k,w_k,\dots,T^{f_k}w_k,u_1,\dots,u_r)$ is a list of $\dim V$ linearly independent vectors, i.e. a basis.
 	<span style="float:right;"> ▨ </span></div>
 </div> <!-- END NILPOTENT OPERATORS -->
+
+
+<!-- OVER R AND C --> <div id="over R and C" class="topic" style="display: none;"> <h1>over $\huge{\R}$ and $\huge{\C}$</h1>
+	<u>claim</u> for $A\in\C^{n\times n}$ we have $\det e^A=e^{\tr A}$
+
+	<br><br>
+
+	<span class="btn" onclick="toggle_show_and_hide('ah')"><u>proof</u></span> <div id="ah" style="display: none;">
+	the result is clear for diagonal matrices $D$. if $A=PDP\inv$ is diagonalizable, then $e^A=Pe^DP\inv$ so $\det e^A=e^{\tr D}=e^{\tr A}$ holds too. finally, the result for $A\in\C^{n\times n}$ general follows by the denseness of the diagonalizable matrices.
+	<span style="float:right;"> ▨ </span></div>
+
+</div> <!-- END OVER R AND C -->
+
 
 <!-- --------------------------------------------------------------------CALCULUS-------------------------------------------------------------------- -->
 
@@ -229,7 +262,23 @@
 	<span style="float:right;"> ▨ </span></div>
 </div> <!-- END COMBINATORIAL METHODS -->
 
+<!-- --------------------------------------------------------------------ALGEBRAIC NUMBER THEORY-------------------------------------------------------------------- -->
+
+<!-- ALGEBRAIC NUMBER THEORY MISC --> <div id="algebraic number theory misc" class="topic" style="display: none;"> <h1>algebraic number theory misc</h1>
+	<u>theorem</u> [Kronecker] a nonzero algebraic integer that lies with its conjugaues inside $|z|\le 1$ has to be a root of unity.
+
+	<br><br>
+
+	<span class="btn" onclick="toggle_show_and_hide('aj')"><u>proof</u></span> <div id="aj" style="display: none;">
+	let $\alpha_i$ be the set of conjugates, let $A$ be the companion matrix to their minimal polynomial. then $A$ is similar to $D=\diag(\alpha_i)$. writing $A=PDP\inv$, we have $A^k=PD^kP\inv$. as $|\alpha_i|\le 1$, the entries of $A^k$ are uniformly bounded integers. ergo, by the pigeonhole principle, $A^m=A^{\ell}$ for some $m < \ell$. thus $D^m=D^\ell$, and $\alpha_i^{\ell-m}=1$.
+	<span style="float:right;"> ▨ </span></div>
+
+</div> <!-- END ALGEBRAIC NUMBER THEORY MISC -->
+
+
+
 <!-- --------------------------------------------------------------------REPRESENTATION THEORY-------------------------------------------------------------------- -->
+	
 <!-- SU2 --> <div id="SU2" class="topic" style="display: none;"> <h1>representation theory of $\huge{\SU(2)}$</h1>
 <u>exercise</u>
 let $\H=\bigg\{A=\left(\begin{array}{cc}
@@ -312,6 +361,29 @@ let $V$ be a representation of $\SU(2)$ and $\chi$ its character. recall the max
 
 </div> <!-- END SU2 -->
 
+
+<!-- --------------------------------------------------------------------SET THEORY-------------------------------------------------------------------- -->
+
+<!-- BASICS --> <div id="set theory basics" class="topic" style="display: none;"> <h1>set theory basics</h1>
+<u>theorem</u> [Cantor] $2^{\N}$ is uncountable.
+
+<br><br>
+
+<span class="btn" onclick="toggle_show_and_hide('ai')"><u>proof</u></span> <div id="ai" style="display: none;">
+we need to show that one cannot enumerate $2^\N$.
+so, given a sequence $(b_i)_{i\in \N}$ in $2^\N$, we need to construct some $b\in 2^\N$ that differs from all the $b_i$. this can be done as follows :
+the $i\th$ bit of $b$ will be the $i\th$ bit of $b_i$, flipped. <span style="float:right;"> ▨ </span> <br>
+<green>for obvious geometrical reasons, this method of proof is called diagonalization.</green>
+</div>
+
+<br><br>
+
+<u>exercise</u> [Cantor] more generally, for any set $X$ we have $|X| < |2^X|$.
+
+
+</div> <!-- END BASICS -->
+
+
 <!-- --------------------------------------------------------------------PROBLEMS-------------------------------------------------------------------- -->
 
 <!-- PROBLEMS MISC --> <div id="problems misc" class="topic" style="display: none;"> <h1>problems misc</h1>
@@ -325,7 +397,17 @@ let $V$ be a representation of $\SU(2)$ and $\chi$ its character. recall the max
 
 	<u>♣3</u> Alice and Bob each are in different rooms, and each has a secret $n$ bit number $a,b\in[0,2^n-1]$. they both want to determine $\max(a,b)$. that is, not only who has the greater number, but also its value. their way of communication is as follows. once the channel opens, one may send a bit to the other each second. but when a second comes where neither (or both) transmit a bit, the channel closes. design a protocol to acheive their goal taking $n+O(\log n)$ seconds.
 
+	<br><br>
+
+	<u>♣4</u> a bounded harmonic function $f:\Z^d\to\R$ is constant.
+
+	<br><br>
+
+	<u>♣5</u> fix $k\in[n]$. show that $|\{f:[n]\to [n] \mid \forall x\in [n] \spc\exists j\ge 0\st f^{(j)}(x)\in [k] \}|=kn^{n-1}$.
+	<!-- this is a Putnam 2013 problem, discussed on aops and puzzling stack exchange -->
+
 </div> <!-- END PROBLEMS MISC -->
+
 <br><br>
 </div> <!-- END NOTES -->
 

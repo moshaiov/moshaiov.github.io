@@ -82,4 +82,5 @@ https://mathoverflow.net/questions/10911/english-reference-for-a-result-of-krone
 MIGHT BE COOL TO
 implement the game black sheep
 write about the universality of the cantor set, space filling curves, Benjamini's theorem
+check out https://www.homepages.ucl.ac.uk/~ucahjde/tg/html/gal-02.html
 write about archimede's hat box theorem and filling a ball using 1 x d rectangles.

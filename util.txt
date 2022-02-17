@@ -4,6 +4,7 @@ COURSE NOTES
 multicourse collections
 ----------------
 https://dec41.user.srcf.net/notes/
+https://www.jmilne.org/math/CourseNotes/
 https://tartarus.org/gareth/maths/notes/
 https://github.com/Dongryul-Kim/harvard_notes
 https://github.com/notzeb/all/blob/master/all.pdf

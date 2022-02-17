@@ -12,6 +12,7 @@ http://www.joelshapiro.org/Pubvit/lectures.html
 https://dmitripavlov.org/#teaching
 https://mathweb.ucsd.edu/~ebelmont
 http://www.mathematik.uni-regensburg.de/Jannsen/
+https://personal.math.ubc.ca/~lior/teaching/
 
 Hebrew
 ------

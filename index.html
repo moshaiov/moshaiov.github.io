@@ -72,14 +72,6 @@
 	\newcommand{\ov}[1]{\overline{{#1}}}
 	\require{AMScd}
 	$
-
-	\begin{CD}
-	\mathbb{Z}/p^n\mathbb{Z} @>{\pi_{n+1,\alpha}}>> U_1/U_{n+1}\\
-	@VVV @VVV\\
-	\mathbb{Z}/p^{n-1}\mathbb{Z} @>{\theta_{n,\alpha}}>> U_1/U_n
-	\end{CD}
-
-	https://www.jmilne.org/not/Mamscd.pdf
 </div> <!-- END LATEX MACROS -->
 
 		<!-- NOTES --> <div id="notes" class="page" style="display: none;">
@@ -111,6 +103,7 @@
 		<!-- TOPOLOGY MENU --> <span class="btn" onclick="toggle_show_and_hide('topology anchors')">topology</span> <br>
 		<div id="topology anchors" style="display: none;">
 			&nbsp <span class="lnk" onclick="show_only_topic('combinatorial methods')">combinatorial methods</span> <br>
+			&nbsp <span class="lnk" onclick="show_only_topic('winding number')">winding number</span> <br>
 		</div> <!-- END TOPOLOGY MENU -->
 
 		<!-- ALGEBRAIC NUMBER THEORY MENU --> <span class="btn" onclick="toggle_show_and_hide('algebraic number theory anchors')">algebraic number theory</span> <br>
@@ -261,6 +254,48 @@
 	it follows that $f(x)_i\le x_i$ for all $i$. since $1=\sum x_i=\sum f(x)_i$, it follows that $x$ is a fixed point of $f$.
 	<span style="float:right;"> ▨ </span></div>
 </div> <!-- END COMBINATORIAL METHODS -->
+	
+<!-- WINDING NUMBER --> <div id="winding number" class="topic" style="display: none;"> <h1>winding number</h1>
+
+<u>prototypical example</u> for $\gamma_n(t)=e^{2\pi i n t}$ we have $\deg(\gamma_n)=n$.
+
+<br><br>
+
+<u>exercise</u> let $\gamma:[0,1]\to\C^\times$ be a path. there exists a continuous map $\xi:[0,1]\to\C$ s.t. $\gamma=e^\xi$, called a <blue>lift</blue>. moreover, the lift $\xi$ is unique up to additions of integer multiples of $2\pi i$.
+
+<br><br>
+
+<u>definition</u> given a path $\gamma:[0,1]\to\C^\times$, its <blue>degree</blue> is $\dfrac{\xi(1)-\xi(0)}{2\pi i}$, where $\xi$ is (any) lift of $\gamma$. in particular, $\gamma$ is closed (i.e. a loop) iff $\deg(\gamma)\in\Z$.
+
+<br><br>
+
+<u>observation</u> $\deg(\gamma_1\gamma_2)=\deg(\gamma_1)+\deg(\gamma_2)$.
+
+<br><br>
+
+<u>exercise</u> if the loop $\gamma:[0,1]\to\C\setminus \R_{\ge0}$ then $\deg(\gamma)=0$.
+
+<br><br>
+
+<u>corollary</u> [dog walking] if the loops $\gamma,\psi:[0,1]\to\C^\times$ are such that $|\gamma-\psi|<|\gamma|$ then $\deg(\psi)=\deg(\gamma)$.
+
+<br><br>
+
+<u>corollary</u> let $f\in\C[z]$ have degree $d$. if $R$ is sufficiently large then $\deg(t\mapsto f(Re^{2\pi i t}))=d$.
+
+<br><br>
+
+<u>exercise</u> let $\Gamma:[0,1]^2\to\C^\times$ be continuous. then $\deg(\Gamma|_{\bottom})+\deg(\Gamma|_{\right})=\deg(\Gamma|_{\left})+\deg(\Gamma|_{\top})$
+
+<br><br>
+
+<u>corollary</u> [fundamental theorem of algebra] let $f\in\C[z]$ have degree $d$. if $d>0$ then $f$ has a root.
+
+<br><br>
+
+<u>exercise</u> if $\gamma:[0,1]\to\C^\times$ is smooth and closed then $\disp\deg(\gamma)=\frac{1}{2\pi}\int_\gamma\frac{x\d y-y\d x}{x^2+y^2}=\frac{1}{2\pi i}\int_\gamma \frac{\d z}{z}$.
+
+</div> <!-- END WINDING NUMBER -->
 
 <!-- --------------------------------------------------------------------ALGEBRAIC NUMBER THEORY-------------------------------------------------------------------- -->
 

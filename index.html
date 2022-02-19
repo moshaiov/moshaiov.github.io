@@ -264,15 +264,29 @@
 	
 <!-- WINDING NUMBER --> <div id="winding number" class="topic" style="display: none;"> <h1>winding number</h1>
 
-<u>prototypical example</u> for $\gamma_n(t)=e^{2\pi i n t}$ we have $\deg(\gamma_n)=n$.
+<u>prototypical example</u> $\deg(t\mapsto e^{2\pi int})=n$
 
 <br><br>
 
-<u>exercise</u> let $\gamma:[0,1]\to\C^\times$ be a path. there exists a continuous map $\xi:[0,1]\to\C$ s.t. $\gamma=e^\xi$, called a <blue>lift</blue>. moreover, the lift $\xi$ is unique up to additions of integer multiples of $2\pi i$.
+<u>claim</u> let $\gamma:[0,1]\to\C^\times$ be a path. there exists a continuous map $\xi:[0,1]\to\C$ s.t. $\gamma=e^\xi$. <br>
+moreover, the <blue>lift</blue> $\xi$ is unique up to additions of integer multiples of $2\pi i$.
 
 <br><br>
 
-<u>definition</u> given a path $\gamma:[0,1]\to\C^\times$, its <blue>degree</blue> is $\dfrac{\xi(1)-\xi(0)}{2\pi i}$, where $\xi$ is (any) lift of $\gamma$. in particular, $\gamma$ is closed (i.e. a loop) iff $\deg(\gamma)\in\Z$.
+<span class="btn" onclick="toggle_show_and_hide('x1')"><u>proof</u></span><div id="x1" style="display: none;">
+[existence] since a continuous logarithm exists on $\R_{>0}$, we may assume $\gamma:[0,1]\to\T$.
+using uniform continuity, and the existence of a continuous argument function on any (proper) arc of $\T$,
+we may fix $N$ s.t. $\forall j\in[N]$ $\exists [\frac{j-1}{N},\frac{j}{N}]\arr{\xi_j}\R$
+with $\gamma|_{[\frac{j-1}{N},\frac{j}{N}]}=e^{i\xi_j}$. inductively, we may add integer
+multiples of $2\pi$ to $\xi_{j+1}$ and make $\xi_j,\xi_{j+1}$ agree at $\frac{j}{N}$.
+this results in a continuous lift $\gamma=e^{i\xi}$. <br>
+[uniqueness] $e^\xi=e^{\xi'}$ implies the path $\xi-\xi'$ takes values in $2\pi i\Z$, and ergo is constant.
+<span style="float:right;"> ▨ </span></div>
+
+<br><br>
+
+<u>definition</u> given a path $\gamma:[0,1]\to\C^\times$, its <blue>degree</blue> is $\dfrac{\xi(1)-\xi(0)}{2\pi i}$, where $\xi$ is (any) lift of $\gamma$. <br>
+in particular, $\gamma$ is closed (i.e. a loop) iff $\deg(\gamma)\in\Z$.
 
 <br><br>
 
@@ -284,7 +298,7 @@
 
 <br><br>
 
-<u>corollary</u> [dog walking] if the loops $\gamma,\psi:[0,1]\to\C^\times$ are such that $|\gamma-\psi|<|\gamma|$ then $\deg(\psi)=\deg(\gamma)$.
+<u>corollary</u> [dog walking] if the loops $\gamma,\gamma':[0,1]\to\C^\times$ are such that $|\gamma-\gamma'|<|\gamma|$ then $\deg(\gamma')=\deg(\gamma)$.
 
 <br><br>
 
@@ -292,7 +306,34 @@
 
 <br><br>
 
-<u>exercise</u> let $\Gamma:[0,1]^2\to\C^\times$ be continuous. then $\deg(\Gamma|_{\bottom})+\deg(\Gamma|_{\right})=\deg(\Gamma|_{\left})+\deg(\Gamma|_{\top})$
+<u>claim</u> let $\Gamma:[0,1]^2\to\C^\times$ be continuous. then $\deg(\Gamma|_{\bottom})+\deg(\Gamma|_{\rght})=\deg(\Gamma|_{\lft})+\deg(\Gamma|_{\top})$
+
+<br><br>
+
+<span class="btn" onclick="toggle_show_and_hide('x2')"><u>proof 1</u></span> <div id="x2" style="display: none;">
+by reasoning similar to that of paths, we can lift $\Gamma=e^{i\Psi}$ with $\Psi:[0,1]^2\to\C$ continuous. the statement ergo reads $\Psi(1,1)-\Psi(0,0)=\Psi(1,1)-\Psi(0,0)$.
+<span style="float:right;"> ▨ </span></div>
+
+<br><br>
+
+<span class="btn" onclick="toggle_show_and_hide('x3')"><u>proof 2</u></span> <div id="x3" style="display: none;">
+first, let us assume $\Gamma|_{\lft}=\Gamma|_{\rght}$ and show $\deg(\Gamma|_{\bottom})=\deg(\Gamma|_{\top})$.
+fix $\delta=\min \abs{\Gamma}$, and $N$ s.t. $\norm{P-Q}_2\le \frac{1}{N}\implies \abs{\Gamma(P)-\Gamma(Q)} < \delta$.
+let $\gamma_j=\Gamma|_{[0,1]\times\{j/N\}}$. by the dog walking lemma, $\deg(\gamma_j)=\deg(\gamma_{j+1})$. in total, $\deg(\gamma_0)=\deg(\gamma_N)$ as we wanted. <br>
+finally, we may reduce the general case of $\Gamma$ to this one by taking $\Psi(x,y) = \Gamma(xy,x(1-y))\Gamma(x+y(1-x),1-y(1-x))\Gamma(1-x,1-x)$.
+<span style="float:right;"> ▨ </span></div>
+
+<br><br>
+
+<span class="btn" onclick="toggle_show_and_hide('x4')"><u>proof 3</u></span> <div id="x4" style="display: none;">
+let $\Delta=\RHS-\LHS$. note that if $[0,1]$ is divided into squares $R_{j}$ then $\Delta=\sum_j \Delta_{R_j}$ by cancellation.
+now, $\Delta_R=0$ if a continuous logarithm exists on $\Gamma(R)$.
+finally, if $\delta=\min\abs{\Gamma}$ and $N$ is s.t. $\norm{P-Q}_\infty\le 1/N\implies \abs{\Gamma(P)-\Gamma(Q)}\le\delta/2$ then the division to $N^2$ subsquares yields $\Delta=0$.
+<span style="float:right;"> ▨ </span></div>
+
+<br><br>
+
+<u>corollary</u> let $\ov{\D}\arr{f}\C$. if $f$ does not vanish on $T$ and $\deg(t\mapsto f(e^{2\pi i t}))\neq 0$ then $f$ vanishes in $\D$.
 
 <br><br>
 
@@ -300,8 +341,17 @@
 
 <br><br>
 
+<u>corollary</u> there does not exist $\ov{\D}\arr{f}\T$ with $f|_{\T}=\id_{\T}$.
+
+<br><br>
+
+<u>corollary</u> [Brouwer] any $\ov{\D}\arr{f}\ov{\D}$ has a fixed point.
+
+<br><br>
+
 <u>exercise</u> if $\gamma:[0,1]\to\C^\times$ is smooth and closed then $\disp\deg(\gamma)=\frac{1}{2\pi}\int_\gamma\frac{x\d y-y\d x}{x^2+y^2}=\frac{1}{2\pi i}\int_\gamma \frac{\d z}{z}$.
 
+	
 </div> <!-- END WINDING NUMBER -->
 
 <!-- --------------------------------------------------------------------ALGEBRAIC NUMBER THEORY-------------------------------------------------------------------- -->

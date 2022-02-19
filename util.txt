@@ -14,6 +14,8 @@ https://dmitripavlov.org/#teaching
 https://mathweb.ucsd.edu/~ebelmont
 http://www.mathematik.uni-regensburg.de/Jannsen/
 https://personal.math.ubc.ca/~lior/teaching/
+https://www.dpmms.cam.ac.uk/~ajs1005/teaching.html
+https://www.dpmms.cam.ac.uk/study/II/
 
 Hebrew
 ------
@@ -85,4 +87,5 @@ write about the universality of the cantor set, space filling curves, Benjamini'
 check out https://www.homepages.ucl.ac.uk/~ucahjde/tg/html/gal-02.html
 http://user.math.uzh.ch/berner/files/algtop.pdf
 https://nptel.ac.in/content/storage2/courses/111101002/downloads/lecture20.pdf
+https://people.math.wisc.edu/~maxim/bundle.pdf
 write about archimede's hat box theorem and filling a ball using 1 x d rectangles.

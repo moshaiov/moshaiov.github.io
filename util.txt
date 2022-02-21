@@ -82,7 +82,7 @@ https://www.reddit.com/r/mathriddles/comments/puvqdh/guessing_numbers_general/
 https://mathoverflow.net/questions/10911/english-reference-for-a-result-of-kronecker
 
 MIGHT BE COOL TO
-implement the game black sheep
+http://www.mat.ufpb.br/jmbo/papers/Brezis/brezis/189.pdf [especially cor1]
 write about the universality of the cantor set, space filling curves, Benjamini's theorem
 check out https://www.homepages.ucl.ac.uk/~ucahjde/tg/html/gal-02.html
 http://user.math.uzh.ch/berner/files/algtop.pdf

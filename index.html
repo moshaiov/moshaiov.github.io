@@ -423,7 +423,7 @@ c & d
 
 <br><br>
 
-<u>subclaim</u> let $W\le V_n$ be an $\SU(2)$ submodule. if $w=\sum r_j x^{n-j}y^j\in W$ and $r_i\neq 0$ then $x^{n-j}y^j\in W$.
+<u>subclaim</u> let $W\le V_n$ be an $\SU(2)$ submodule. if $w=\sum r_j x^{n-j}y^j\in W$ and $r_k\neq 0$ then $x^{n-k}y^k\in W$.
 
 <br><br>
 
@@ -459,21 +459,44 @@ let $V$ be a representation of $\SU(2)$ and $\chi$ its character. recall the max
 <!-- --------------------------------------------------------------------SET THEORY-------------------------------------------------------------------- -->
 
 <!-- BASICS --> <div id="set theory basics" class="topic" style="display: none;"> <h1>set theory basics</h1>
-<u>theorem</u> [Cantor] $2^{\N}$ is uncountable.
+
+<u>exercise</u> any infinite subset $A\sub \N$ is countable.
 
 <br><br>
 
-<span class="btn" onclick="toggle_show_and_hide('ai')"><u>proof</u></span> <div id="ai" style="display: none;">
+<u>claim</u> $\N^2$ is countable.
+
+<br><br>
+
+<span class="btn" onclick="toggle_show_and_hide('x5')"><u>proof</u></span> <div id="x5" style="display: none;">
+to enumerate the points of the quarter grid $\N^2$, we follow its diagonals. namely the diagonals $x+y=c$ form layers, ordered by $c$. the $c+1$ elements within each layer are ordered by height (namely the $y$ coordinate). in formula, this bijection $\N^2\to \N$ is $(x,y)\mapsto {x+y+1 \choose 2}+y$. <br>
+as a second solution, it's easier, and sufficient, to find an injection $f:\N^2\to\N$. one could take $f(a,b)=2^a3^b$.
+<span style="float:right;"> ▨ </span></div>
+
+<br><br>
+
+<u>exercise</u> consider the following game. an invisible monkey lives in $\N$. every second, it jumps further right to a different location. we don't know where the monkey started or how far it can jump, but we do know the jumps are constant.
+with each passing second, we are allowed to make a guess on the monkey's location. find a procedure that is guaranteed to eventually find the monkey.
+
+<br><br>
+
+<u>claim</u> [Cantor] $2^{\N}$ is uncountable.
+
+<br><br>
+
+<span class="btn" onclick="toggle_show_and_hide('x6')"><u>proof</u></span> <div id="x6" style="display: none;">
 we need to show that one cannot enumerate $2^\N$.
 so, given a sequence $(b_i)_{i\in \N}$ in $2^\N$, we need to construct some $b\in 2^\N$ that differs from all the $b_i$. this can be done as follows :
 the $i\th$ bit of $b$ will be the $i\th$ bit of $b_i$, flipped. <span style="float:right;"> ▨ </span> <br>
-<green>for obvious geometrical reasons, this method of proof is called diagonalization.</green>
-</div>
+<green>for obvious geometrical reasons, this method of proof is called diagonalization. <green> </div>
+
+<br><br>
+
+<u>observation</u> consider again the monkey game, only now the monkey starts at the origin, but each second it can choose either to stay in place or move one tile right. now, if the monkey plays well, we won't be able to ever find it, no matter how well we play. from this fact alone we could deduce the uncountability of $2^\N$.
 
 <br><br>
 
 <u>exercise</u> [Cantor] more generally, for any set $X$ we have $|X| < |2^X|$.
-
 
 </div> <!-- END BASICS -->
 

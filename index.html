@@ -531,18 +531,42 @@ the $i\th$ bit of $b$ will be the $i\th$ bit of $b_i$, flipped. <span style="flo
 <br><br>
 </div> <!-- END NOTES -->
 
-<!-- --------------------------------------------------------------------SOLUTIONS-------------------------------------------------------------------- -->
-
-<div id="solutions" class="page" style="display: none;">
-	<span style="color:red"> under construction </span>
-</div> <!-- END SOLUTIONS -->
-
-<!-- --------------------------------------------------------------------GAMES-------------------------------------------------------------------- -->
+	<!-- --------------------------------------------------------------------GAMES-------------------------------------------------------------------- -->
 
 
 <div id="games" class="page" style="display: none;">
-	<span style="color:red"> under construction </span>
+	<span style="color:red"> </span>
+
+	<div id="king eats pawns" class="topic" style="display: inline">
+	<br>
+	<canvas id="kingEatsPawnsCanvas"  width="350" height="350" class="idk"></canvas>
+	<br>
+	<div id="output" style="text-align: center;"></div>
+	<span class="btn" onclick="ReverseLastMove()">undo last move</span> <br>
+		<span class="btn" onclick="Restart()">restart level</span> <br>
+		<span class="btn" onclick="ShowMoves()">see the moves you made</span> <br>
+	<span class="btn" onclick="ChangeLevel()">change level</span> &nbsp&nbsp <input type="number" id="KEP level" min="1" max="46" value="1"><br>
+
+	<span class="btn" onclick="toggle_show_and_hide('KEP colors')">change colors</span> <br>
+	<div id="KEP colors" style="display: none;">
+	&nbsp king &nbsp <input type="color" id="king" value="#6b8764" onchange="changeColor('king')"> <br>
+	&nbsp pawn &nbsp <input type="color" id="pawn" value="#056b9e" onchange="changeColor('pawn')"> <br>
+	&nbsp vacant &nbsp <input type="color" id="vacant" value="#808080" onchange="changeColor('vacant')"> <br>
+	&nbsp clicked &nbsp <input type="color" id="clicked" value="#ffd500" onchange="changeColor('clicked')"> <br>
+	</div>
+	<br>
+	game rules : <br>
+	1. each game starts with one king and several pawns <br>
+	2. the goal of the game is to eliminate the pawns one by one so eventually only the king will remain <br>
+	3. the kings and pawns live on the 13 cells a 5x5 grid, those colored black on a chessboard coloring <br>
+	4. a move consists of making one piece (a pawn or the king) jump over and eat a pawn. [just like in checkers, except horizontal and vertical jumps are also allowed]
+	<br><br>
+	this is a fan clone. no rights reserved.
+	<script src="kingEatsPawns.js"></script>
+</div>
+
 </div> <!-- END GAMES -->
+
 
 </body>
 

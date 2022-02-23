@@ -1,8 +1,15 @@
-body {font-family: Georgia; line-height: 2.5;}
+html {font-size: 1.1em;}
+body {margin : 25px; font-family: Helvetica; line-height: 2.5;}
 a, a:hover, a:focus, a:active { text-decoration: none; color: #49BED9; }
 blue{color: #49BED9;}
 red{color: #FF0000;}
+green{color: #80BB80;}
+
 h1 {text-align: center;}
 
 .btn {cursor: pointer;}
 .lnk{cursor: pointer; color: #49BED9;}
+.idk {
+      display: block;
+      margin: 0 auto;
+}

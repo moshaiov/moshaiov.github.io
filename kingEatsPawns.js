@@ -1,7 +1,7 @@
 //file : kingEatsPawns.js
 //brief : the back end of an implementation of a simple video game
 //author : Tom M, 21/02/22
-//naming convention : variables are camelCase, functions are CamelCase
+//naming convention : variables with camelCase, functions with CamelCase
 
 //game rules :
 //1. each game starts with one king and several pawns

@@ -100,6 +100,7 @@
 		<!-- LINEAR ALGEBRA MENU --> <span class="btn" onclick="toggle_show_and_hide('linear algebra anchors')">linear algebra</span> <br>
 		<div id="linear algebra anchors" style="display: none;">
 			&nbsp <span class="lnk" onclick="show_only_topic('nilpotent-operators')">nilpotent operators</span> <br>
+			&nbsp <span class="lnk" onclick="show_only_topic('minimal polynomial')">minimal polynomial</span> <br>
 			&nbsp <span class="lnk" onclick="show_only_topic('over R and C')">over $\R$ and $\C$</span> <br>
 		</div> <!-- END LINEAR ALGEBRA MENU -->
 
@@ -162,6 +163,13 @@
 
 <!-- --------------------------------------------------------------------LINEAR ALGEBRA-------------------------------------------------------------------- -->
 
+<!-- MINIMAL POLYNOMIAL --> <div id="minimal polynomial" class="topic" style="display: none;"> <h1>minimal polynomial</h1>
+	<u>theorem</u> [Jordan-Chevalley] fix $T\in\End V$. assuming its minimal polynomial $m_T(t)=\prod_j(t-\lambda_j)^{m_j}$ splits over $F$, 
+	there exists unique commuting $N,D\in\End V$ with $T=N+D$, $N$ nilpotent and $D$ diagonalizable. in addition, $N,D$ are polynomials in $T$ 
+	without constant term.
+</div> <!-- END MINIMAL POLYNOMIAL -->
+
+	
 <!-- NILPOTENT OPERATORS --> <div id="nilpotent-operators" class="topic" style="display: none;"> <h1>nilpotent operators</h1>
 	<u>claim</u> let $T\in\End(V)$, $n=\dim V$. then $\{v\mid \exists k : T^kv=0\}=\ker T^n$. in particular, $T$ is nilpotent iff $T^n=0$.
 

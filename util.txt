@@ -17,6 +17,7 @@ https://personal.math.ubc.ca/~lior/teaching/
 https://www.dpmms.cam.ac.uk/~ajs1005/teaching.html
 https://www.dpmms.cam.ac.uk/study/II/
 
+
 Hebrew
 ------
 https://digmi.org/lecture-notes/
@@ -29,6 +30,7 @@ algebra
 -------
 http://img2.tapuz.co.il/forums/1_119799880.pdf [Nakayama + Nullstellensatz]
 https://kskedlaya.org/math203b-win16/
+https://web.stanford.edu/~viviank/math6310notes.pdf
 https://github.com/ryankeleti/ega
 https://stacks.math.columbia.edu/browse
 https://ocw.mit.edu/courses/mathematics/18-726-algebraic-geometry-spring-2009/lecture-notes/

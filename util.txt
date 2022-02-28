@@ -28,6 +28,7 @@ http://www.ma.huji.ac.il/lecture_notes/pazy1.pdf [mainfolds]
 algebra
 -------
 http://img2.tapuz.co.il/forums/1_119799880.pdf [Nakayama + Nullstellensatz]
+https://kskedlaya.org/math203b-win16/
 https://github.com/ryankeleti/ega
 https://stacks.math.columbia.edu/browse
 https://ocw.mit.edu/courses/mathematics/18-726-algebraic-geometry-spring-2009/lecture-notes/

@@ -29,6 +29,7 @@ http://www.ma.huji.ac.il/lecture_notes/pazy1.pdf [mainfolds]
 algebra
 -------
 https://math.stanford.edu/~vakil/0708-216
+http://math.stanford.edu/~vakil/216blog/FOAGnov1817public.pdf
 http://img2.tapuz.co.il/forums/1_119799880.pdf [Nakayama + Nullstellensatz]
 https://kskedlaya.org/math203b-win16/
 https://web.stanford.edu/~viviank/math6310notes.pdf

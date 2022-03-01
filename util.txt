@@ -28,6 +28,7 @@ http://www.ma.huji.ac.il/lecture_notes/pazy1.pdf [mainfolds]
 
 algebra
 -------
+https://math.stanford.edu/~vakil/0708-216
 http://img2.tapuz.co.il/forums/1_119799880.pdf [Nakayama + Nullstellensatz]
 https://kskedlaya.org/math203b-win16/
 https://web.stanford.edu/~viviank/math6310notes.pdf
@@ -73,6 +74,7 @@ https://faculty.math.illinois.edu/~vddries/recursion.pdf
 
 OTHER
 =====
+https://ayoucis.wordpress.com/
 https://matthewhr.wordpress.com/expository-writings-notes-problem-solutions-etc/
 https://istina.msu.ru/media/courses/course/7be/72b/31309676/pdfjoiner_11.pdf
 https://drive.google.com/file/d/1sQtirXxkEfWYuGSKDZ-d7VGYkR_idebY/view?usp=sharing [olympiad combinatorics]

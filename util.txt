@@ -1,14 +1,13 @@
-COURSE NOTES
-============
-
-multicourse collections
-----------------
+LARGE COLLECTIONS OF NOTES
+---------------------------
 https://dec41.user.srcf.net/notes/
 http://alpha.math.uga.edu/~pete/expositions2012.html
 https://www.jmilne.org/math/CourseNotes/
 https://tartarus.org/gareth/maths/notes/
 https://github.com/Dongryul-Kim/harvard_notes
-https://github.com/notzeb/all/blob/master/all.pdf
+
+SMALL COLLECTIONS OF NOTES
+--------------------------
 http://www.ma.huji.ac.il/~razk/iWeb/My_Site/Teaching.html
 http://www.joelshapiro.org/Pubvit/lectures.html
 https://dmitripavlov.org/#teaching
@@ -17,6 +16,17 @@ http://www.mathematik.uni-regensburg.de/Jannsen/
 https://personal.math.ubc.ca/~lior/teaching/
 https://www.dpmms.cam.ac.uk/~ajs1005/teaching.html
 https://www.dpmms.cam.ac.uk/study/II/
+
+
+ALGEBRA
+-------
+http://web.mit.edu/18.705/www/13Ed.pdf  ["a term of commutative algebra", clear]
+http://math.stanford.edu/~vakil/216blog/FOAGnov1817public.pdf [the rising sea, clear]
+http://perso.ens-lyon.fr/sophie.morel/notes540.pdf [homological algebra]
+http://perso.ens-lyon.fr/sophie.morel/rep_theory_notes.pdf [representation theory]
+https://github.com/ryankeleti/ega [Grothendieck translated]
+http://www-math.mit.edu/~etingof/artinnotes.pdf [noncommutative algebra]
+
 
 
 Hebrew
@@ -30,20 +40,15 @@ http://www.ma.huji.ac.il/lecture_notes/pazy1.pdf [mainfolds]
 algebra
 -------
 https://math.stanford.edu/~vakil/0708-216
-http://math.stanford.edu/~vakil/216blog/FOAGnov1817public.pdf
 http://img2.tapuz.co.il/forums/1_119799880.pdf [Nakayama + Nullstellensatz]
 https://kskedlaya.org/math203b-win16/
 https://web.stanford.edu/~viviank/math6310notes.pdf
-https://github.com/ryankeleti/ega
 https://stacks.math.columbia.edu/browse
 https://ocw.mit.edu/courses/mathematics/18-726-algebraic-geometry-spring-2009/lecture-notes/
 https://you-qi2121.github.io/mypage/algebraicgeo.pdf
 https://math.columbia.edu/~dejong/courses/Commutative-Algebra.pdf
 https://ocw.mit.edu/courses/mathematics/18-712-introduction-to-representation-theory-fall-2010/lecture-notes/
 https://math.mit.edu/classes/18.745/Notes/
-http://www-math.mit.edu/~etingof/artinnotes.pdf
-http://perso.ens-lyon.fr/sophie.morel/notes540.pdf [homological algebra]
-http://perso.ens-lyon.fr/sophie.morel/rep_theory_notes.pdf
 http://www.mathematik.uni-regensburg.de/Jannsen/home/UebungWS1718/Etale-gesamt-eng.pdf
 
 geometry & topology
@@ -53,7 +58,6 @@ https://www.math.stonybrook.edu/~kirillov/mat552/liegroups.pdf
 https://you-qi2121.github.io/mypage/liegroup.pdf
 https://you-qi2121.github.io/mypage/cars.pdf    [Riemann surfaces]
 https://math.berkeley.edu/~teleman/math/Riemann.pdf
-https://www.math.stonybrook.edu/~azinger/mat620/EGnotes.pdf
 https://meshulam.net.technion.ac.il/files/2021/05/Introductory-Geometry-English.pdf
 https://adebray.github.io/lecture_notes/m392c_RSnotes.pdf
 

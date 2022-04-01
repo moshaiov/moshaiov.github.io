@@ -7,14 +7,21 @@
 	  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	  <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], processEscapes: true }}); </script>
 	  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
-	  $
-	  \newcommand{\C}{\mathbf{C}}
-	  \newcommand{\H}{\mathbf{H}}
-	  $
   </head>
+	
+  <div style="display: none;">
+  $
+  \newcommand{\C}{\mathbf{C}}
+  \newcommand{\R}{\mathbf{R}}
+  \newcommand{\Z}{\mathbf{Z}}
+  \newcommand{\N}{\mathbf{N}}
+  \newcommand{\U}{\mathbf{U}}
+  \newcommand{\D}{\mathbf{D}}
+  $
+  </div>
   
   <body>
-	Identity. [Jacobi] we have $$\sum_{n\ge 1}e^{i(n^2\tau + nz)}=\prod_{k\ge 1}(1-q^{2k})(1+q^{2k-1}e^{iz})(1+q^{2k-1}e^{-iz})$$
-	where $q=e^{i\tau}$ for all $z\in\C$, $\tau\in\H$.
+	Identity. [Jacobi] $\sum_{n\ge 1}e^{i(n^2\tau + nz)}=\prod_{k\ge 1}(1-q^{2k})(1+q^{2k-1}e^{iz})(1+q^{2k-1}e^{-iz})$
+	where $q=e^{i\tau}$ for all $z\in\C$, $\tau\in\U$.
   </body>
 </html>

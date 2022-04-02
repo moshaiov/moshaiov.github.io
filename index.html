@@ -17,11 +17,17 @@
   \newcommand{\N}{\mathbf{N}}
   \newcommand{\U}{\mathbf{U}}
   \newcommand{\D}{\mathbf{D}}
+  \renewcommand{\to}{\longrightarrow}
   $
   </div>
   
   <body>
-	Identity. [Jacobi] $$\sum_{n\ge 1}e^{i(n^2\tau + nz)}=\prod_{k\ge 1}(1-q^{2k})(1+q^{2k-1}e^{iz})(1+q^{2k-1}e^{-iz})$$
-	where $q=e^{i\tau}$ for all $z\in\C$, $\tau\in\U$.
+	theorem. [Schwarz] let $f:\D\to\D$, $f(0)=0$ be holomorphic. then either $f(z)=e^{i\theta}z$ is a rotation for some angle $\theta\in\R$ 
+	  or $f$ is a contraction : $|f(z)| < |z|$ for all $z\in\D\-\{0\}$ and $|f'(0)| < 1$.
+	  
+	<hr>
+	
+	identity. [Jacobi] $$\sum_{n\ge 1}q^{n^2}a^n = \prod_{k\ge 1} (1-q^{2k}) (1+q^{2k-1}a) (1+q^{2k-1}/a)$$
+	for all $|q|<1$, $a\neq 0$.
   </body>
 </html>

@@ -1,6 +1,13 @@
 body {
       font-family: Georgia;
       line-height: 2.5;
+      background-color: white;
+      color: black;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
 }
 
 hr {

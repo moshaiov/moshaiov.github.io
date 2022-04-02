@@ -19,6 +19,7 @@
   \newcommand{\D}{\mathbf{D}}
   \renewcommand{\to}{\longrightarrow}
   \newcommand{\-}{\setminus}
+  \newcommand{\disp}{\displaystyle}
   $
   </div>
   
@@ -33,8 +34,14 @@
 	  or $f$ is a contraction : $|f(z)| < |z|$ for all $z\in\D\-\{0\}$ and $|f'(0)| < 1$.
 	  
 	<hr>
+		
+	proof. consider the holomorphic $g:\D\to\C$ given by $g(z)=f(z)/z$ for $z\in\D\-\{0\}$ and $g(0)=f'(0)$. then $g$ is holomorphic. 
+	we shall show that $|g|\le 1$. indeed, for $r\in(0,1)$ we have that $\disp\max_{|z|=r}|g(z)|\le 1/r$. by the maximum principle, letting 
+	$r\to 1^-$ yields $|g|\le 1$. if at any point $|g(z_0)|=1$ then $g$ is constant and $f$ is a rotation. <qed>
+		  
+	<hr>
 	
 	identity. [Jacobi] $$\sum_{n\ge 1}q^{n^2}a^n = \prod_{k\ge 1} (1-q^{2k}) (1+q^{2k-1}a) (1+q^{2k-1}/a)$$
-	for all $|q|<1$, $a\neq 0$.
+	for all $|q| < 1$, $a\neq 0$.
   </body>
 </html>

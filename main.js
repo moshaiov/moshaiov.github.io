@@ -6,6 +6,7 @@ function ToggleDarkMode() {
 function AddQedSymbols() {
    var els = document.getElementsByClassName("qed");
    for(var i = 0; i < els.length; i++) {
+      console.log("hi");
       var x = els[i];
       x.insertAdjacentHTML('afterend', '◆');
    }

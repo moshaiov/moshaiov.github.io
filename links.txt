@@ -1,1 +1,5 @@
-https://people.math.harvard.edu/~ctm/courses.html
+Course notes
+  (Curtis Mcmullen) https://people.math.harvard.edu/~ctm/courses.html
+
+Papers
+  (proof of Jacobi triple product) https://www.ams.org/journals/proc/1965-016-02/S0002-9939-1965-0171725-X/S0002-9939-1965-0171725-X.pdf

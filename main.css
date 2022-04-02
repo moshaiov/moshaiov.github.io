@@ -1,3 +1,7 @@
+body {
+      font-family: Georgia;
+}
+
 hr {
     clear: both;
     visibility: hidden;

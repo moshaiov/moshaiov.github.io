@@ -3,3 +3,8 @@ Course notes
 
 Papers
   (proof of Jacobi triple product) https://www.ams.org/journals/proc/1965-016-02/S0002-9939-1965-0171725-X/S0002-9939-1965-0171725-X.pdf
+  
+Books
+  Eberhard Freitag, Rolf Busam - Complex analysis
+  Steven G. Krantz - Geometric Function Theory, Explorations in Complex Analysis
+  Complex Analysis (Princeton Lectures in Analysis, Volume II)

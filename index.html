@@ -33,21 +33,25 @@
 	  
 	<hr> <hr>
 	  
+	<h1>the unit disk and the upper half plane</h1>
+	  
 	theorem. [Schwarz] let $f:\D\to\D$, $f(0)=0$ be holomorphic. then either $f(z)=e^{i\theta}z$ is a rotation for some angle $\theta\in\R$ 
 	or $f$ is a contraction : $|f(z)| < |z|$ for all $z\in\D\-\{0\}$ and $|f'(0)| < 1$.
 	  
-	<hr>
+	<hr> <hr>
 		
 	proof. let $g:\D\to\C$ be given by $g(z)=f(z)/z$ for $z\in\D\-\{0\}$ and $g(0)=f'(0)$. then $g$ is holomorphic. 
 	since for $r\in(0,1)$ we have $\disp\max_{|z|=r}|g(z)|\le 1/r$, the maximum modulus principle implies $|g|\le 1$ (by letting $r\uparrow 1$).
 	if at any point $|g(z_0)|=1$ then $g$ is constant, meaning $f$ is a rotation. otherwise $f$ is a contraction.
 	<qed></qed>
 	  
-	<hr>
+	<hr> <hr>
 	  
 	corollary. let $f:\D\to\D$, $f(0)=0$ be a holomorphic bijection. then $f(z)=e^{i\theta}z$ is a rotation for some angle $\theta\in\R$.
 		  
-	<hr>
+	<hr> <hr>
+	  
+	<h1>Jacobi's theta functions</h1>
 	
 	identity. [Jacobi] $$\sum_{n\ge 1}q^{n^2}a^n = \prod_{k\ge 1} (1-q^{2k}) (1+q^{2k-1}a) (1+q^{2k-1}/a)$$
 	for all $|q| < 1$, $a\neq 0$.

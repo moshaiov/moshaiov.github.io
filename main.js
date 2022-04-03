@@ -9,6 +9,6 @@ function AddQedSymbols() {
    for(var i = 0; i < els.length; i++) {
       console.log("hi");
       var x = els[i];
-      x.insertAdjacentHTML('afterend', '❖');
+      x.insertAdjacentHTML('afterbegin', '❖');
    }
 }

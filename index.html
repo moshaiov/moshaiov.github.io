@@ -34,13 +34,13 @@
 	<hr> <hr>
 	  
 	theorem. [Schwarz] let $f:\D\to\D$, $f(0)=0$ be holomorphic. then either $f(z)=e^{i\theta}z$ is a rotation for some angle $\theta\in\R$ 
-	  or $f$ is a contraction : $|f(z)| < |z|$ for all $z\in\D\-\{0\}$ and $|f'(0)| < 1$.
+	or $f$ is a contraction : $|f(z)| < |z|$ for all $z\in\D\-\{0\}$ and $|f'(0)| < 1$.
 	  
 	<hr>
 		
-	proof. consider the holomorphic $g:\D\to\C$ given by $g(z)=f(z)/z$ for $z\in\D\-\{0\}$ and $g(0)=f'(0)$. then $g$ is holomorphic. 
-	we shall show that $|g|\le 1$. indeed, for $r\in(0,1)$ we have $\disp\max_{|z|=r}|g(z)|\le 1/r$. fixing $z_0\in\D$ and letting $r\uparrow 1$, 
-	the maximum principle yields $|g(z_0)|\le 1$ as we wanted. finally, if at any point $|g(z_0)|=1$ then $g$ is constant meaning $f$ is a rotation.
+	proof. let $g:\D\to\C$ be given by $g(z)=f(z)/z$ for $z\in\D\-\{0\}$ and $g(0)=f'(0)$. then $g$ is holomorphic. 
+	since for $r\in(0,1)$ we have $\disp\max_{|z|=r}|g(z)|\le 1/r$, the maximum modulus principle implies $|g|\le 1$ (by letting $r\uparrow 1$).
+	if at any point $|g(z_0)|=1$ then $g$ is constant, meaning $f$ is a rotation. otherwise $f$ is a contraction.
 	<qed></qed>
 	  
 	<hr>

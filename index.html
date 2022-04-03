@@ -64,10 +64,25 @@
 	  
 	<h3>identities</h3>
 	identities. [Euler] <br>
-	$\cdot$ $\disp\prod_{n\ge 1}(1+x^n)=\sum_{n\ge 1}a_n x^n$ where $a_n=\#\text{partitions of $n$ with distinct parts}$. <br>
+	$\cdot$ $\disp\prod_{n\ge 1}(1+x^n)=\sum_{n\ge 0}a_n x^n$ where $a_n=\#\text{partitions of $n$ with distinct parts}$. <br>
 	$\cdot$ $\disp\prod_{n\ge 1}(1-x^n)\inv = \prod_{n\ge 1}\sum_{m\ge 0}x^{nm}=\sum_{n\ge 0}a_n x^n$ where $a_n=\#\text{partitions of $n$}$.
 	  
 	<hr> <hr>  
+	  
+	exercise. express $\sum_{n\ge 0}a_n x^n$ as an infinite product where $a_n=\#\text{partitions of $n$ with only odd parts}$. 
+	
+	<hr> <hr>
+	
+	corollary. [Euler] $\#\text{partitions of $n$ with only odd parts}=\#\text{partitions of $n$ with distinct parts}$.
+
+	<hr> <hr>
+	
+	proof. we must show that $\prod_{n\ge 1}(1-x^{2n-1})\inv=\prod_{n\ge 1}1+x^n$. this follows by noting that $1+x^n=\dfrac{1-x^{2n}}{1-x^n}$, 
+	leaving us with only odd degree denominators. a second proof is as follows. let $f(x)=\prod_{n\ge 1}(1-x^{2n-1})(1+x^n)$. then grouping $(1-t)(1+t)$ 
+	yields $f(x)=f(x^2)$, implying $f\equiv 1$.
+	<qed></qed>
+	  
+	<hr> <hr>
 	
 	identity. [Jacobi] $$\sum_{n\ge 1}q^{n^2}a^n = \prod_{k\ge 1} (1-q^{2k}) (1+q^{2k-1}a) (1+q^{2k-1}/a)$$
 	for all $|q| < 1$, $a\neq 0$.

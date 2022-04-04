@@ -64,8 +64,8 @@ $
     
     <h3>identities</h3>
     identities. [Euler] <br>
-    $\cdot$ $\disp\prod_{n\ge 1}(1+x^n)=\sum_{n\ge 0}a_n x^n$ where $a_n=\#\text{partitions of $n$ with distinct parts}$. <br>
-    $\cdot$ $\disp\prod_{n\ge 1}(1-x^n)\inv = \prod_{n\ge 1}\sum_{m\ge 0}x^{nm}=\sum_{n\ge 0}a_n x^n$ where $a_n=\#\text{partitions of $n$}$.
+    $$\disp\prod_{n\ge 1}(1+x^n)=\sum_{n\ge 0}(\#\text{partitions of $n$ with distinct parts})x^n$$
+    $$\disp\prod_{n\ge 1}(1-x^n)\inv = \prod_{n\ge 1}\sum_{m\ge 0}x^{nm}=\sum_{n\ge 0}(\#\text{partitions of $n$})x^n$$
     
     <hr> <hr>  
     
@@ -92,12 +92,16 @@ $
     
     <hr> <hr>
     
-    identity. [Euler] $\disp\prod_{k\ge 1}(1-x^k t)=\sum_{n\ge 0}\dfrac{(-1)^n x^{n(n+1)/2}}{\prod_{\ell=1}^n(1-x^\ell)}$
-    
+    identities. [Euler] 
+    $$\prod_{k\ge 0}(1+x^k t)=\sum_{n\ge 0}\dfrac{x^{n(n-1)/2} t^n}{(1-x)\dots(1-x^n)}$$
+    $$\prod_{k\ge 0}(1-x^k t)\inv=\sum_{n\ge 0}\dfrac{t^n}{(1-x)\dots(1-x^n)}$$
+
     <hr> <hr>  
     
-    proof. let $f(x,t)$ be the right hand side. then $f(x,tx)(1-xt)=f(x,t)$. plugging in $f(x,t)=\sum_{n\ge0} a_n(x)t^n$ yields 
-    $a_0(x)=1$, ${a_{n}(x)=-a_{n-1}x^{n}/(1-x^{n})}\implies a_n(x)=\dfrac{(-1)^n x^{n(n+1)/2}}{\prod_{\ell=1}^n(1-x^\ell)}$.
+    proof. (of first identity) let $f(x,t)$ be the right hand side. then $f(x,tx)(1+t)=f(x,t)$. plugging in $f(x,t)=\sum_{n\ge0} a_n(x)t^n$ yields 
+    $a_0(x)=1$, ${a_{n}(x)=a_{n-1}x^{n-1}/(1-x^{n})}\implies a_n(x)=\dfrac{x^{n(n-1)/2}}{\prod_{\ell=1}^n(1-x^\ell)}$. 
+    <qed></qed><br>
+    the second identity proof is similar.
     <qed></qed>
     
     <hr> <hr>

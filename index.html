@@ -1,93 +1,108 @@
 <!DOCTYPE html>
 <html>
-  <head>
-	  <title> Moshaiov </title>
-  	  <link rel="stylesheet" href="main.css">
-	  <script src="main.js"> </script>
-	  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	  <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], processEscapes: true }}); </script>
-	  <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
-  </head>
-  
-  <body onload="AddQedSymbols()">
-	
-  <div style="display: none;">
-  $
-  \newcommand{\C}{\mathbf{C}}
-  \newcommand{\R}{\mathbf{R}}
-  \newcommand{\Z}{\mathbf{Z}}
-  \newcommand{\N}{\mathbf{N}}
-  \newcommand{\U}{\mathbf{U}}
-  \newcommand{\D}{\mathbf{D}}
-  \renewcommand{\to}{\longrightarrow}
-  \newcommand{\-}{\setminus}
-  \newcommand{\disp}{\displaystyle}
-  \newcommand{\inv}{^{-1}}
-  $
-  </div>
-  
-  <body>
-	<button onclick="ToggleDarkMode()" style="float: right;">toggle dark mode</button>
-	about. Tom Moshaiov's mathematical notes. <br>
-	remarks. currently fairly unorganized and severely incomplete. <br>
-	contanct. tom dot moshaiov at gmail dot com
-	  
-	<hr> <hr>
-	  
-	<h3>the unit disk and the upper half plane</h3>
-	
-	exercise. [Blaschke] fix $\alpha\in\D$. then the Möbius transformation $\psi_\alpha(z)=\dfrac{\alpha-z}{1-\bar\alpha z}$ defines a holomorphic 
-	bijection $\D\to \D$. in fact, $\psi_\alpha$ is an involution.  
-	  
-	<hr> <hr>
-	  
-	theorem. [Schwarz] let $f:\D\to\D$, $f(0)=0$ be holomorphic. then either $f(z)=e^{i\theta}z$ is a rotation for some angle $\theta\in\R$ 
-	or $f$ is a contraction : $|f(z)| < |z|$ for all $z\in\D\-\{0\}$ and $|f'(0)| < 1$.
-	  
-	<hr> <hr>
-		
-	proof. let $g:\D\to\C$ be given by $g(z)=f(z)/z$ for $z\in\D\-\{0\}$ and $g(0)=f'(0)$. then $g$ is holomorphic. 
-	since for $r\in(0,1)$ we have $\disp\max_{|z|=r}|g(z)|\le 1/r$, the maximum modulus principle implies $|g|\le 1$ (by letting $r\uparrow 1$).
-	if at any point $|g(z_0)|=1$ then $g$ is constant, meaning $f$ is a rotation. otherwise $f$ is a contraction.
-	<qed></qed>
-	  
-	<hr> <hr>
-	  
-	corollary. let $f:\D\to\D$, $f(0)=0$ be a holomorphic bijection. then $f(z)=e^{i\theta}z$ is a rotation for some angle $\theta\in\R$.
-		  
-	<hr> <hr>
-	  
-	corollary. let $f:\D\to\D$ be a holomorphic bijection. then $f(z)=e^{i\theta}\dfrac{\alpha-z}{1-\bar\alpha z}$ for some 
-	$\theta\in\R$ and $\alpha\in\D$.
-	  
-	<hr> <hr>
-	  
-	<h3>identities</h3>
-	identities. [Euler] <br>
-	$\cdot$ $\disp\prod_{n\ge 1}(1+x^n)=\sum_{n\ge 0}a_n x^n$ where $a_n=\#\text{partitions of $n$ with distinct parts}$. <br>
-	$\cdot$ $\disp\prod_{n\ge 1}(1-x^n)\inv = \prod_{n\ge 1}\sum_{m\ge 0}x^{nm}=\sum_{n\ge 0}a_n x^n$ where $a_n=\#\text{partitions of $n$}$.
-	  
-	<hr> <hr>  
-	  
-	exercise. express $\sum_{n\ge 0}a_n x^n$ as an infinite product where $a_n=\#\text{partitions of $n$ with only odd parts}$. 
-	
-	<hr> <hr>
-	
-	corollary. [Euler] $\#\text{partitions of $n$ with only odd parts}=\#\text{partitions of $n$ with distinct parts}$.
+<head>
+    <title> Moshaiov </title>
+    <link rel="stylesheet" href="main.css">
+    <script src="main.js"> </script>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], processEscapes: true }}); </script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+</head>
 
-	<hr> <hr>
-	
-	proof. we must show that $\prod_{n\ge 1}(1-x^{2n-1})\inv=\prod_{n\ge 1}1+x^n$. this follows by noting that $1+x^n=\dfrac{1-x^{2n}}{1-x^n}$, 
-	leaving us with only odd degree denominators. 
-	<qed></qed> <br>
-	  
-	a second proof is as follows. let $f(x)=\prod_{n\ge 1}(1-x^{2n-1})(1+x^n)$. then grouping $(1-t)(1+t)$ 
-	yields $f(x)=f(x^2)$, implying $f\equiv 1$.
-	<qed></qed>
-	  
-	<hr> <hr>
-	
-	identity. [Jacobi] $$\sum_{n\ge 1}q^{n^2}a^n = \prod_{k\ge 1} (1-q^{2k}) (1+q^{2k-1}a) (1+q^{2k-1}/a)$$
-	for all $|q| < 1$, $a\neq 0$.
-  </body>
+<body onload="AddQedSymbols()">
+    
+<div style="display: none;">
+$
+\newcommand{\C}{\mathbf{C}}
+\newcommand{\R}{\mathbf{R}}
+\newcommand{\Z}{\mathbf{Z}}
+\newcommand{\N}{\mathbf{N}}
+\newcommand{\U}{\mathbf{U}}
+\newcommand{\D}{\mathbf{D}}
+\renewcommand{\to}{\longrightarrow}
+\newcommand{\-}{\setminus}
+\newcommand{\disp}{\displaystyle}
+\newcommand{\inv}{^{-1}}
+$
+</div>
+
+<body>
+    <button onclick="ToggleDarkMode()" style="float: right;">toggle dark mode</button>
+    about. Tom Moshaiov's mathematical notes. <br>
+    remarks. currently fairly unorganized and severely incomplete. <br>
+    contanct. tom dot moshaiov at gmail dot com
+    
+    <hr> <hr>
+    
+    <h3>the unit disk and the upper half plane</h3>
+    
+    exercise. [Blaschke] fix $\alpha\in\D$. then the Möbius transformation $\psi_\alpha(z)=\dfrac{\alpha-z}{1-\bar\alpha z}$ defines a holomorphic 
+    bijection $\D\to \D$. in fact, $\psi_\alpha$ is an involution.  
+    
+    <hr> <hr>
+    
+    theorem. [Schwarz] let $f:\D\to\D$, $f(0)=0$ be holomorphic. then either $f(z)=e^{i\theta}z$ is a rotation for some angle $\theta\in\R$ 
+    or $f$ is a contraction : $|f(z)| < |z|$ for all $z\in\D\-\{0\}$ and $|f'(0)| < 1$.
+    
+    <hr> <hr>
+        
+    proof. let $g:\D\to\C$ be given by $g(z)=f(z)/z$ for $z\in\D\-\{0\}$ and $g(0)=f'(0)$. then $g$ is holomorphic. 
+    since for $r\in(0,1)$ we have $\disp\max_{|z|=r}|g(z)|\le 1/r$, the maximum modulus principle implies $|g|\le 1$ (by letting $r\uparrow 1$).
+    if at any point $|g(z_0)|=1$ then $g$ is constant, meaning $f$ is a rotation. otherwise $f$ is a contraction.
+    <qed></qed>
+    
+    <hr> <hr>
+    
+    corollary. let $f:\D\to\D$, $f(0)=0$ be a holomorphic bijection. then $f(z)=e^{i\theta}z$ is a rotation for some angle $\theta\in\R$.
+        
+    <hr> <hr>
+    
+    corollary. let $f:\D\to\D$ be a holomorphic bijection. then $f(z)=e^{i\theta}\dfrac{\alpha-z}{1-\bar\alpha z}$ for some 
+    $\theta\in\R$ and $\alpha\in\D$.
+    
+    <hr> <hr>
+    
+    <h3>identities</h3>
+    identities. [Euler] <br>
+    $\cdot$ $\disp\prod_{n\ge 1}(1+x^n)=\sum_{n\ge 0}a_n x^n$ where $a_n=\#\text{partitions of $n$ with distinct parts}$. <br>
+    $\cdot$ $\disp\prod_{n\ge 1}(1-x^n)\inv = \prod_{n\ge 1}\sum_{m\ge 0}x^{nm}=\sum_{n\ge 0}a_n x^n$ where $a_n=\#\text{partitions of $n$}$.
+    
+    <hr> <hr>  
+    
+    exercise. express $\sum_{n\ge 0}a_n x^n$ as an infinite product where $a_n=\#\text{partitions of $n$ with only odd parts}$. 
+    
+    <hr> <hr>
+    
+    corollary. [Euler] $\#\text{partitions of $n$ with only odd parts}=\#\text{partitions of $n$ with distinct parts}$.
+    
+    <hr> <hr>
+    
+    example. $7$ has fifteen partitions $7,61,52,51^{2},43,421,41^{3},3^{2}1,32^{2},321^{2},31^{4},2^{3}1,2^{2}1^{3},21^{5},1^{7}$. 
+    five partitions have no repeating parts and five partitions have only odd parts.
+    
+    <hr> <hr>
+    
+    proof. we must show that $\prod_{n\ge 1}(1-x^{2n-1})\inv=\prod_{n\ge 1}1+x^n$. this follows by noting that $1+x^n=\dfrac{1-x^{2n}}{1-x^n}$, 
+    leaving us with only odd degree denominators. 
+    <qed></qed> <br>
+    
+    a second proof is as follows. let $f(x)=\prod_{n\ge 1}(1-x^{2n-1})(1+x^n)$. then grouping $(1-t)(1+t)$ 
+    yields $f(x)=f(x^2)$, implying $f\equiv 1$.
+    <qed></qed>
+    
+    <hr> <hr>
+    
+    identity. [Euler] $\disp\prod_{k\ge 1}(1-x^k t)=\sum_{n\ge 0}\dfrac{(-1)^n x^{n(n+1)/2}}{\prod_{\ell=1}^n(1-x^\ell)}$
+    
+    <hr> <hr>  
+    
+    proof. let $f(x,t)$ be the right hand side. then $f(x,tx)(1-xt)=f(x,t)$. plugging in $f(x,t)=\sum_{n\ge0} a_n(x)t^n$ yields 
+    $a_0(x)=1$, ${a_{n}(x)=-a_{n-1}x^{n}/(1-x^{n})}\implies a_n(x)=\dfrac{(-1)^n x^{n(n+1)/2}}{\prod_{\ell=1}^n(1-x^\ell)}$.
+    <qed></qed>
+    
+    <hr> <hr>
+    
+    identity. [Jacobi] $$\sum_{n\ge 1}q^{n^2}a^n = \prod_{k\ge 1} (1-q^{2k}) (1+q^{2k-1}a) (1+q^{2k-1}/a)$$
+    for all $|q| < 1$, $a\neq 0$.
+</body>
 </html>

@@ -12,3 +12,7 @@ Books
   Eberhard Freitag, Rolf Busam - Complex analysis
   Steven G. Krantz - Geometric Function Theory, Explorations in Complex Analysis
   Complex Analysis (Princeton Lectures in Analysis, Volume II)
+  from calculus to cohomology
+  treatise on analysis
+  Newman - analytic number theory
+  Apostol - introduction to analytic number theory

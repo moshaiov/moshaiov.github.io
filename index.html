@@ -24,6 +24,7 @@ $
 \newcommand{\-}{\setminus}
 \newcommand{\disp}{\displaystyle}
 \newcommand{\inv}{^{-1}}
+\newcommand{\End}{\text{End}}
 $
 </div>
     
@@ -36,7 +37,7 @@ $
     
     <hr> <hr>
     
-    <h3>the unit disk and the upper half plane</h3>
+    <h2>the unit disk and the upper half plane</h2>
     
     exercise. [Blaschke] fix $\alpha\in\D$. then the Möbius transformation $\psi_\alpha(z)=\dfrac{\alpha-z}{1-\bar\alpha z}$ defines a holomorphic 
     bijection $\D\to \D$. in fact, $\psi_\alpha$ is an involution.  
@@ -74,7 +75,8 @@ $
     
     <hr> <hr>
     
-    <h3>identities</h3>
+    <h2>identities</h2>
+    
     identities. [Euler] <br>
     $$\disp\prod_{n\ge 1}(1+x^n)=\sum_{n\ge 0}(\#\text{partitions of $n$ with distinct parts})x^n$$
     $$\disp\prod_{n\ge 1}(1-x^n)\inv = \prod_{n\ge 1}\sum_{m\ge 0}x^{nm}=\sum_{n\ge 0}(\#\text{partitions of $n$})x^n$$
@@ -117,6 +119,12 @@ $
     <qed></qed>
     
     <hr> <hr>
+    
+    <h2>linear algebra</h2>
+    
+    exercise. let $T\in\End(V)$ have a cyclic vector : $v,Tv,T^2v,\dots,T^{d-1}v$ is a basis of $V$. then $S\in\End(V)$ commutes with $T$ iff $S$ is 
+    a polynomials in $T$.
+
     
 </body>
 </html>

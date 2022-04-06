@@ -16,4 +16,4 @@ Books
   treatise on analysis
   Newman - analytic number theory
   Apostol - introduction to analytic number theory
-  Farkas, Kra - Theta constants, Riemann surfaces and the modular group
+  Maass - modular functions off one complex variable

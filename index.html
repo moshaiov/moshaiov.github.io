@@ -19,6 +19,7 @@ $
 \newcommand{\N}{\mathbf{N}}
 \newcommand{\U}{\mathbf{U}}
 \newcommand{\D}{\mathbf{D}}
+\newcommand{\d}{\text{d}}
 \renewcommand{\to}{\longrightarrow}
 \newcommand{\-}{\setminus}
 \newcommand{\disp}{\displaystyle}
@@ -62,6 +63,16 @@ to do : write Andrews proof of Jacobi triple product
     
     corollary. let $f:\D\to\D$ be a holomorphic bijection. then $f(z)=e^{i\theta}\dfrac{\alpha-z}{1-\bar\alpha z}$ for some 
     $\theta\in\R$ and $\alpha\in\D$.
+    
+    <hr> <hr>
+    
+    exercise. let $f:\D\to\D$ be any holomorphic bijection, $w=f(z)$. then $\dfrac{|\d z|}{1-|z|^2}=\dfrac{|\d w|}{1-|w|^2}$. therefore 
+    the holomorphic bijections of $\D$ preserve the <green>hyperbolic metric</green>.
+    
+    <hr> <hr> 
+    
+    definition. the <blue>Poincare hyperbolic</blue> metric on $\D$ is given by $\dfrac{2|\d z|}{1-|z|^2}$. that is, the hyperbolic 
+    length of a path $\gamma:I\to\D$ is given by $\int_I \dfrac{2|\gamma'(t)|}{1-|\gamma(t)|^2}\d t$.
     
     <hr> <hr>
     
@@ -109,7 +120,5 @@ to do : write Andrews proof of Jacobi triple product
     
     <hr> <hr>
     
-    identity. [Jacobi] $$\sum_{n\ge 1}q^{n^2}a^n = \prod_{k\ge 1} (1-q^{2k}) (1+q^{2k-1}a) (1+q^{2k-1}/a)$$
-    for all $|q| < 1$, $a\neq 0$.
 </body>
 </html>

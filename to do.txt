@@ -1,0 +1,4 @@
+write Andrew's proof of Jacobi triple product identity
+write Hom(Z^N,Z)={(x)\mapsto a_1x_1+\dots+a_nx_n : n\ge 0,a_i\in\Z}
+write 3rd riddle of oct 2017 from "using your head is permitted"
+write the 64 bit wizard problem

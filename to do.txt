@@ -1,4 +1,13 @@
 write Andrew's proof of Jacobi triple product identity
 write Hom(Z^N,Z)={(x)\mapsto a_1x_1+\dots+a_nx_n : n\ge 0,a_i\in\Z}
-write 3rd riddle of oct 2017 from "using your head is permitted"
-write the 64 bit wizard problem
+Noga Alon communicating on n-cube
+applications of Baire
+https://www.brand.site.co.il/riddles/201710q.html
+https://www.brand.site.co.il/riddles/201509q.html
+https://www.reddit.com/r/mathriddles/comments/avpbnp/determination_of_polynomial_by_2_points_preimage/
+https://www.reddit.com/r/mathriddles/comments/czzrcr/on_an_evolutionary_process_in_a_graph/
+https://www.reddit.com/r/mathriddles/comments/70pij9/friendly_neighbors_2n_1_chessboard/
+https://www.reddit.com/r/mathriddles/comments/6z463c/graphs_that_just_wont_converge/
+https://www.reddit.com/r/mathriddles/comments/7b8ry6/dominating_family/
+http://www.hewwolff.org/GoogleProof/proof.html
+https://www.reddit.com/r/mathriddles/comments/bf4awi/does_the_stupidest_sorting_method_work/?utm_source=share&utm_medium=ios_app&utm_name=iossmf

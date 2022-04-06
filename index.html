@@ -25,6 +25,7 @@ $
 \newcommand{\disp}{\displaystyle}
 \newcommand{\inv}{^{-1}}
 \newcommand{\End}{\text{End}}
+\newcommand{\SL}{\text{SL}}
 $
 </div>
     
@@ -68,12 +69,30 @@ $
     exercise. let $f:\D\to\D$ be any holomorphic bijection, $w=f(z)$. then $\dfrac{|\d z|}{1-|z|^2}=\dfrac{|\d w|}{1-|w|^2}$. therefore 
     the holomorphic bijections of $\D$ preserve the <green>hyperbolic metric</green>.
     
-    <hr> <hr> 
+    <hr> <hr>
     
-    definition. the <blue>Poincare hyperbolic</blue> metric on $\D$ is given by $\dfrac{2|\d z|}{1-|z|^2}$. that is, the hyperbolic 
-    length of a path $\gamma:I\to\D$ is given by $\int_I \dfrac{2|\gamma'(t)|}{1-|\gamma(t)|^2}\d t$.
+    definition. the <blue>Poincaré hyperbolic</blue> metric on $\D$ is given by $\dfrac{2|\d z|}{1-|z|^2}$. <br>
+    that is, the <blue>hyperbolic length</blue> of a path $\gamma:I\to\D$ is given by $\int_I \dfrac{2|\gamma'(t)|}{1-|\gamma(t)|^2}\d t$.
     
     <hr> <hr>
+    
+    observation. [Cayley] the map $w=i\dfrac{1+z}{1-z}$ is a holomorphic bijection $\D\to\U$. 
+    
+    <hr> <hr>
+    
+    corollary. any holomorphic bijection $\U\to\U$ is a Möbius transformation.
+    
+    <hr> <hr>
+    
+    exercise. $f:\U\to\U$ is a holomorphic bijection iff $f(w)=\dfrac{aw+b}{cw+d}$ for some $\left(\begin{array}{cc}a & b\\c & d\end{array}\right)\in\SL_2(\R)$.
+    
+    <hr> <hr>
+    
+    definition. the <blue>Poincaré hyperbolic</blue> metric on $\U$ is given by $\dfrac{|\d w|}{y}$ where $w=x+iy\in\U$. <br>
+    
+    <hr> <hr>
+    
+    exercise. the Cayley map preserves the hyperbolic structure.  
     
     <h2>identities</h2>
     

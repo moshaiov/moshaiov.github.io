@@ -21,5 +21,6 @@ qed {
     float: right;
 }
 
-blue {color:blue;}
-green {color:green;}
+blue{color: #49BED9;}
+red{color: #FF0000;}
+green{color: #80BB80;}

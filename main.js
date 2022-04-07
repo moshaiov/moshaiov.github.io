@@ -11,7 +11,7 @@ function AddQedSymbols() {
    }
 }
 
-function ChangeFont(newFont) {
-   var element = document.body;
-   element.style.fontFamily = newFont;
-}
+ function ToggleFont() {
+    var element = document.body;
+    element.classList.toggle("change-font");
+ }

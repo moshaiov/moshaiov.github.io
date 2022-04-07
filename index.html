@@ -13,19 +13,20 @@
     
 <div style="display: none;">
 $
-\newcommand{\C}{\mathbf{C}}
-\newcommand{\R}{\mathbf{R}}
-\newcommand{\Z}{\mathbf{Z}}
-\newcommand{\N}{\mathbf{N}}
-\newcommand{\U}{\mathbf{U}}
-\newcommand{\D}{\mathbf{D}}
-\newcommand{\d}{\text{d}}
-\renewcommand{\to}{\longrightarrow}
-\newcommand{\-}{\setminus}
-\newcommand{\disp}{\displaystyle}
-\newcommand{\inv}{^{-1}}
-\newcommand{\End}{\text{End}}
-\newcommand{\SL}{\text{SL}}
+    \newcommand{\C}{\mathbf{C}}
+    \newcommand{\R}{\mathbf{R}}
+    \newcommand{\Z}{\mathbf{Z}}
+    \newcommand{\N}{\mathbf{N}}
+    \newcommand{\U}{\mathbf{U}}
+    \newcommand{\D}{\mathbf{D}}
+    \newcommand{\d}{\text{d}}
+    \renewcommand{\to}{\longrightarrow}
+    \newcommand{\-}{\setminus}
+    \newcommand{\disp}{\displaystyle}
+    \newcommand{\inv}{^{-1}}
+    \newcommand{\End}{\text{End}}
+    \newcommand{\SL}{\text{SL}}
+    \newcommand{\bij}{\longleftrightarrow}
 $
 </div>
     
@@ -34,10 +35,8 @@ $
     <button onclick="ToggleDarkMode()" style="float: right;">toggle dark mode</button>
     about. Tom Moshaiov's mathematical notes. <br>
     remarks. currently fairly unorganized and severely incomplete. <br>
-    contanct. tom dot moshaiov at gmail dot com
-    
-    <hr> <hr>
-    
+    contanct. tom dot moshaiov at gmail dot com.
+        
     <h2>the unit disk and the upper half plane</h2>
     
     exercise. [Blaschke] fix $\alpha\in\D$. then the Möbius transformation $\psi_\alpha(z)=\dfrac{\alpha-z}{1-\bar\alpha z}$ defines a holomorphic 
@@ -136,13 +135,29 @@ $
     <qed></qed><br>
     the second identity proof is similar.
     <qed></qed>
-    
-    <hr> <hr>
-    
+        
     <h2>linear algebra</h2>
     
     exercise. let $T\in\End(V)$ have a cyclic vector : $v,Tv,T^2v,\dots,T^{d-1}v$ is a basis of $V$. then $S\in\End(V)$ commutes with $T$ iff $S$ is 
     a polynomial in $T$.
+    
+    <h2>foundations</h2>
+    
+    theorem. [Tarski] let $f$ be any order preserving function of a complete lattice $(L,\le)$. then $f$ has a fixed point.
+    
+    <hr> <hr>
+    
+    exercise. prove Tarski's theorem.
+    
+    <hr> <hr>
+    
+    corollary. [Cantor-Schröder–Bernstein] let $A,B$ be sets with injections $i:A\to B$ and $j:B\to A$. then there exists a bijection $p:A\to B$.
+    
+    <hr> <hr>
+    
+    proof. consider the complete lattice $2^A$ and the order preserving map on it $f(X) = j(B\- i(A\- X))$. let $X$ be a fixed point. 
+    then $A=A\- X\sqcup X \bij i(A\- X) \sqcup B\- i(A\- X)=B$.
+    <qed></qed>
 
     
 </body>

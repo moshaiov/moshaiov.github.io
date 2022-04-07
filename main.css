@@ -17,10 +17,14 @@ hr {
     visibility: hidden;
 }
 
-qed {
-    float: right;
+.MathJax_Display, .MJXc-display, .MathJax_SVG_Display {
+    overflow-x: auto;
+    overflow-y: hidden;
 }
+
+qed {float: right;}
 
 blue{color: #49BED9;}
 red{color: #FF0000;}
 green{color: #80BB80;}
+

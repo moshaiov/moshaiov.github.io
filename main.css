@@ -11,15 +11,12 @@ body {
   color: white;
 }
 
+.change-font {font-family: 'Courier New', Courier, monospace;}
+
 hr {
     height : 200%;
     clear: both;
     visibility: hidden;
-}
-
-.MathJax_Display, .MJXc-display, .MathJax_SVG_Display {
-    overflow-x: auto;
-    overflow-y: hidden;
 }
 
 qed {float: right;}

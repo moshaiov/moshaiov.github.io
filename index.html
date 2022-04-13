@@ -27,6 +27,9 @@ $
     \newcommand{\End}{\text{End}}
     \newcommand{\SL}{\text{SL}}
     \newcommand{\bij}{\longleftrightarrow}
+    \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+    \newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+
 $
 </div>
     
@@ -40,7 +43,15 @@ $
     remarks. currently fairly unorganized and severely incomplete. <br>
     contanct. tom dot moshaiov at gmail dot com
         
-    <h2>the unit disk and the upper half plane</h2>
+<h2>calculus</h2>    
+    
+    claim. let $f:\D_{a,r}\to\C$ be holomorphic. if $|f'(a)| \gt |f'(a)-f'(z)|$ then $f$ is injective.
+    
+    <hr> <hr>
+    
+    proof. fix $z_1\neq z_2$. then $|f(z_2)-f(z_1)|=\abs{\int_{z_1}^{z_2} f'(z)\d z}$
+    
+<h2>hyperbolic geometry</h2>
     
     exercise. [Blaschke] fix $\alpha\in\D$. then the Möbius transformation $\psi_\alpha(z)=\dfrac{\alpha-z}{1-\bar\alpha z}$ defines a holomorphic 
     bijection $\D\to \D$. in fact, $\psi_\alpha$ is an involution.  
@@ -96,7 +107,7 @@ $
     
     exercise. the Cayley map preserves the hyperbolic structure.  
     
-    <h2>identities</h2>
+<h2>identities</h2>
     
     identities. [Euler] <br>
     $$\disp\prod_{n\ge 1}(1+x^n)=\sum_{n\ge 0}(\#\text{partitions of $n$ with distinct parts})x^n$$
@@ -139,7 +150,7 @@ $
     the second identity proof is similar.
     <qed></qed>
         
-    <h2>abstract algebra</h2>
+<h2>abstract algebra</h2>
     
     problem. an additive function $f:\Z^\N\to\Z$ must have the form $f(x_1,x_2,x_3,\dots)=a_1x_1+\dots+a_kx_k$ for some finite sequence $a_1,\dots,a_k$.
     
@@ -152,7 +163,7 @@ $
     exercise. let $T\in\End(V)$ have a cyclic vector : $v,Tv,T^2v,\dots,T^{d-1}v$ is a basis of $V$. then $S\in\End(V)$ commutes with $T$ iff $S$ is 
     a polynomial in $T$.
     
-    <h2>foundations</h2>
+<h2>foundations</h2>
     
     theorem. [Tarski] let $f$ be any order preserving function of a complete lattice $(L,\le)$. then $f$ has a fixed point.
     

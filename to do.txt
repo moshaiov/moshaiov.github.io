@@ -1,5 +1,4 @@
 write Andrew's proof of Jacobi triple product identity
-write Hom(Z^N,Z)={(x)\mapsto a_1x_1+\dots+a_nx_n : n\ge 0,a_i\in\Z}
 Noga Alon communicating on n-cube
 applications of Baire
 https://www.brand.site.co.il/riddles/201710q.html
@@ -13,3 +12,5 @@ http://www.hewwolff.org/GoogleProof/proof.html
 https://www.reddit.com/r/mathriddles/comments/bf4awi/does_the_stupidest_sorting_method_work/?utm_source=share&utm_medium=ios_app&utm_name=iossmf
 https://arxiv.org/abs/2001.06050
 https://math.stackexchange.com/questions/3934746/theorems-you-wish-you-knew-in-complex-analysis
+
+Grace-Heawood theorem

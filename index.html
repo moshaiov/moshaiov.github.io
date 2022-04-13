@@ -17,6 +17,7 @@ $
     \newcommand{\R}{\mathbf{R}}
     \newcommand{\Z}{\mathbf{Z}}
     \newcommand{\N}{\mathbf{N}}
+    \newcommand{\F}{\mathbf{F}}
     \newcommand{\U}{\mathbf{U}}
     \newcommand{\D}{\mathbf{D}}
     \newcommand{\d}{\text{d}}
@@ -38,15 +39,46 @@ $
     <button onclick="ToggleFont()" style="float: right;">toggle font</button>
 
     <button onclick="ToggleDarkMode()" style="float: right;">toggle dark mode</button>
-
+    
+    <br>
+    
     about. Tom Moshaiov's mathematical notes. <br>
     remarks. currently fairly unorganized and severely incomplete. <br>
     contanct. tom dot moshaiov at gmail dot com
-        
+       
+    
 <h2>calculus</h2>    
     
     exercise. let $f:\Omega\to\C$ be holomorphic, $\Omega$ convex. then $f$ is injective if $|W| \gt |W-f'(z)|$ for some $W$.
+
+<h2>number theory</h2>
     
+    proposition. fix an odd prime $p$, and let $r(\alpha)=\#\{(x,y)\in(\Z/p\Z)^2 : x^2+y^2=\alpha\}$. then 
+    $r(\alpha)=\begin{cases}\begin{array}{c}p-1\\p+1\end{array} & \begin{array}{c}p\equiv1\mod4\\p\equiv3\mod4\end{array}\end{cases}$
+     for $\alpha\in(\Z/p\Z)^\times$, and 
+    $r(0)=\begin{cases}\begin{array}{c}2p-1\\1\end{array} & \begin{array}{c}p\equiv1\mod4\\p\equiv3\mod4\end{array}\end{cases}$
+    
+    <hr> <hr>
+
+    proof. let $\xi=e^{2\pi i /p}$, $A=\disp\sum_{x\in  \F_p}\xi^{x^2}$ and $B=\bar A=\disp\sum_{y\in  \F_p}\xi^{-y^2}$. 
+    then $AB=\disp\sum_{x,y}\xi^{x^2-y^2}$. the invertible linear change of variables $a=x+y$, $b=x-y$ yields 
+    $AB=\disp\sum_{a,b}\xi^{ab}=p$. however if $p\equiv_4 1$ then $-1$ is a square so that $A=B$ and if 
+    $p\equiv_4 3$ then $-1$ is a nonsquare so $A+B=2\disp\sum_{z\in  \F_p}\xi^z=0$. thus 
+    $A^2=(-1)^{\frac{p-1}{2}}p=\disp\sum_{x,y}\xi^{x^2+y^2}=\disp\sum_\alpha r(\alpha)\xi^\alpha$. 
+    the result follows by noting that $\disp\sum_\alpha r(\alpha)=p^2$ and using that $1+x+\dots+x^{p-1}$ is the minimal polynomial of $\xi$ over $\Z$.
+    <qed></qed>
+
+    <hr> <hr>
+
+    corollary. $2$ is a square modulo $p$ iff $p\equiv \pm1\mod 8$.
+
+    <hr> <hr>
+
+    proof. consider the set $S=\{(x,y)\in (\Z/p\Z)^2:x^2+y^2\equiv 2\}$ of $r(2)=(-1)^{\frac{p+1}{2}}+p$ elements.
+    the dihedral group $D_4$ acting on $S$ by swapping $x,y$ along with their signs. almost all orbits have $8$ elements. 
+    the orbit $(\pm 1,\pm 1)$ has four. there is an extra orbit of size $4$ iff $2$ is a square, namely $\{(0,\pm\sqrt{2}),(\pm\sqrt{2},0)\}$. done.
+    <qed></qed>
+
 <h2>hyperbolic geometry</h2>
     
     exercise. [Blaschke] fix $\alpha\in\D$. then the Möbius transformation $\psi_\alpha(z)=\dfrac{\alpha-z}{1-\bar\alpha z}$ defines a holomorphic 

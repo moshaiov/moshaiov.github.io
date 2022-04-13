@@ -29,3 +29,33 @@ notations. h=\det\left(\begin{array}{cc}
 h_{x} & h_{y}
 \end{array}\right).
 
+
+
+    <pre>
+    algorithm for finding the eventual cycle of $f:X\to X$ starting at $x_0$.
+    time is linear in cycle's length plus distance from $x_0$.
+    
+    def floyd(f,x0):
+        slow = f(x0)
+        fast = f(f(x0))
+        while slow != fast:
+            slow = f(slow)
+            fast = f(f(fast))
+        
+        searcher = x0
+        steps-to-cycle = 0
+        while searcher != slow:
+            searcher = f(searcher)
+            slow = f(slow)
+            steps-to-cycle += 1
+        
+        starting = searcher
+        searcher = f(searcher)
+        cycle-length = 1
+        while searcher != starting:
+            searcher = f(searcher)
+            cycle-length += 1
+        
+        return steps-to-cycle, cycle-length
+    </pre>
+

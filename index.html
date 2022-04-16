@@ -44,7 +44,7 @@ $
     
     about. Tom Moshaiov's mathematical notes. <br>
     remarks. currently fairly unorganized and severely incomplete. <br>
-    contanct. tom dot moshaiov at gmail dot com
+    contanct. tom dot moshaiov at gmail dot com.
        
     
 <h2>calculus</h2>    
@@ -206,9 +206,42 @@ $
     <hr> <hr>
     
     proof. consider the complete lattice $2^A$ and the order preserving map on it $f(X) = j(B\- i(A\- X))$. let $X$ be a fixed point. 
-    then $$A=A\- X\sqcup X \bij i(A\- X) \sqcup B\- i(A\- X)=B$$
+    then $A=A\- X\sqcup X \bij i(A\- X) \sqcup B\- i(A\- X)=B$
     <qed></qed>
-
+    
+<h2computation</h2>
+    
+    task. given a function $f:X\to X$ on a finite set $X$ and a starting element $x_0$, find the eventual loop of $f$ from $x_0$. 
+    namely, find the loop's size and the number of steps from $x_0$ to enter the loop.
+    
+    <hr> <hr>
+    
+    algorithm. [Floyd?] we find the first occurence of $f^{k}(x)=f^{2k}(x)$ for $k\ge1$. thus $k$ is divisible by cycle length. 
+    ergo the first occurence of $f^{r}(x)=f^{r+k}(x)$ for $r\ge0$ is the number of steps to enter the loop.
+<pre>
+def find-loop(f,x0):
+	slow = f(x0)
+	fast = f(f(x0))
+	while slow != fast:
+		slow = f(slow)
+		fast = f(f(fast))
+        
+	searcher = x0
+	no-steps-to-cycle = 0
+	while searcher != slow:
+		searcher = f(searcher)
+		slow = f(slow)
+		no-steps-to-cycle += 1
+       
+	starting = searcher
+	searcher = f(searcher)
+	cycle-length = 1
+	while searcher != starting:
+		searcher = f(searcher)
+		cycle-length += 1
+        
+	return no-steps-to-cycle, cycle-length	</pre>
+exercise. verify the algorithm is correct, and its running time is linear in <tt>no-steps-to-cycle + cycle-length</tt>.
     
 </body>
 </html>

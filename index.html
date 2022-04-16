@@ -1,223 +1,236 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> Moshaiov </title>
-    <link rel="stylesheet" href="main.css">
-    <script src="main.js"> </script>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], processEscapes: true }}); </script>
-    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+	<title> Moshaiov </title>
+	<link rel="stylesheet" href="main.css">
+	<script src="main.js"> </script>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/x-mathjax-config"> MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], processEscapes: true }}); </script>
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
 </head>
 
 <body onload="AddQedSymbols()">
-    
+	
 <div style="display: none;">
 $
-    \newcommand{\C}{\mathbf{C}}
-    \newcommand{\R}{\mathbf{R}}
-    \newcommand{\Z}{\mathbf{Z}}
-    \newcommand{\N}{\mathbf{N}}
-    \newcommand{\F}{\mathbf{F}}
-    \newcommand{\U}{\mathbf{U}}
-    \newcommand{\D}{\mathbf{D}}
-    \newcommand{\d}{\text{d}}
-    \renewcommand{\to}{\longrightarrow}
-    \newcommand{\-}{\setminus}
-    \newcommand{\disp}{\displaystyle}
-    \newcommand{\inv}{^{-1}}
-    \newcommand{\End}{\text{End}}
-    \newcommand{\SL}{\text{SL}}
-    \newcommand{\bij}{\longleftrightarrow}
-    \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
-    \newcommand{\abs}[1]{\left\lvert#1\right\rvert}
+	\newcommand{\C}{\mathbf{C}}
+	\newcommand{\R}{\mathbf{R}}
+	\newcommand{\Z}{\mathbf{Z}}
+	\newcommand{\N}{\mathbf{N}}
+	\newcommand{\F}{\mathbf{F}}
+	\newcommand{\U}{\mathbf{U}}
+	\newcommand{\D}{\mathbf{D}}
+	\newcommand{\d}{\text{d}}
+	\renewcommand{\to}{\longrightarrow}
+	\newcommand{\-}{\setminus}
+	\newcommand{\disp}{\displaystyle}
+	\newcommand{\inv}{^{-1}}
+	\newcommand{\End}{\text{End}}
+	\newcommand{\SL}{\text{SL}}
+	\newcommand{\bij}{\longleftrightarrow}
+	\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+	\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
 
 $
 </div>
-    
+	
 
 <body>
     <button onclick="ToggleFont()" style="float: right;">toggle font</button>
 
-    <button onclick="ToggleDarkMode()" style="float: right;">toggle dark mode</button>
-    
-    <br>
-    
-    about. Tom Moshaiov's mathematical notes. <br>
-    remarks. currently fairly unorganized and severely incomplete. <br>
-    contanct. tom dot moshaiov at gmail dot com.
-       
-    
-<h2>calculus</h2>    
-    
-    exercise. let $f:\Omega\to\C$ be holomorphic, $\Omega$ convex. then $f$ is injective if $|W| \gt |W-f'(z)|$ for some $W$.
+	<button onclick="ToggleDarkMode()" style="float: right;">toggle dark mode</button>
+	
+	<br>
+	
+	about. Tom Moshaiov's mathematical notes. <br>
+	remarks. currently fairly unorganized and severely incomplete. <br>
+	contanct : tom dot moshaiov at gmail dot com.
+	   
+	
+<h2>calculus</h2>	
+	
+	exercise. let $f:\Omega\to\C$ be holomorphic, $\Omega$ convex. then $f$ is injective if $|W| \gt |W-f'(z)|$ for some $W$.
 
 <h2>number theory</h2>
-    
-    proposition. fix an odd prime $p$, and let $r(\alpha)=\#\{(x,y)\in(\Z/p\Z)^2 : x^2+y^2=\alpha\}$. then 
-    $r(\alpha)=\begin{cases}\begin{array}{c}p-1\\p+1\end{array} & \begin{array}{c}p\equiv1\mod4\\p\equiv3\mod4\end{array}\end{cases}$
-     for $\alpha\in(\Z/p\Z)^\times$, and 
-    $r(0)=\begin{cases}\begin{array}{c}2p-1\\1\end{array} & \begin{array}{c}p\equiv1\mod4\\p\equiv3\mod4\end{array}\end{cases}$
-    
-    <hr> <hr>
+	
+	proposition. fix an odd prime $p$, and let $r(\alpha)=\#\{(x,y)\in(\Z/p\Z)^2 : x^2+y^2=\alpha\}$. then 
+	$r(\alpha)=\begin{cases}\begin{array}{c}p-1\\p+1\end{array} & \begin{array}{c}p\equiv1\mod4\\p\equiv3\mod4\end{array}\end{cases}$
+	 for $\alpha\in(\Z/p\Z)^\times$, and 
+	$r(0)=\begin{cases}\begin{array}{c}2p-1\\1\end{array} & \begin{array}{c}p\equiv1\mod4\\p\equiv3\mod4\end{array}\end{cases}$
+	
+	<hr> <hr>
 
-    proof. let $\xi=e^{2\pi i /p}$, $A=\disp\sum_{x\in  \F_p}\xi^{x^2}$ and $B=\bar A=\disp\sum_{y\in  \F_p}\xi^{-y^2}$. 
-    then $AB=\disp\sum_{x,y}\xi^{x^2-y^2}$. the invertible linear change of variables $a=x+y$, $b=x-y$ yields 
-    $AB=\disp\sum_{a,b}\xi^{ab}=p$. however if $p\equiv_4 1$ then $-1$ is a square so that $A=B$ and if 
-    $p\equiv_4 3$ then $-1$ is a nonsquare so $A+B=2\disp\sum_{z\in  \F_p}\xi^z=0$. thus 
-    $A^2=(-1)^{\frac{p-1}{2}}p=\disp\sum_{x,y}\xi^{x^2+y^2}=\disp\sum_\alpha r(\alpha)\xi^\alpha$. 
-    the result follows by noting that $\disp\sum_\alpha r(\alpha)=p^2$ and using that $1+x+\dots+x^{p-1}$ is the minimal polynomial of $\xi$ over $\Z$.
-    <qed></qed>
+	proof. let $\xi=e^{2\pi i /p}$, $A=\disp\sum_{x\in  \F_p}\xi^{x^2}$ and $B=\bar A=\disp\sum_{y\in  \F_p}\xi^{-y^2}$. 
+	then $AB=\disp\sum_{x,y}\xi^{x^2-y^2}$. the invertible linear change of variables $a=x+y$, $b=x-y$ yields 
+	$AB=\disp\sum_{a,b}\xi^{ab}=p$. however if $p\equiv_4 1$ then $-1$ is a square so that $A=B$ and if 
+	$p\equiv_4 3$ then $-1$ is a nonsquare so $A+B=2\disp\sum_{z\in  \F_p}\xi^z=0$. thus 
+	$A^2=(-1)^{\frac{p-1}{2}}p=\disp\sum_{x,y}\xi^{x^2+y^2}=\disp\sum_\alpha r(\alpha)\xi^\alpha$. 
+	the result follows by noting that $\disp\sum_\alpha r(\alpha)=p^2$ and using that $1+x+\dots+x^{p-1}$ is the minimal polynomial of $\xi$ over $\Z$.
+	<qed></qed>
 
-    <hr> <hr>
+	<hr> <hr>
 
-    corollary. $2$ is a square modulo $p$ iff $p\equiv \pm1\mod 8$.
+	corollary. $2$ is a square modulo $p$ iff $p\equiv \pm1\mod 8$.
 
-    <hr> <hr>
+	<hr> <hr>
 
-    proof. consider the set $S=\{(x,y)\in (\Z/p\Z)^2:x^2+y^2\equiv 2\}$ of $r(2)=(-1)^{\frac{p+1}{2}}+p$ elements.
-    the dihedral group $D_4$ acting on $S$ by swapping $x,y$ along with their signs. almost all orbits have $8$ elements. 
-    the orbit $(\pm 1,\pm 1)$ has four. there is an extra orbit of size $4$ iff $2$ is a square, namely $\{(0,\pm\sqrt{2}),(\pm\sqrt{2},0)\}$. done.
-    <qed></qed>
+	proof. consider the set $S=\{(x,y)\in (\Z/p\Z)^2:x^2+y^2\equiv 2\}$ of $r(2)=(-1)^{\frac{p+1}{2}}+p$ elements.
+	the dihedral group $D_4$ acting on $S$ by swapping $x,y$ along with their signs. almost all orbits have $8$ elements. 
+	the orbit $(\pm 1,\pm 1)$ has four. there is an extra orbit of size $4$ iff $2$ is a square, namely $\{(0,\pm\sqrt{2}),(\pm\sqrt{2},0)\}$. done.
+	<qed></qed>
 
 <h2>hyperbolic geometry</h2>
-    
-    exercise. [Blaschke] fix $\alpha\in\D$. then the Möbius transformation $\psi_\alpha(z)=\dfrac{\alpha-z}{1-\bar\alpha z}$ defines a holomorphic 
-    bijection $\D\to \D$. in fact, $\psi_\alpha$ is an involution.  
-    
-    <hr> <hr>
-    
-    theorem. [Schwarz] let $f:\D\to\D$, $f(0)=0$ be holomorphic. then either $f(z)=e^{i\theta}z$ is a rotation for some angle $\theta\in\R$ 
-    or $f$ is a contraction : $|f(z)| < |z|$ for all $z\in\D\-\{0\}$ and $|f'(0)| < 1$.
-    
-    <hr> <hr>
-        
-    proof. let $g:\D\to\C$ be given by $g(z)=f(z)/z$ for $z\in\D\-\{0\}$ and $g(0)=f'(0)$. then $g$ is holomorphic. 
-    since for $r\in(0,1)$ we have $\disp\max_{|z|=r}|g(z)|\le 1/r$, the maximum modulus principle implies $|g|\le 1$ (by letting $r\uparrow 1$).
-    if at any point $|g(z_0)|=1$ then $g$ is constant, meaning $f$ is a rotation. otherwise $f$ is a contraction.
-    <qed></qed>
-    
-    <hr> <hr>
-    
-    corollary. let $f:\D\to\D$, $f(0)=0$ be a holomorphic bijection. then $f(z)=e^{i\theta}z$ is a rotation for some angle $\theta\in\R$.
-        
-    <hr> <hr>
-    
-    corollary. let $f:\D\to\D$ be a holomorphic bijection. then $f(z)=e^{i\theta}\dfrac{\alpha-z}{1-\bar\alpha z}$ for some 
-    $\theta\in\R$ and $\alpha\in\D$.
-    
-    <hr> <hr>
-    
-    exercise. let $f:\D\to\D$ be any holomorphic bijection, $w=f(z)$. then $\dfrac{|\d z|}{1-|z|^2}=\dfrac{|\d w|}{1-|w|^2}$. therefore 
-    the holomorphic bijections of $\D$ preserve the <green>hyperbolic metric</green>.
-    
-    <hr> <hr>
-    
-    definition. the <blue>Poincaré hyperbolic</blue> metric on $\D$ is given by $\dfrac{2|\d z|}{1-|z|^2}$. <br>
-    that is, the <blue>hyperbolic length</blue> of a path $\gamma:I\to\D$ is given by $\int_I \dfrac{2|\gamma'(t)|}{1-|\gamma(t)|^2}\d t$.
-    
-    <hr> <hr>
-    
-    observation. [Cayley] the map $w=i\dfrac{1+z}{1-z}$ is a holomorphic bijection $\D\to\U$. 
-    
-    <hr> <hr>
-    
-    corollary. any holomorphic bijection $\U\to\U$ is a Möbius transformation.
-    
-    <hr> <hr>
-    
-    exercise. $f:\U\to\U$ is a holomorphic bijection iff $f(w)=\dfrac{aw+b}{cw+d}$ for some $\left(\begin{array}{cc}a & b\\c & d\end{array}\right)\in\SL_2(\R)$.
-    
-    <hr> <hr>
-    
-    definition. the <blue>Poincaré hyperbolic</blue> metric on $\U$ is given by $\dfrac{|\d w|}{y}$ where $w=x+iy\in\U$. <br>
-    
-    <hr> <hr>
-    
-    exercise. the Cayley map preserves the hyperbolic structure.  
-    
+	
+	exercise. [Blaschke] fix $\alpha\in\D$. then the Möbius transformation $\psi_\alpha(z)=\dfrac{\alpha-z}{1-\bar\alpha z}$ defines a holomorphic 
+	bijection $\D\to \D$. in fact, $\psi_\alpha$ is an involution.  
+	
+	<hr> <hr>
+	
+	theorem. [Schwarz] let $f:\D\to\D$, $f(0)=0$ be holomorphic. then either $f(z)=e^{i\theta}z$ is a rotation for some angle $\theta\in\R$ 
+	or $f$ is a contraction : $|f(z)| < |z|$ for all $z\in\D\-\{0\}$ and $|f'(0)| < 1$.
+	
+	<hr> <hr>
+		
+	proof. let $g:\D\to\C$ be given by $g(z)=f(z)/z$ for $z\in\D\-\{0\}$ and $g(0)=f'(0)$. then $g$ is holomorphic. 
+	since for $r\in(0,1)$ we have $\disp\max_{|z|=r}|g(z)|\le 1/r$, the maximum modulus principle implies $|g|\le 1$ (by letting $r\uparrow 1$).
+	if at any point $|g(z_0)|=1$ then $g$ is constant, meaning $f$ is a rotation. otherwise $f$ is a contraction.
+	<qed></qed>
+	
+	<hr> <hr>
+	
+	corollary. let $f:\D\to\D$, $f(0)=0$ be a holomorphic bijection. then $f(z)=e^{i\theta}z$ is a rotation for some angle $\theta\in\R$.
+		
+	<hr> <hr>
+	
+	corollary. let $f:\D\to\D$ be a holomorphic bijection. then $f(z)=e^{i\theta}\dfrac{\alpha-z}{1-\bar\alpha z}$ for some 
+	$\theta\in\R$ and $\alpha\in\D$.
+	
+	<hr> <hr>
+	
+	exercise. let $f:\D\to\D$ be any holomorphic bijection, $w=f(z)$. then $\dfrac{|\d z|}{1-|z|^2}=\dfrac{|\d w|}{1-|w|^2}$. therefore 
+	the holomorphic bijections of $\D$ preserve the <green>hyperbolic metric</green>.
+	
+	<hr> <hr>
+	
+	definition. the <blue>Poincaré hyperbolic</blue> metric on $\D$ is given by $\dfrac{2|\d z|}{1-|z|^2}$. <br>
+	that is, the <blue>hyperbolic length</blue> of a path $\gamma:I\to\D$ is given by $\int_I \dfrac{2|\gamma'(t)|}{1-|\gamma(t)|^2}\d t$.
+	
+	<hr> <hr>
+	
+	observation. [Cayley] the map $w=i\dfrac{1+z}{1-z}$ is a holomorphic bijection $\D\to\U$. 
+	
+	<hr> <hr>
+	
+	corollary. any holomorphic bijection $\U\to\U$ is a Möbius transformation.
+	
+	<hr> <hr>
+	
+	exercise. $f:\U\to\U$ is a holomorphic bijection iff $f(w)=\dfrac{aw+b}{cw+d}$ for some $\left(\begin{array}{cc}a & b\\c & d\end{array}\right)\in\SL_2(\R)$.
+	
+	<hr> <hr>
+	
+	definition. the <blue>Poincaré hyperbolic</blue> metric on $\U$ is given by $\dfrac{|\d w|}{y}$ where $w=x+iy\in\U$. <br>
+	
+	<hr> <hr>
+	
+	exercise. the Cayley map preserves the hyperbolic structure.  
+	
 <h2>identities</h2>
-    
-    identities. [Euler] <br>
-    $$\disp\prod_{n\ge 1}(1+x^n)=\sum_{n\ge 0}(\#\text{partitions of $n$ with distinct parts})x^n$$
-    $$\disp\prod_{n\ge 1}(1-x^n)\inv = \prod_{n\ge 1}\sum_{m\ge 0}x^{nm}=\sum_{n\ge 0}(\#\text{partitions of $n$})x^n$$
-    
-    <hr> <hr>  
-    
-    exercise. express $\sum_{n\ge 0}a_n x^n$ as an infinite product where $a_n=\#\text{partitions of $n$ with only odd parts}$. 
-    
-    <hr> <hr>
-    
-    corollary. [Euler] $\#\text{partitions of $n$ with only odd parts}=\#\text{partitions of $n$ with distinct parts}$.
-    
-    <hr> <hr>
-    
-    example. $7$ has fifteen partitions $7,61,52,51^{2},43,421,41^{3},3^{2}1,32^{2},321^{2},31^{4},2^{3}1,2^{2}1^{3},21^{5},1^{7}$. 
-    five partitions have no repeating parts and five partitions have only odd parts.
-    
-    <hr> <hr>
-    
-    proof. we must show that $\prod_{n\ge 1}(1-x^{2n-1})\inv=\prod_{n\ge 1}1+x^n$. this follows by noting that $1+x^n=\dfrac{1-x^{2n}}{1-x^n}$, 
-    leaving us with only odd degree denominators. 
-    <qed></qed> <br>
-    
-    a second proof is as follows. let $f(x)=\prod_{n\ge 1}(1-x^{2n-1})(1+x^n)$. then grouping $(1-t)(1+t)$ 
-    yields $f(x)=f(x^2)$, implying $f\equiv 1$.
-    <qed></qed>
-    
-    <hr> <hr>
-    
-    identities. [Euler] 
-    $$\prod_{k\ge 0}(1+x^k t)=\sum_{n\ge 0}\dfrac{x^{n(n-1)/2} t^n}{(1-x)\dots(1-x^n)}$$
-    $$\prod_{k\ge 0}(1-x^k t)\inv=\sum_{n\ge 0}\dfrac{t^n}{(1-x)\dots(1-x^n)}$$
+	
+	identities. [Euler] <br>
+	$$\disp\prod_{n\ge 1}(1+x^n)=\sum_{n\ge 0}(\#\text{partitions of $n$ with distinct parts})x^n$$
+	$$\disp\prod_{n\ge 1}(1-x^n)\inv = \prod_{n\ge 1}\sum_{m\ge 0}x^{nm}=\sum_{n\ge 0}(\#\text{partitions of $n$})x^n$$
+	
+	<hr> <hr>  
+	
+	exercise. express $\sum_{n\ge 0}a_n x^n$ as an infinite product where $a_n=\#\text{partitions of $n$ with only odd parts}$. 
+	
+	<hr> <hr>
+	
+	corollary. [Euler] $\#\text{partitions of $n$ with only odd parts}=\#\text{partitions of $n$ with distinct parts}$.
+	
+	<hr> <hr>
+	
+	example. $7$ has fifteen partitions $7,61,52,51^{2},43,421,41^{3},3^{2}1,32^{2},321^{2},31^{4},2^{3}1,2^{2}1^{3},21^{5},1^{7}$. 
+	five partitions have no repeating parts and five partitions have only odd parts.
+	
+	<hr> <hr>
+	
+	proof. we must show that $\prod_{n\ge 1}(1-x^{2n-1})\inv=\prod_{n\ge 1}1+x^n$. this follows by noting that $1+x^n=\dfrac{1-x^{2n}}{1-x^n}$, 
+	leaving us with only odd degree denominators. 
+	<qed></qed> <br>
+	
+	a second proof is as follows. let $f(x)=\prod_{n\ge 1}(1-x^{2n-1})(1+x^n)$. then grouping $(1-t)(1+t)$ 
+	yields $f(x)=f(x^2)$, implying $f\equiv 1$.
+	<qed></qed>
+	
+	<hr> <hr>
+	
+	identities. [Euler] 
+	$$\prod_{k\ge 0}(1+x^k t)=\sum_{n\ge 0}\dfrac{x^{n(n-1)/2} t^n}{(1-x)\dots(1-x^n)}$$
+	$$\prod_{k\ge 0}(1-x^k t)\inv=\sum_{n\ge 0}\dfrac{t^n}{(1-x)\dots(1-x^n)}$$
 
-    <hr> <hr>  
-    
-    proof. (of first identity) let $f(x,t)$ be the right hand side. then $f(x,tx)(1+t)=f(x,t)$. plugging in $f(x,t)=\sum_{n\ge0} a_n(x)t^n$ yields 
-    $a_0(x)=1$, ${a_{n}(x)=a_{n-1}x^{n-1}/(1-x^{n})}\implies a_n(x)=\dfrac{x^{n(n-1)/2}}{\prod_{\ell=1}^n(1-x^\ell)}$. 
-    <qed></qed><br>
-    the second identity proof is similar.
-    <qed></qed>
-        
+	<hr> <hr>  
+	
+	proof. (of first identity) let $f(x,t)$ be the right hand side. then $f(x,tx)(1+t)=f(x,t)$. plugging in $f(x,t)=\sum_{n\ge0} a_n(x)t^n$ yields 
+	$a_0(x)=1$, ${a_{n}(x)=a_{n-1}x^{n-1}/(1-x^{n})}\implies a_n(x)=\dfrac{x^{n(n-1)/2}}{\prod_{\ell=1}^n(1-x^\ell)}$. 
+	<qed></qed><br>
+	the second identity proof is similar.
+	<qed></qed>
+		
 <h2>abstract algebra</h2>
-    
-    problem. an additive function $f:\Z^\N\to\Z$ must have the form $f(x_1,x_2,x_3,\dots)=a_1x_1+\dots+a_kx_k$ for some finite sequence $a_1,\dots,a_k$.
-    
-    <hr> <hr>
-    
-    corollary. we have $\hom(\Z^\N,\Z)\equiv\Z^{(\N)}$ in addition to $\hom(\Z^{(\N)},\Z)\equiv \Z^\N$. 
-    
-    <hr> <hr>
-    
-    exercise. let $T\in\End(V)$ have a cyclic vector : $v,Tv,T^2v,\dots,T^{d-1}v$ is a basis of $V$. then $S\in\End(V)$ commutes with $T$ iff $S$ is 
-    a polynomial in $T$.
-    
+	
+	problem. an additive function $f:\Z^\N\to\Z$ must have the form $f(x_1,x_2,x_3,\dots)=a_1x_1+\dots+a_kx_k$ for some finite sequence $a_1,\dots,a_k$.
+	
+	<hr> <hr>
+	
+	solution. we need to show two things. first, that $f$ is determined by the values $f(e_1),f(e_2),f(e_3),\dots$ and second, that this list of values 
+	terminates to zeros. the first ammounts to showing $f(e_1)=f(e_2)=f(e_3)=\dots=0\implies f\equiv 0$. observe that if $d$ divides all entries $x_j$ 
+	then $d$ divides $f(x)$. if indeed $f(e_j)=0$ then $f(x)=f(0,x_2,x_3,x_4,\dots)=f(0,0,x_3,x_4,\dots)=\dots$ so that if $p^j\mid x_j$ then $p^j\mid f(x)$ 
+	implying $f(x)=0$. but by Bézout any $x$ has the form $x_n=2^na_n+3^nb_n$, implying $f\equiv 0$. now comes the second part : 
+	showing $f(e_j)$ terminates. define a sequence $b_n$ as follows. let $b_1=1$ and let $b_{n+1}$ be the smallest power of two for which 
+	$b_{n+1}\gt \max(b_n,2|f(b_1,\dots,b_n,0,0,\dots)|)$. consider the integer $c=f(b_1,b_2,b_3,\dots)$. 
+    then $c=f(b_1,\dots,b_n,0,0,\dots)+f(0,\dots,0,b_{n+1},b_{n+2},\dots)=f(b_1,\dots,b_n,0,0,\dots)+b_{n+1}d_{n+1}$ for some $d_{n+1}\in\Z$. 
+    thus $|d_{n+1}|\le |c|/b_{n+1}+|f(b_1,\dots,b_n,0,0,\dots)|/b_{n+1} \lt 1$ for $n$ large enough that $2|c|\lt b_{n+1}$. 
+    that is, $\forall n\ge N : d_{n+1}=0\implies\forall n\ge N : c=b_1f(e_1)+\dots+b_nf(e_n)\implies \forall n \gt N : f(e_n)=0$.
+    <qed></qed> 
+	
+	<hr> <hr>
+	
+	corollary. we have $\hom(\Z^\N,\Z)\equiv\Z^{(\N)}$ (in addition to $\hom(\Z^{(\N)},\Z)\equiv \Z^\N$). 
+	
+	<hr> <hr>
+	
+	exercise. let $T\in\End(V)$ have a cyclic vector : $v,Tv,T^2v,\dots,T^{d-1}v$ is a basis of $V$. then $S\in\End(V)$ commutes with $T$ iff $S$ is 
+	a polynomial in $T$.
+	
 <h2>foundations</h2>
-    
-    theorem. [Tarski] let $f$ be any order preserving function of a complete lattice $(L,\le)$. then $f$ has a fixed point.
-    
-    <hr> <hr>
-    
-    exercise. prove Tarski's theorem.
-    
-    <hr> <hr>
-    
-    corollary. [Cantor-Schröder–Bernstein] let $A,B$ be sets with injections $i:A\to B$ and $j:B\to A$. then there exists a bijection $p:A\to B$.
-    
-    <hr> <hr>
-    
-    proof. consider the complete lattice $2^A$ and the order preserving map on it $f(X) = j(B\- i(A\- X))$. let $X$ be a fixed point. 
-    then $A=A\- X\sqcup X \bij i(A\- X) \sqcup B\- i(A\- X)=B$
-    <qed></qed>
-    
+	
+	theorem. [Tarski] let $f$ be any order preserving function of a complete lattice $(L,\le)$. then $f$ has a fixed point.
+	
+	<hr> <hr>
+	
+	exercise. prove Tarski's theorem.
+	
+	<hr> <hr>
+	
+	corollary. [Cantor-Schröder–Bernstein] let $A,B$ be sets with injections $i:A\to B$ and $j:B\to A$. then there exists a bijection $p:A\to B$.
+	
+	<hr> <hr>
+	
+	proof. consider the complete lattice $2^A$ and the order preserving map on it $f(X) = j(B\- i(A\- X))$. let $X$ be a fixed point. 
+	then $A=A\- X\sqcup X \bij i(A\- X) \sqcup B\- i(A\- X)=B$
+	<qed></qed>
+	
 <h2>computation</h2>
-    
-    task. given a function $f:X\to X$ on a finite set $X$ and a starting element $x_0$, find the eventual loop of $f$ from $x_0$. 
-    namely, find the number of steps from $x_0$ to enter an infinite loop, as well as the loop's size.
-    
-    <hr> <hr>
-    
-    algorithm. [Floyd?] we find the first occurence of $f^{k}(x)=f^{2k}(x)$ for $k\ge1$. thus $k$ is divisible by cycle length. 
-    ergo the first occurence of $f^{r}(x)=f^{r+k}(x)$ for $r\ge0$ is the number of steps to enter the loop.
+	
+	task. given a function $f:X\to X$ on a finite set $X$ and a starting element $x_0$, find the eventual loop of $f$ from $x_0$. 
+	namely, find the number of steps from $x_0$ to enter an infinite loop, as well as the loop's size.
+	
+	<hr> <hr>
+	
+	algorithm. [Floyd?] we find the first occurence of $f^{k}(x)=f^{2k}(x)$ for $k\ge1$. thus $k$ is divisible by cycle length. 
+	ergo the first occurence of $f^{r}(x)=f^{r+k}(x)$ for $r\ge0$ is the number of steps to enter the loop.
 <pre>
 def find-loop(f,x0):
 	slow = f(x0)
@@ -225,21 +238,21 @@ def find-loop(f,x0):
 	while slow != fast:
 		slow = f(slow)
 		fast = f(f(fast))
-        
+		
 	searcher = x0
 	no-steps-to-cycle = 0
 	while searcher != slow:
 		searcher = f(searcher)
 		slow = f(slow)
 		no-steps-to-cycle += 1
-       
+	   
 	starting = searcher
 	searcher = f(searcher)
 	cycle-length = 1
 	while searcher != starting:
 		searcher = f(searcher)
 		cycle-length += 1
-        
+		
 	return no-steps-to-cycle, cycle-length	</pre>
 exercise. verify the algorithm is correct, and its running time is linear in <tt>no-steps-to-cycle + cycle-length</tt>.
 

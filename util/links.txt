@@ -22,3 +22,6 @@ Books
   Apostol - introduction to analytic number theory
   Maass - modular functions off one complex variable
   https://www.maths.ed.ac.uk/~v1ranick/papers/iversensheaves.pdf
+  
+Videos
+  (theory of elliptic curves) https://www.youtube.com/playlist?list=PLYpVTXjEi1oe1OeAllJpNhFoI4B7Ws8Yl

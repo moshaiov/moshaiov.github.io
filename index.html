@@ -273,7 +273,7 @@ exercise. verify the algorithm is correct, and its running time is linear in <tt
 	
 	solution. firstly, $Tx=0\implies x=0$ if $n$ is even, and $Tx=0\implies x=0\text{ or }x=(1,0,1,\dots,0,1)$ if $n$ is odd. 
 	so $T$ is invertible iff $n$ is even. given the base case $T_{n=1}=0$, it suffices to show : $T_{n}$ is nilpotent iff $T_{2n+1}$ is nilpotent. <br>
-	we give two solutions.
+	we give three solutions.
 
 	<hr> <hr>
 	
@@ -284,18 +284,35 @@ exercise. verify the algorithm is correct, and its running time is linear in <tt
 	$f_{7}(x)=x^{7}$, $f_{8}(x)=x^{8}+x^{6}+x^{4}+1$. <br>
 	we need to show that $f_{n}(x)=x^{n}\iff f_{2n+1}(x)=x^{2n+1}$. more generally, we have $f_{2n+1}(x)=xf_{n}(x^{2})$ as well as 
 	$f_{2n+2}(x)=f_{n+1}(x^{2})+f_{n}(x^{2})$ for all $n\ge0$, as easily proven by induction.
+	<qed></qed>
 	
 	<hr> <hr>
 	
 	solution $\#2$. <br>
-	[$T_{n}$ nilpotent $\impliedby T_{2n+1}$ nilpotent] indeed, fix $x=(x_{1},\dots,x_{n})\in F_{2}^{n}$. 
+	[$T_{n}$ nilpotent $\impliedby T_{2n+1}$ nilpotent] indeed, if $x=(x_{1},\dots,x_{n})\in F_{2}^{n}$  
 	then $(x_{1},\dots,x_{n},0,x_{n},\dots,x_{1})\in F_{2}^{2n+1}$ evolves under $T_{2n+1}$ as per the evolution of 
-	$(x_{1},\dots,x_{n})$ under $T_{n}$. ergo x dies under sufficient iteration of $T_{n}$. <br>
+	$(x_{1},\dots,x_{n})$ under $T_{n}$. ergo $x$ dies under sufficient iteration of $T_{n}$. <br>
 	[$T_{n}$ nilpotent $\implies T_{2n+1}$ nilpotent] indeed, any vector $x\in F_{2}^{2n+1}$ of the form 
 	$(x_{1},\dots,x_{n},0,x_{n},\dots,x_{1})$ evolves to 0 in $n$ iterations. for general $x=(x_{1},\dots,x_{2n+1})\in F_{2}^{2n+1}$ 
 	let $Rx=(x_{2n+1},\dots,x_{1})$. then $x+Rx$ is of the above form, so $T^{n}(x+Rx)=0\implies T^{n}x=T^{n}Rx$. 
 	of course, $T$ commutes with $R$, and so $T^{n}x=RT^{n}x$, meaning $T^{n}x$ is a symmetric vector 
 	(of the form $(y_{1},\dots,y_{n},z,y_{n},\dots,y_{1})$). one more iteration makes $T^{n+1}x$ a symmetric vector with $0$ 
 	as its middle entry, yielding $T^{2n+1}x=0$ as we wanted.
+	<qed></qed>
+	
+	<hr> <hr>
+	
+	solution $\#3$. <br>
+	[$T_{n}$ nilpotent $\impliedby T_{2n+1}$ nilpotent] indeed, if $x=(x_{1},\dots,x_{n})\in F_{2}^{n}$ then 
+	then $(0,x_1,0,x_2,0,\dots,x_n,0)\in F_{2}^{2n+1}$ evolves under $T^2$ as per the evolution of 
+	$(x_1,\dots,x_n)$ under $T$. ergo $x$ dies under sufficient iteration of $T_n$. <br>
+	[$T_{n}$ nilpotent $\implies T_{2n+1}$ nilpotent] indeed, any vector $x\in F_{2}^{2n+1}$ of the form 
+	$(0,x_1,0,x_2,0\dots,x_n,0)$ dies under sufficient iteration of $T^2$, and any vector of the form 
+	$(x_1,0,x_2,0\dots,0,x_{n+1})$ evolves to a vector of the former form under $T$, and thus also dies eventually. 
+	by linearity, $T_{2n+1}$ is nilpotent.
+	<qed></qed>
+
+
+
 </body>
 </html>

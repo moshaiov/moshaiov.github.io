@@ -52,6 +52,17 @@ $
 	exercise. let $f:\Omega\to\C$ be holomorphic, $\Omega$ convex. then $f$ is injective if $|W| \gt |W-f'(z)|$ for some $W$.
 
 <h2>number theory</h2>
+	theorem. fix an odd prime $p$. then $-1$ is a square modulo $p$ iff $p\equiv 1\mod 4$.
+	
+	<hr> <hr>
+	
+	proof. consider the equation $x^2-y^2=1$ over $\F_p$. on one hand, we have an action of $C_2\times C_2$ on the set of solutions by swapping
+	the signs of $x$ and $y$. ergo solutions always come in fours, except for solutions with $x=0$ or $y=0$. now there are $2$ solutions with $y=0$ 
+	and there are $2\delta_{-1\text{ is a square}}$ solutions with $x=0$. on the other hand, by the (linear invertible) change of variables $a=x+y$ 
+	$b=x-y$, the equation is equivalent to $ab=1$, which has precisely $p-1$ solutions. thus $p-1\equiv_4 2+2\delta_{-1\text{ is a square}}$.
+	<qed></qed>
+	
+	<hr> <hr> 
 	
 	proposition. fix an odd prime $p$, and let $r(\alpha)=\#\{(x,y)\in(\Z/p\Z)^2 : x^2+y^2=\alpha\}$. then 
 	$r(\alpha)=\begin{cases}\begin{array}{c}p-1\\p+1\end{array} & \begin{array}{c}p\equiv1\mod4\\p\equiv3\mod4\end{array}\end{cases}$
@@ -61,11 +72,11 @@ $
 	<hr> <hr>
 
 	proof. let $\xi=e^{2\pi i /p}$, $A=\disp\sum_{x\in  \F_p}\xi^{x^2}$ and $B=\bar A=\disp\sum_{y\in  \F_p}\xi^{-y^2}$. 
-	then $AB=\disp\sum_{x,y}\xi^{x^2-y^2}$. the invertible linear change of variables $a=x+y$, $b=x-y$ yields 
-	$AB=\disp\sum_{a,b}\xi^{ab}=p$. however if $p\equiv_4 1$ then $-1$ is a square so that $A=B$ and if 
-	$p\equiv_4 3$ then $-1$ is a nonsquare so $A+B=2\disp\sum_{z\in  \F_p}\xi^z=0$. thus 
-	$A^2=(-1)^{\frac{p-1}{2}}p=\disp\sum_{x,y}\xi^{x^2+y^2}=\disp\sum_\alpha r(\alpha)\xi^\alpha$. 
-	the result follows by noting that $\disp\sum_\alpha r(\alpha)=p^2$ and using that $1+x+\dots+x^{p-1}$ is the minimal polynomial of $\xi$ over $\Z$.
+	then $AB=\disp\sum_{x,y}\xi^{x^2-y^2}$. applying the change of variables $a=x+y$, $b=x-y$ yields 
+	$AB=\disp\sum_{a,b\in\F_p}\xi^{ab}=p$. but clearly $A=B$ if $p\equiv_4 1$ and $-1$ is a square, and otherwise $-1$ is 
+	a nonsquare so $A+B=2\disp\sum_{z\in  \F_p}\xi^z=0$. thus $A^2=(-1)^{\frac{p-1}{2}}p=\disp\sum_{x,y}\xi^{x^2+y^2}=
+	\disp\sum_\alpha r(\alpha)\xi^\alpha$. using the fact that $1+x+\dots+x^{p-1}$ is the minimal polynomial of $\xi$ over $\Z$, it follows 
+	$r(\alpha)$ is constant for nonzero $\alpha$. we finish by noting $\sum r(\alpha)=p^2$.
 	<qed></qed>
 
 	<hr> <hr>

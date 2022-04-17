@@ -1,4 +1,5 @@
 prove multiplicativity of Ramanujan tau (as given in Hardy's twelve lectures)
+https://math.stackexchange.com/a/1933274
 write Andrew's proof of Jacobi triple product identity
 Noga Alon communicating on n-cube
 applications of Baire

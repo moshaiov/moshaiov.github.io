@@ -15,4 +15,5 @@ https://arxiv.org/abs/2001.06050
 https://math.stackexchange.com/questions/3934746/theorems-you-wish-you-knew-in-complex-analysis
 https://cstheory.stackexchange.com/questions/189/algorithms-from-the-book
 Grace-Heawood theorem
+https://mathoverflow.net/questions/769/exhibit-an-explicit-bijection-between-irreducible-polynomials-over-finite-fields
 https://math.ucr.edu/home/baez/roots/

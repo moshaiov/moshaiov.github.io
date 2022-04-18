@@ -1,6 +1,8 @@
 Course notes
+  (AMS)                   https://www.ams.org/open-math-notes/
   (Chua)                  https://dec41.user.srcf.net/notes/
   (Garza)                 dzackgarza.com/writing/
+  (Milne)                 https://www.jmilne.org/math/CourseNotes/index.html
   (Curtis Mcmullen)       https://people.math.harvard.edu/~ctm/courses.html
   (Sophie Morel)          http://perso.ens-lyon.fr/sophie.morel/
   (Garrett)               https://www-users.cse.umn.edu/~garrett/m/v/

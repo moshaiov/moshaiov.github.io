@@ -10,6 +10,7 @@ Course notes
   (Sudan)                 http://madhu.seas.harvard.edu/MIT/FT98/course.html
   (basic alg top)         https://sili-math.github.io/AT2020/Algebraic-Topology.2020.pdf            
   (several cmplx vars)    https://staff.science.uva.nl/j.j.o.o.wiegerinck/edu/scv/scvboek.pdf
+  (etc)                   https://minterscompactness.wordpress.com/lecture-notes/
 
 Papers
   (proof of Jacobi triple product) https://www.ams.org/journals/proc/1965-016-02/S0002-9939-1965-0171725-X/S0002-9939-1965-0171725-X.pdf

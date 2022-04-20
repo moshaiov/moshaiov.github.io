@@ -1,4 +1,5 @@
 Bredon - Topology and Geometry
 Brian Hall - Lie Groups, Lie Algebras, and Representations An Elementary Introduction
-Daniel Perrin - algebraic geometry an introduction
+Deitmar - principles of harmonic analysis
+Perrin - algebraic geometry an introduction
 combinatorics the Rota way

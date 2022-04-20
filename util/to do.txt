@@ -1,3 +1,4 @@
+kraft and lym inequalities
 prove multiplicativity of Ramanujan tau (as given in Hardy's twelve lectures)
 https://math.stackexchange.com/a/1933274
 the method of alternating projections (Omer Ginat)

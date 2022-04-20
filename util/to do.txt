@@ -1,3 +1,4 @@
+dillworth implies hall
 kraft and lym inequalities
 usamo 2008 p5
 prove multiplicativity of Ramanujan tau (as given in Hardy's twelve lectures)

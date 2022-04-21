@@ -1,2 +1,2 @@
 # moshaiov.github.io
-repo for personal webpage about cool maths 
+repo for personal webpage about maths 

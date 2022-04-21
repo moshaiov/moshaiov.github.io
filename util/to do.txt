@@ -24,3 +24,4 @@ Grace-Heawood theorem
 https://mathoverflow.net/questions/769/exhibit-an-explicit-bijection-between-irreducible-polynomials-over-finite-fields
 https://math.ucr.edu/home/baez/roots/
 https://sci-hub.hkvisa.net/10.2307/2324485
+https://planetmath.org/sikorskisextensiontheorem

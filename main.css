@@ -33,6 +33,6 @@ green{color: #80BB80;}
 
 
 @media only screen and (max-width: 1200px) {
-  body {font-size: 230%;}
-  MathJax{font-size:1.4em;}
+  body {font-size: 200%;}
+  MathJax{font-size:1.3em;}
 }

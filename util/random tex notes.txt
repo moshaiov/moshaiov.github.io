@@ -1,3 +1,7 @@
+exercise. a metric space $(X,d)$ is complete iff any sequence $x_n$ for which $d(x_n,x_{n+k})\le 2^{-n}$ is convergent.
+
+
+
 Boolean algebra
 
 quote. Boole, perhaps the greatest simplifier in history, called these axioms “the laws of thought”.

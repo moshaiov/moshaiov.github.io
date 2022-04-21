@@ -32,7 +32,7 @@ red{color: #FF0000;}
 green{color: #80BB80;}
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
   body {font-size: 200%;}
   MathJax{font-size:1.3em;}
 }

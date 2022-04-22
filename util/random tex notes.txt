@@ -2,75 +2,6 @@ exercise. a metric space $(X,d)$ is complete iff any sequence $x_n$ for which $d
 
 
 
-Boolean algebra
-
-quote. Boole, perhaps the greatest simplifier in history, called these axioms “the laws of thought”.
-
-motivation. let T denote truth and F denote false, let \land denote logical and, and \lor denote logical or. thas is, T\land T=T, T\land F=F\land T=F\land F=F and F\lor F=F, F\lor T=T\lor F=T\lor T=T. let also T^{c}=F, F^{c}=T be complements. then we have laws such as x\lor x^{c}=T, x\land x^{c}=F, F\lor x=x, x\lor(x\land y)=x and so on.
-
-definition. a set S with elements 0,1\in S, binary laws \land,\lor and a unary law \cdot^{c} is a Boolean algebra if the following axioms hold.
-
-(associativity) (a\lor b)\lor c=a\lor(b\lor c) and (a\land b)\land c=a\land(b\land c)
-
-(commutativity) a\lor b=b\lor a and a\land b=b\land a
-
-(identities) a\lor0=a=a\land1
-
-(complements) a\land a^{c}=0, a\lor a^{c}=1
-
-(distributivity) a\land(b\lor c)=(a\land b)\lor(a\land c) and a\lor(b\land c)=(a\lor b)\land(a\lor c) 
-
-(absorption) a\lor(a\land b)=a=a\land(a\lor b)
-
-example. \{0,1\} is a Boolean algebra under 0=F, 1=T, 0^{c}=1,1^{c}=0, \land,\lor being logical and, or. note that in this case \lor is maximum and \land is minimum and is also multiplication.
-
-example. for any set A, its family of subsets 2^{A} is a Boolean algebra (under 0=\varnothing, 1=A, \land=\cap, \lor=\cup, X^{C}=A\setminus X)
-
-example. the family of clopen sets in a topological space X is a Boolean algebra.
-
-exercise. verify the following as consequences of the axioms.
-
-0^{c}=1, 1^{c}=0
-
-a\land a=a\lor a=a
-
-0\land a=0, 1\lor a=1
-
-a\land b=0,a\lor b=1\implies b=a^{c}
-
-(a^{c})^{c}=a
-
-(De-Morgan) (x\lor y)^{c}=x^{c}\land y^{c}, (x\land y)^{c}=x^{c}\lor y^{c}.
-
-theorem. [Stone] any Boolean algebra is (naturally isomorphic to) the Boolean algebra of clopen sets of a space.
-
-pedagogy. for those familiar with rings, a natural proof will now follow. a more abstract proof will also be given.
-
-definition. a Boolean ring is a (unital, commutative) ring B such that x^{2}=x \forall x\in B.
-
-example. 2^{A} is a Boolean ring (where \cdot=\cap, +=\triangle, 0=\varnothing, 1=A. equivalently, this is the product ring (F_{2})^{A} or the pointwise ring of functions A\to F_{2}). any subring of 2^{A} is a Boolean ring.
-
-exercises. in Booelan rings we have :
-
-1+1=0.
-
-1 is the only invertible element.
-
-subrings and quotients of Boolean rings are Boolean rings.
-
-the only Boolean ring which is a field is F_{2}.
-
-the commutativity assumption is redundant (as it follows from the other axioms). 
-
-theorem. let x be a nonzero element of a Boolean ring B. then there exists a ring homomorphism \phi:B\to F_{2} such that \phi(x)=1.
-
-proof. as 1+x is not invertible, let I be a maximal ideal of B containing 1+x. the quotient field F=B/I has to be F_{2}. finally, the image of x is 1 as x\not\in I.
-
-corollary. any Boolean ring B is (naturally isomorphic to) a subring of 2^{A} for some set A.
-
-proof. let A=\left\{ \text{ring homomorphisms }B\to F_{2}\right\} . let \Phi:B\to2^{A} by \varPhi(x)=\left\{ \phi\in A:\phi(x)=1\right\} . then \Phi is a ring homomorphism. the above theorem is the injectivity \ker\Phi=\left\{ 0\right\} .
-
-observation. a subset \mathcal{F}\subseteq2^{A} is a subring iff \varnothing\in\mathcal{F}, and \mathcal{F} is closed under complements and under (finite) intersection. in this case \mathcal{F} is also closed under (finite) unions.
 
 
 
@@ -135,3 +66,101 @@ h_{x} & h_{y}
         return steps-to-cycle, cycle-length
     </pre>
 
+
+
+
+
+
+
+
+Boolean algebra
+
+quote. Boole, perhaps the greatest simplifier in history, called these axioms “the laws of thought”.
+
+motivation. let T denote truth and F denote false, let \land denote logical and, and \lor denote logical or. thas is, T\land T=T, T\land F=F\land T=F\land F=F and F\lor F=F, F\lor T=T\lor F=T\lor T=T. let also T^{c}=F, F^{c}=T be complements. then we have laws such as x\lor x^{c}=T, x\land x^{c}=F, F\lor x=x, x\lor(x\land y)=x and so on.
+
+definition. a set S with elements 0,1\in S, binary laws \land,\lor and a unary law \cdot^{c} is a Boolean algebra if the following axioms hold.
+
+(associativity) (a\lor b)\lor c=a\lor(b\lor c) and (a\land b)\land c=a\land(b\land c)
+
+(commutativity) a\lor b=b\lor a and a\land b=b\land a
+
+(identities) a\lor0=a=a\land1
+
+(complements) a\land a^{c}=0, a\lor a^{c}=1
+
+(distributivity) a\land(b\lor c)=(a\land b)\lor(a\land c) and a\lor(b\land c)=(a\lor b)\land(a\lor c) 
+
+(absorption) a\lor(a\land b)=a=a\land(a\lor b)
+
+example. \{0,1\} is a Boolean algebra under 0=F, 1=T, 0^{c}=1,1^{c}=0, \land,\lor being logical and, or. note that in this case \lor is maximum and \land is minimum and is also multiplication.
+
+example. for any set A, its family of subsets 2^{A} is a Boolean algebra (under 0=\varnothing, 1=A, \land=\cap, \lor=\cup, X^{C}=A\setminus X). any (nonempty) family \mathcal{F}\subseteq2^{A} closed under taking completements as well as (finite) unions and intersections is a Boolean algebra.
+
+example. the family of clopen sets in a topological space X is a Boolean algebra.
+
+exercise. verify the following as consequences of the axioms.
+
+0^{c}=1, 1^{c}=0
+
+a\land a=a\lor a=a
+
+0\land a=0, 1\lor a=1
+
+a\land b=0,a\lor b=1\implies b=a^{c}
+
+(a^{c})^{c}=a
+
+(De-Morgan) (x\lor y)^{c}=x^{c}\land y^{c}, (x\land y)^{c}=x^{c}\lor y^{c}
+
+a\land(a^{c}\lor b)=a\land b and a\lor(a^{c}\land b)=a\lor b
+
+(xor) a\triangle b\equiv(a\land b^{c})\lor(a^{c}\land b)=(a\lor b)\land(a^{c}\lor b^{c})
+
+a=a\triangle0, a^{c}=a\triangle1
+
+a\triangle b=b\triangle a=a^{c}\triangle b^{c}
+
+(a\triangle b)^{c}=(a^{c}\lor b)\land(a\lor b^{c})=(a\land b)\lor(a^{c}\land b^{c})=a^{c}\triangle b=a\triangle b^{c}
+
+x\land(a\triangle b)=(x\land a)\triangle(x\land b)
+
+(a\triangle b)\triangle c=(a\land b\land c)\lor(a\land b^{c}\land c^{c})\lor(a^{c}\land b\land c^{c})\lor(a^{c}\land b^{c}\land c)=a\triangle(b\triangle c)
+
+a\lor b=a\triangle b\triangle(a\land b)
+
+quote. [von Neumann] the theory of Boolean algebras is “pointless” set theory.
+
+corollary. let (B,\land,\lor,\cdot^{c},0,1) be a Boolean algebra. then (B,+,\cdot,0,1) is a ring where x\cdot y=x\land y and x+y=x\triangle y. moreover, we have x^{2}=x=-x \forall x\in B.
+
+observation. the Boolean algebra structure may be reconstructed from the ring structure as follows : x\land y=x\cdot y, x^{c}=x+1, x\lor y=x+y+xy.
+
+theorem. [Stone] any Boolean algebra is (naturally isomorphic to) the Boolean algebra of clopen sets of a space.
+
+pedagogy. for those familiar with rings, a natural proof will now follow. a more abstract proof will also be given.
+
+definition. a Boolean ring is a (unital, commutative) ring B such that x^{2}=x \forall x\in B.
+
+example. 2^{A} is a Boolean ring (where \cdot=\cap, +=\triangle, 0=\varnothing, 1=A. equivalently, this is the product ring (F_{2})^{A} or the pointwise ring of functions A\to F_{2}). any subring of 2^{A} is a Boolean ring.
+
+exercises. in Booelan rings we have :
+
+x=-x.
+
+1 is the only invertible element.
+
+subrings and quotients of Boolean rings are Boolean rings.
+
+the only Boolean ring which is a field (or even a domain) is F_{2}.
+
+the commutativity assumption is redundant (as it follows from the other axioms). 
+
+theorem. let x be a nonzero element of a Boolean ring B. then there exists a ring homomorphism \phi:B\to F_{2} such that \phi(x)=1.
+
+proof. as 1+x is not invertible, let I be a maximal ideal of B containing 1+x. the quotient field F=B/I has to be F_{2}. finally, the image of x is 1 as x\not\in I.
+
+corollary. any Boolean ring B is (naturally isomorphic to) a subring of 2^{A} for some set A.
+
+proof. let A=\left\{ \text{ring homomorphisms }B\to F_{2}\right\} . let \Phi:B\to2^{A} by \varPhi(x)=\left\{ \phi\in A:\phi(x)=1\right\} . then \Phi is a ring homomorphism. the above theorem is the injectivity \ker\Phi=\left\{ 0\right\} .
+
+observation. a subset \mathcal{F}\subseteq2^{A} is a subring iff \varnothing\in\mathcal{F}, and \mathcal{F} is closed under complements and under (finite) intersection. in this case \mathcal{F} is also closed under (finite) unions.

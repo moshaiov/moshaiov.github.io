@@ -26,12 +26,13 @@ $
 	\newcommand{\-}{\setminus}
 	\newcommand{\disp}{\displaystyle}
 	\newcommand{\inv}{^{-1}}
-	\newcommand{\End}{\text{End}}
 	\newcommand{\SL}{\text{SL}}
 	\newcommand{\bij}{\longleftrightarrow}
 	\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 	\newcommand{\abs}[1]{\left\lvert#1\right\rvert}
-
+	\newcommand{\End}{\text{End}}
+	\renewcommand{\span}{\text{span}}
+	\newcommand{\dotp}[1]{\langle#1\rangle}
 $
 </div>
 	
@@ -268,6 +269,18 @@ def find-loop(f,x0):
 	return no-steps-to-cycle, cycle-length	</pre>
 exercise. verify the algorithm is correct, and its running time is linear in <tt>no-steps-to-cycle + cycle-length</tt>.
 
+	
+<h2>algebraic analysis</h2>
+	theorem. let $\phi$ be a continuous linear functional on a Hilbert space $H$. then $\phi(x)=\dotp{x,v}$ for some (unique) $v\in H$.
+	
+	<hr> <hr>
+	
+	proof. wlog $\phi\not\equiv0$. let $M=\ker\phi$. 
+	then $M$ is a closed subspace of codimension one. 
+	thus $M^\perp=\span v_0$. setting $c_0=\phi(v_0)/\norm{v_0}^2$ we have  
+	$\phi(m+\alpha v_0)=\langle m+\alpha v_0,c_0v_0\rangle\implies\phi=\langle\cdot,c_0v_0\rangle$.
+	<qed></qed>
+	
 	
 <h2>miscellaneous</h2>
 	problem. [Gillis olympiad 2015] a row of $n\ge2$ lamps is given. each lamp is initially either on or off. 

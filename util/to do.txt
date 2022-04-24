@@ -1,3 +1,4 @@
+Hilbert basis theorem from Dickson lemma from Gordan lemma (see Rota book p15)
 dillworth implies hall
 kraft and lym inequalities
 usamo 2008 p5

@@ -8,6 +8,7 @@ Course notes
   (Sophie Morel)          http://perso.ens-lyon.fr/sophie.morel/
   (Garrett)               https://www-users.cse.umn.edu/~garrett/m/v/
   (Gorodnik)              https://www.math.uzh.ch/gorodnik/teaching.html
+                          https://castel.dev/notes
   (Sudan)                 http://madhu.seas.harvard.edu/MIT/FT98/course.html
   (basic alg top)         https://sili-math.github.io/AT2020/Algebraic-Topology.2020.pdf            
   (several cmplx vars)    https://staff.science.uva.nl/j.j.o.o.wiegerinck/edu/scv/scvboek.pdf

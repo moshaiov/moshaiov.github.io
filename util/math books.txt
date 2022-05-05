@@ -5,3 +5,5 @@ Perrin - algebraic geometry an introduction
 ? combinatorics the Rota way
 The Sensual (Quadratic) Form
 Newman - analytic number theory
+Weintraub - Fundamentals of Algebraic Topology
+

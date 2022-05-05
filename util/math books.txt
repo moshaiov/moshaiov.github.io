@@ -2,4 +2,5 @@ Bredon - Topology and Geometry
 Brian Hall - Lie Groups, Lie Algebras, and Representations An Elementary Introduction
 Deitmar - principles of harmonic analysis
 Perrin - algebraic geometry an introduction
-combinatorics the Rota way
+? combinatorics the Rota way
+The Sensual (Quadratic) Form

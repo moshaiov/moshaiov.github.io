@@ -30,3 +30,4 @@ https://sci-hub.hkvisa.net/10.2307/2324485
 https://planetmath.org/sikorskisextensiontheorem
 https://math.stackexchange.com/questions/17939/preimaging-units-to-units
 anatomy of integers and permutations + permutation statistics
+https://homes.esat.kuleuven.be/~wcastryc/thesis03.pdf

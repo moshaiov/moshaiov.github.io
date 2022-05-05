@@ -164,3 +164,17 @@ corollary. any Boolean ring B is (naturally isomorphic to) a subring of 2^{A} fo
 proof. let A=\left\{ \text{ring homomorphisms }B\to F_{2}\right\} . let \Phi:B\to2^{A} by \varPhi(x)=\left\{ \phi\in A:\phi(x)=1\right\} . then \Phi is a ring homomorphism. the above theorem is the injectivity \ker\Phi=\left\{ 0\right\} .
 
 observation. a subset \mathcal{F}\subseteq2^{A} is a subring iff \varnothing\in\mathcal{F}, and \mathcal{F} is closed under complements and under (finite) intersection. in this case \mathcal{F} is also closed under (finite) unions.
+
+
+
+proposition. x^{p-1}-1\equiv(x-1)(x-2)(x-3)\dots(x-(p-1)) mod p
+
+proof. over the field \Z/p these are two monic polynomials of degree p-1. for these polynomials to be equal, it suffices they agree on on p-1 points in \Z/p. of course, Fermat's little theorem means 1,2,3,\dots,p-1 are common roots of the polynomials.
+
+corollary. [Wilson] (p-1)!\equiv-1 mod p
+
+proposition. x^{\frac{p-1}{2}}-1\equiv(x-1)(x-4)(x-9)\dots(x-(\frac{p-1}{2})^{2}) mod p
+
+proof. over the field \Z/p these are two monic polynomials of degree \frac{p-1}{2}. for these polynomials to be equal, it suffices they agree on \frac{p-1}{2} points in \Z/p. the points 1,4,9,\dots,(\frac{p-1}{2})^{2} are distinct mod p, and by Fermat's little theorem are common roots of the polynomials.
+
+corollary. let a\in\Z, p\nmid a. then a^{\frac{p-1}{2}}\equiv1 mod p if a\equiv n^{2} mod p for some n and a^{\frac{p-1}{2}}\equiv-1 mod p if a\not\equiv n^{2} mod p for any n.

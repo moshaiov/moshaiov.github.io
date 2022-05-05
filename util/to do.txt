@@ -1,3 +1,4 @@
+[Wouter Castryck] page 429 of problems from the book
 https://e.math.cornell.edu/people/belk/numbertheory/CyclotomicPolynomials.pdf
 Hilbert basis theorem from Dickson lemma from Gordan lemma (see Rota book p15)
 dillworth implies hall

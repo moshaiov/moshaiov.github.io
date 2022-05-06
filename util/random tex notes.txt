@@ -178,3 +178,54 @@ proposition. x^{\frac{p-1}{2}}-1\equiv(x-1)(x-4)(x-9)\dots(x-(\frac{p-1}{2})^{2}
 proof. over the field \Z/p these are two monic polynomials of degree \frac{p-1}{2}. for these polynomials to be equal, it suffices they agree on \frac{p-1}{2} points in \Z/p. the points 1,4,9,\dots,(\frac{p-1}{2})^{2} are distinct mod p, and by Fermat's little theorem are common roots of the polynomials.
 
 corollary. let a\in\Z, p\nmid a. then a^{\frac{p-1}{2}}\equiv1 mod p if a\equiv n^{2} mod p for some n and a^{\frac{p-1}{2}}\equiv-1 mod p if a\not\equiv n^{2} mod p for any n.
+
+
+
+
+\begin{document}
+\subsection*{proofs of the fundamental theorem of algebra}
+observation. any real polynomial of odd degree has a real root.
+\\\\
+\subsubsection*{Dersken's proof}
+subclaim. any pair of commuting endomorphisms of a real linear space of odd dimension have a common eigenvector.
+\\\\
+proof. let $T,S\in\End(V)$ be as in the hypothesis. let $\lambda\in\R$ be an eigenvalue of $T$, and consider $W_1=\ker(T-\lambda)$, $W_2=\img(T-\lambda)$. if $W_1=V$ we're done. otherwise both $W_1,W_2$ are proper, and one has odd dimension. because both are $T$-invariant and $S$-invariant, we win by induction on the dimension.
+\\\\
+proof of FTA. let $V=\text{Skew}_n(\C)$ and 
+\newpage
+\subsection*{real and complex linear algebra}
+theorem. $\det e^A=e^{\tr A}$ for all $A\in\C^{n\times n}$
+\\\\
+proof. this is trivial for diagonal matrices, and ergo follows for diagonable matrices. but diagonable matrices are dense in the matrix algebra $\C^{n\times n}$ and of course both sides are continuous.
+\\\\
+theorem. any symmetric $A\in \R^{n\times n}$ admits an orthonormal basis of eigenvectors.
+\\\\
+subclaim. any symmetric $A\in\R^{n\times n}$ has an eigenvector.
+\\\\
+proof. let $f(x)=x^tAx$. then $\nabla f=2Ax$. by Lagrange multipliers, any local extrema of $f$ on the unit sphere $\{x:x^tx=1\}=\S^{n-1}$ (which exist by compactness) is an eigenvector of $f$.
+\\\\
+exercise. deduce the theorem from the subclaim.
+\subsection*{alternating forms}
+prototypical example. the determinant is an alternating $n$ form on $k^n$.
+\\\\
+definition. a multilinear $n$-form $f:V^n\to k$ is \blue{alternating} if $f(x_1,\dots,x_n)=0$ whenever $x_i=x_j$ for some $i\neq j$. we write $\alt_n(V)=\{\text{alternating $n$-forms on $V$}\}$.
+\\\\
+observations. let $f:V^n\to k$ be alternating. then \\
+$\cdot$ $f(x_{\sigma(1)},\dots,x_{\sigma(n)})=\sgn(\sigma) f(x_1,\dots,x_n)$ for any $\sigma\in S_n$.\\
+$\cdot$ $f(x_1,\dots,x_n)=0$ whenever $x_1,\dots,x_n\in V$ are linearly dependent. in particular, $\alt_n(V)=0$ if $n>\dim V$.\\
+in addition, $\alt_1(V)=V^*$.
+\\\\
+observation. let $B=v_1,\dots,v_d$ be a basis of $V$, and let $k<d$. 
+then $f:(x_1,\dots,x_k)\mapsto \det([x_1]_B,\dots,[x_k]_B,e_{k+1},\dots,e_d)$ is an alternating $k$-form on $V$ s.t. $f(v_{i_1},\dots,v_{i_k})=\pm\delta_{\{i_1,\dots,i_k\}=[k]}$
+\\\\
+corollary. $\dim\alt_k(V)={\dim V\choose k}$
+\\\\
+definition. the \blue{wedge product} of $f\in\alt_k(V)$ and $g\in\alt_\ell(V)$ is $f\wedge g\in\alt_{k+\ell}(V)$ defined by 
+$$(x_1,\dots,x_{k+\ell})\mapsto \displaystyle \sum'
+\sgn(\sigma)f(x_{\sigma(1)},\dots,x_{\sigma(k)})g(x_{\sigma(k+1)},\dots,x_{\sigma(k+\ell)})$$
+where the sum is over all $\sigma\in S_{k+\ell}$ s.t. $\sigma(1)<\dots<\sigma(k)$ and $\sigma(k+1)<\dots<\sigma(k+\ell)$.
+\\\\
+exercises. $\wedge$ is associative and bilinear. also $f\wedge g=(-1)^{k+\ell}g\wedge f$. finally, $f\wedge g$ really is alternating.
+\\\\
+observation. let $\xi_1,\dots,\xi_k\in V^*$. then $(\xi_1\wedge\dots\wedge \xi_k)(v_1,\dots,v_k)=\det \xi_i(v_j)$.
+\end{document}

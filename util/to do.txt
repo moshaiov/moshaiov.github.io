@@ -14,6 +14,7 @@ the method of alternating projections (Omer Ginat)
 write Andrew's proof of Jacobi triple product identity
 Noga Alon communicating on n-cube
 applications of Baire
+dresken proof of fta
 https://www.brand.site.co.il/riddles/201710q.html
 https://www.brand.site.co.il/riddles/201509q.html
 https://www.reddit.com/r/mathriddles/comments/avpbnp/determination_of_polynomial_by_2_points_preimage/

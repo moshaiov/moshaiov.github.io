@@ -1,7 +1,7 @@
 Problems in the theory of modular forms first few pages
-
 https://mathoverflow.net/questions/393150/list-of-problems-for-graduate-topics
-[https://homes.esat.kuleuven.be/~wcastryc/reciprocity.pdf] page 429 of problems from the book
+https://www.gcsu.edu/sites/files/page-assets/node-808/attachments/warnock.pdf
+[https://homes.esat.kuleuven.be/~wcastryc/reciprocity.pdf] page 429 of problems from the book [proof of quad recip]
 https://e.math.cornell.edu/people/belk/numbertheory/CyclotomicPolynomials.pdf
 Hilbert basis theorem from Dickson lemma from Gordan lemma (see Rota book p15)
 dillworth implies hall

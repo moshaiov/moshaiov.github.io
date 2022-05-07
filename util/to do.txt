@@ -39,3 +39,4 @@ https://math.uchicago.edu/~may/VIGRE/VIGRE2008/REUPapers/Yang.pdf
 https://www2.math.upenn.edu/~tbraz/drp/#Fall2020
 legendre symbol as sign of permutation and proof of quadratic reciprocity Zolotarev lemma
 how many subsets of [p] have sum divisible by p? do both by translation and complex combinatorics
+https://freedommathdance.blogspot.com/2019/07/irreducibility-of-cyclotomic-polynomials.html

@@ -37,3 +37,5 @@ anatomy of integers and permutations + permutation statistics
 https://homes.esat.kuleuven.be/~wcastryc/thesis03.pdf
 https://math.uchicago.edu/~may/VIGRE/VIGRE2008/REUPapers/Yang.pdf
 https://www2.math.upenn.edu/~tbraz/drp/#Fall2020
+
+how many subsets of [p] have sum divisible by p? do both by translation and complex combinatorics

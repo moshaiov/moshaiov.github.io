@@ -1,0 +1,110 @@
+\documentclass{article}
+\usepackage{amsmath ,amssymb}
+\usepackage[margin=.7in]{geometry}
+\setlength\parindent{0pt}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{ebgaramond}
+\usepackage{xcolor}
+\newcommand{\blue}[1]{{\color{blue}{#1}}}
+\newcommand{\red}[1]{{\color{red}{#1}}}
+\newcommand{\vect}{\text{vect}}
+\newcommand{\alt}{\text{alt}}
+\newcommand{\trace}{\text{tr}}
+\newcommand{\disp}{\displaystyle}
+\newcommand{\dsum}{\disp\sum}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\chr}{char}
+\DeclareMathOperator{\img}{img}
+\DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\C}{\mathbf{C}}
+\DeclareMathOperator{\Z}{\mathbf{Z}}
+\DeclareMathOperator{\R}{\mathbf{R}}
+\renewcommand{\S}{\mathbf{S}}
+\newcommand{\inv}{^{-1}}
+\newcommand{\qed}{\hfill\diamonddiamond}
+\newcommand{\floor}[1]{\lfloor#1\rfloor}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\begin{document}
+{\it written for the curious explorer of the mathematical universe}
+\section*{sums of squares}
+a sum of two squares is an integer of the form $a^2+b^2$ for $a,b\in\Z$. \\
+in other words, the sums of squares are precisely the square distances of lattice points in the square plane lattice $\Z+i\Z$. \\
+the first few sums of two squares are $0,1,2,4,5, 8,9,10,13,16, 17,18,20,25,26, 29,32,34,36,37, 40, 41, 45, 49, 50, 52, 53, 58, 61, 64$.\\\\
+exercise. a sum of two squares is never congruent to $3$ modulo $4$. \\\\
+proposition. if $a$ is a sum of two squares and $b$ is a sum of two squares then $ab$ is a sum of two squares. \\\\
+proof. $a=\alpha^2+\beta^2$, $b=\gamma^2+\delta^2 \implies a=|\alpha+i\beta|^2$, $b=|\gamma+i\delta|^2\implies$ $$ab=|(\alpha+i\beta)(\gamma+i\delta)|^2=|\alpha\gamma-\beta\delta + i (\alpha\delta+\beta\gamma)|^2=(\alpha\gamma-\beta\delta)^2+(\alpha\delta+\beta\gamma)^2$$
+theorem. [Girard-Fermat] let $p$ be a prime congruent to $1$ modulo $4$. then $p$ is a sum of two squares. \\\\
+examples. $\begin{array}{ccccccc}
+5=1+4 & 13=4+9 & 17=1+16 & 29=4+25 & 37=1+36 & 41=16+25 & 53=4+49\\
+{61=25+36} & 73=9+64 & {89=4+81} & {97=16+81} & 101=1+100 & 109=9+100 & 113=49+64\\
+137=16+121 & 149=49+100 & 157=36+121 & 173=4+169 & 181=81+100 & 193=49+144 & 197=1+196
+\end{array}$ \\\\
+corollary. let $p$ be a prime congruent to $1$ modulo $4$. then there exists an integer $x$ such that $x^2\equiv -1$ mod $p$. that is, there exists a square root of minus one modulo $p$. \\\\
+examples. $2^2\equiv -1$ mod $5$, $5^2\equiv -1$ mod $13$, $4^2\equiv -1$ mod $17$, $12^2\equiv-1$ mod $29$, $6^2\equiv-1$ mod $37$, $9^2\equiv-1$ mod $41$, $23^2\equiv-1$ mod $53$. \\\\
+proof of corollary (from theorem). if $p=a^2+b^2$ then $x=(a/b$ mod $p)$ works. \\\\
+for example, modulo $p=29$, we have $a=2$, $b=5$ and so $a/b\equiv 2\cdot 6=12$ is a square root of minus one. indeed $12^2+1=145=29\cdot 5$. \\\\
+proof of corollary (from Wilson's theorem). we have $-1\equiv 1\cdot 2\cdots (p-1)\equiv 1\cdot 2\cdots(\frac{p-1}{2})(p-\frac{p-1}{2})\cdots(p-2)(p-1)\equiv (\frac{p-1}{2})! (-1)^{\frac{p-1}{2}}(\frac{p-1}{2})!=[(\frac{p-1}{2})!]^2$ mod $p$. \\\\
+for example, modulo $p=17$, we have $(\frac{p-1}{2})!=8!=(2\cdot 8)( 3\cdot 6)( 5\cdot 7)\cdot 4\equiv -4$ is a square root of minus one. indeed, $(-4)^2+1=17$. \\\\
+proof of theorem (from corollary). let $x^2\equiv-1$ mod $p$. the map $(a,b)\mapsto (a+xb $ mod $p)$ can't be injective from $0\le a,b\le \floor{\sqrt{p}}$. fix $a+xb\equiv a'+xb'$ mod $p$ so that $p\mid (a-a')^2+(b-b')^2$. but as $0<(a-a')^2+(b-b')^2\le \floor{\sqrt{p}}^2+\floor{\sqrt{p}}^2<2p$ we must have $p=(a-a')^2+(b-b')^2$. \\\\
+% the above generalizes for any n where -1 is a square mod n
+proposition. let $p\equiv 3\mod 4$ be a prime. then $x^2\equiv -1$ mod $p$ does not have a solution. that is, there does not exist a square root of minus one modulo $p$. in other words, a number of the form $n^2+1$ cannot have any prime divisor congruent to $3$ modulo $4$. \\\\
+proof. if $x^2\equiv -1$ then by Fermat $1\equiv x^{p-1}=(x^2)^{\frac{p-1}{2}}\equiv (-1)^{\frac{p-1}{2}}=-1$, a contradiction. \\\\
+corollary. there are infinitely many primes congruent to $1$ modulo $4$. \\\\
+proof. the first is $5$. suppose we've collected $k$ such primes $p_1,\dots,p_k$. then any prime factor of $(2p_1\dots p_k)^2+1$ is a valid $k+1$ prime in our sequence, as it has to be $1$ mod $4$ and can't be any previous prime. \\\\
+
+% if p=3 mod 4 we can show that p divides a^2+b^2 implies p divides a and b
+
+% if an integer is a sum of two rational squares its a sum of two integer squares
+
+\newpage
+\section*{linear ode's}
+definition. a linear homogeneous ode is a system $y:I\to \C^n$, $y'=Ay$ where $I$ is an interval and $A:I\to \C^{n\times n}$ is a continuous matrix function. \\\\
+example. $\begin{array}{c}
+y_{1}'(t)=\cos(t)y_{1}(t)+e^{-t^{2}}y_{2}(t)\\
+y_{2}'(t)=(t^{3}+7)y_{1}(t)-80y_{2}(t)
+\end{array}$ is a linear homogeneous ode. \\\\
+observation. the set of functions solving a linear homogeneous ode is a linear space. \\\\
+example. consider $y'=\left(\begin{array}{cc}
+0 & -2t\\
+2t & 0
+\end{array}\right)y$. we have two solutions $\left(\begin{array}{c}
+\cos t^{2}\\
+\sin t^{2}
+\end{array}\right)$ and also $\left(\begin{array}{c}
+\sin t^{2}\\
+-\cos t^{2}
+\end{array}\right)$. thus $\alpha \left(\begin{array}{c}
+\cos t^{2}\\
+\sin t^{2}
+\end{array}\right)+\beta\left(\begin{array}{c}
+\sin t^{2}\\
+-\cos t^{2}
+\end{array}\right)$ are solutions. we'll soon show no other solutions exist.\\\\
+exercise. find all solutions to $y'=\left(\begin{array}{cc}
+2 & \sin t\\
+0 & 1
+\end{array}\right)y$. \\\\
+observation. if $y'=Ay$ and $y(\tau)=\xi\iff y(t)=\xi+\int_\tau^t Ay$. \\\\
+proposition. if $y(t)=\xi+\int_\tau^t Ay$ and $\norm{A}\le M$ then $\norm{y}\le \norm{\xi}e^{M(t-\tau)}$ for $t\ge \tau$. \\\\
+proof. we have $\norm{y(t)}\le \norm{\xi}+\int_\tau^t M\norm{y}$. now apply Gronwall. \\\\
+corollary. let $y'=Ay$ be a linear homogeneous ode on $I$. for any given starting condition $y(\tau)=\xi$ there exists a unique solution on $I$. \\\\
+corollary. let $y:I\to \C^n$, $y'=Ay$ be a linear homogenous ode. the solution space is $n$ dimensional. \\\\
+definition. $\Phi:I\to \C^n$ is called a fundamental matrix for the linear homogeneous system  if its columns form a basis of the solutions. \\\\
+example. $\left(\begin{array}{cc}
+\cos t & -\sin t\\
+\sin t & \cos t
+\end{array}\right)$ is a fundamental matrix for $y'=\left(\begin{array}{cc}
+0 & -1\\
+1 & 0
+\end{array}\right)y$. \\\\
+exercise. if $A$ is constant then $\Phi(t)=e^{tA}$ is a fundamental matrix for the system $y'=Ay$. \\\\
+observations. let $\Phi$ be a fundamental matrix for the system $y'=Ay$. then we have :\\
+$\Phi'=A\Phi$ \\
+the solutions to the system are precisely the functions $\Phi c$ for $c$ constant \\
+$\det \Phi(t)\neq 0$ for all $t$. \\
+$\Phi C$ is also fundamental matrix for any constant invertible matrix $C$. in the other direction, any fundamental matrix has this form. \\
+$(\det \Phi)' =\det \Phi \cdot \trace A$. \\
+% continue from https://digmi.org/lecture_notes/Ordinary_Differential_Equations.pdf
+\end{document}

@@ -35,3 +35,4 @@ https://planetmath.org/sikorskisextensiontheorem
 https://math.stackexchange.com/questions/17939/preimaging-units-to-units
 anatomy of integers and permutations + permutation statistics
 https://homes.esat.kuleuven.be/~wcastryc/thesis03.pdf
+https://math.uchicago.edu/~may/VIGRE/VIGRE2008/REUPapers/Yang.pdf
